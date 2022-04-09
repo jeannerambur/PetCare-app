@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Pet extends Model
 {
     use HasFactory;
-
+    protected $fillable = ['name','user_id', 'type', 'date_of_birth', 'sex'];
     public function user() {
         return $this->belongsTo(User::class);
     }

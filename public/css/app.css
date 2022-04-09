@@ -675,7 +675,6 @@ progress {
   width: 100%;
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -11285,4 +11284,71 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+
+.login-title, .register-title {
+  font-size: 36px;
+}
+
+.container-login, .container-register {
+  padding-left: 35px;
+  margin-top: 50%;
+}
+
+.login-subtitle, .username-subtitle {
+  font-size: 18px;
+  color: black;
+  opacity: 0.5;
+}
+
+.no-account, .has-account {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  margin-left: 10%;
+}
+
+.container-home-page {
+  margin-top: 20%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.username {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.username strong {
+  font-weight: 600;
+}
+
+.pets-card {
+  margin-top: 70%;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+
+.my-pets {
+  font-size: 24px;
+}
+.button-add-pet {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  background: #F2865E;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.add-pet {
+  margin-top: 10%;
+}
+.add-pet-title {
+  font-size: 18px;
+  text-align: center;
 }

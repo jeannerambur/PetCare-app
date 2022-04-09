@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Pet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StorePetRequest;
 use App\Http\Requests\UpdatePetRequest;
 
@@ -16,7 +18,8 @@ class PetController extends Controller
      */
     public function index()
     {
-        //
+        $pets = Pet::where('user_id',Auth::id())->get();
+        return view('pet/index', compact('pets'));
     }
 
     /**
@@ -26,7 +29,7 @@ class PetController extends Controller
      */
     public function create()
     {
-        //
+        return view('pet/create');
     }
 
     /**
@@ -37,8 +40,19 @@ class PetController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request->all());
+        $birthday = Carbon::parse($request->date_of_birth)->format('Y-m-d');
+
+        $pet = Pet::create([
+            "name" => $request->name,
+            "user_id" => Auth::id(),
+            "type" => $request->type,
+            "sex" => $request->sex,
+            "date_of_birth" => $birthday,
+            "created_at" => now(),
+            "updated_at" => now()
+            ]);
+
+        return redirect('/pets')->with('success', 'Animal créer avec succèss');
     }
 
     /**
@@ -47,9 +61,11 @@ class PetController extends Controller
      * @param  \App\Models\Pet  $pet
      * @return \Illuminate\Http\Response
      */
-    public function show(Pet $pet)
+    public function show($id)
     {
-        //
+        $pet = Pet::find($id);
+        return view('pets.show')->with('pet', $pet);
+
     }
 
     /**
@@ -58,9 +74,11 @@ class PetController extends Controller
      * @param  \App\Models\Pet  $pet
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pet $pet)
+    public function edit($id)
     {
-        //
+        $pet = Pet::findOrFail($id);
+
+        return view('pet/edit', compact('pet'));
     }
 
     /**
@@ -70,9 +88,19 @@ class PetController extends Controller
      * @param  \App\Models\Pet  $pet
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePetRequest $request, Pet $pet)
+    public function update(Request $request, $id)
     {
-        //
+
+        $birthday = Carbon::parse($request->date_of_birth)->format('Y-m-d');
+        Pet::whereId($id)->update([
+            "name" => $request->name,
+            "type" => $request->type,
+            "sex" => $request->sex,
+            "date_of_birth" => $birthday,
+            "updated_at" => now()
+        ]);
+
+        return redirect('/pets')->with('success', 'Animal mis à jour avec succèss');
     }
 
     /**
@@ -81,8 +109,11 @@ class PetController extends Controller
      * @param  \App\Models\Pet  $pet
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pet $pet)
+    public function destroy($id)
     {
-        //
+        $pet = Pet::findOrFail($id);
+        $pet->delete();
+
+        return redirect('/pets')->with('success', 'Animal supprimer avec succèss');
     }
 }

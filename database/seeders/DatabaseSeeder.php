@@ -22,6 +22,12 @@ class DatabaseSeeder extends Seeder
 			'password'=> Hash::make('totototo')
 		]);
 
-		Pet::factory()->count(10)->create();
+		User::create([
+			'name'=> 'Jeanne',
+			'email'=> 'jeanne_rambur@hotmail.fr',
+			'password'=> Hash::make('Jeannette')
+		]);
+
+		Pet::factory()->count(2)->create();
 	}
 }

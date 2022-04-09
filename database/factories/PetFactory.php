@@ -15,7 +15,10 @@ class PetFactory extends Factory
     {
         return [
             'name'=> $this->faker->name,
-            'user_id'=> 1
+            'user_id'=> 1,
+            'type' => 'dog',
+            'date_of_birth' => '2021-02-28',
+            'sex' => 'female'
         ];
     }
 }
