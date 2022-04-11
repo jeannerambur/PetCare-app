@@ -53,7 +53,7 @@
       @foreach($pets as $pet)
       <div class="card">
         <div class="container">
-
+        <img src="{{ Storage::url($pet->image) }}" height="75" width="75" alt="" />
           <h4><b>{{$pet->name}}</b></h4>
           <p>Architect & Engineer</p>
         </div>

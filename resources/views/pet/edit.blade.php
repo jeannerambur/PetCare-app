@@ -25,7 +25,7 @@
       </div><br />
     @endif
 
-      <form method="post" action="{{ route('pets.update', $pet->id ) }}">
+      <form method="post" action="{{ route('pets.update', $pet->id ) }}" enctype="multipart/form-data">
           <div class="form-group">
               @csrf
               @method('PATCH')
@@ -57,6 +57,19 @@
                 <option value="unknown">Unknown</option>
               </select>
           </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Post Image:</strong>
+                 <input type="file" name="image" class="form-control" placeholder="Post Title">
+                @error('image')
+                  <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+               @enderror
+            </div>
+            <div class="form-group">
+              <img src="{{ Storage::url($pet->image) }}" height="200" width="200" alt="" />
+            </div>
+        </div>
 
           <button type="submit" class="btn btn-primary">Modifier</button>
       </form>

@@ -18,7 +18,8 @@ class PetFactory extends Factory
             'user_id'=> 1,
             'type' => 'dog',
             'date_of_birth' => '2021-02-28',
-            'sex' => 'female'
+            'sex' => 'female',
+            'image' => 'default.jpg'
         ];
     }
 }

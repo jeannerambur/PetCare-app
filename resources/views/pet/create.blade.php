@@ -25,7 +25,7 @@
       </div><br />
     @endif
 
-      <form method="post" action="{{ route('pets.store') }}">
+      <form method="post" action="{{ route('pets.store') }}" enctype="multipart/form-data">
          @csrf
          <div class="form-row align-items-center">
             <div class="form-group col-auto my-1">
@@ -56,6 +56,15 @@
               </select>
           </div>
 
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Pet Image:</strong>
+                 <input type="file" name="image" class="form-control" placeholder="Post Title">
+                @error('image')
+                  <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+               @enderror
+            </div>
+          </div>
 
           <button type="submit" class="btn btn-primary">Ajouter</button>
       </form>

@@ -41,17 +41,34 @@ class PetController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        $path = $request->file('image')->store('public/images');
         $birthday = Carbon::parse($request->date_of_birth)->format('Y-m-d');
 
-        $pet = Pet::create([
-            "name" => $request->name,
-            "user_id" => Auth::id(),
-            "type" => $request->type,
-            "sex" => $request->sex,
-            "date_of_birth" => $birthday,
-            "created_at" => now(),
-            "updated_at" => now()
-            ]);
+        $pet = new Pet;
+
+        $pet->name = $request->name;
+        $pet->user_id = Auth::id();
+        $pet->type = $request->type;
+        $pet->sex = $request->sex;
+        $pet->date_of_birth = $birthday;
+        $pet->image = $path;
+        $pet->created_at = now();
+        $pet->updated_at = now();
+
+        $pet->save();
+
+        // $pet = Pet::create([
+        //     "name" => $request->name,
+        //     "user_id" => Auth::id(),
+        //     "type" => $request->type,
+        //     "sex" => $request->sex,
+        //     "date_of_birth" => $birthday,
+        //     "created_at" => now(),
+        //     "updated_at" => now()
+        //     ]);
+
 
         return redirect('/pets')->with('success', 'Animal créer avec succèss');
     }
@@ -92,13 +109,30 @@ class PetController extends Controller
     public function update(Request $request, $id)
     {
 
-        Pet::whereId($id)->update([
-            "name" => $request->name,
-            "type" => $request->type,
-            "sex" => $request->sex,
-            "date_of_birth" => $request->date_of_birth->format('Y-m-d'),
-            "updated_at" => now()
-        ]);
+        $pet = Pet::find($id);
+        $birthday = Carbon::parse($request->date_of_birth)->format('Y-m-d');
+
+        if($request->hasFile('image')){
+            $path = $request->file('image')->store('public/images');
+            $pet->image = $path;
+        }
+
+        $pet->name = $request->name;
+        $pet->user_id = Auth::id();
+        $pet->type = $request->type;
+        $pet->sex = $request->sex;
+        $pet->date_of_birth = $birthday;
+        $pet->updated_at = now();
+
+        $pet->save();
+
+        // Pet::whereId($id)->update([
+        //     "name" => $request->name,
+        //     "type" => $request->type,
+        //     "sex" => $request->sex,
+        //     "date_of_birth" => $request->date_of_birth->format('Y-m-d'),
+        //     "updated_at" => now()
+        // ]);
 
         return redirect('/pets')->with('success', 'Animal mis à jour avec succèss');
     }
