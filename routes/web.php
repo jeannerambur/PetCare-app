@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Routes;
+
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\PetController;
 
@@ -23,9 +25,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
 //Route::view('/pets/create', 'pet/create-pet')->name('create-pet');
 
-//Route::post('/pets/store', [PetController::class, 'store'])->name('pets.store');
+Route::post('/pets/store', [PetController::class, 'store'])->name('pets.store');
 
-Route::resource('cars', CarController::class);
 Route::resource('pets', PetController::class);
+
+Route::post('pets', [PetController::class, 'upload'])->name('pets.upload');

@@ -16,7 +16,9 @@
             My Pets
         </div>
         <button class="button-add-pet" onclick="window.location.href = '{{ url('/pets/create') }}' ">+</button>
+
     </div>
 
+    
 </div>
 @endsection

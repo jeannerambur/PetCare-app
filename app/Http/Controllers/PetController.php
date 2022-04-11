@@ -8,6 +8,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StorePetRequest;
 use App\Http\Requests\UpdatePetRequest;
+use Image;
 
 class PetController extends Controller
 {
@@ -91,17 +92,17 @@ class PetController extends Controller
     public function update(Request $request, $id)
     {
 
-        $birthday = Carbon::parse($request->date_of_birth)->format('Y-m-d');
         Pet::whereId($id)->update([
             "name" => $request->name,
             "type" => $request->type,
             "sex" => $request->sex,
-            "date_of_birth" => $birthday,
+            "date_of_birth" => $request->date_of_birth->format('Y-m-d'),
             "updated_at" => now()
         ]);
 
         return redirect('/pets')->with('success', 'Animal mis à jour avec succèss');
     }
+
 
     /**
      * Remove the specified resource from storage.

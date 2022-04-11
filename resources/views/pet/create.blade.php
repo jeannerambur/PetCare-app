@@ -45,7 +45,7 @@
           </div>
 
           <label for="birth">Birth date:</label>
-          <input type="date" id="start" name="trip-start" value="2022-04-22">
+          <input name="date" id="date" class="form-control" style="width: 100%; display: inline;" onchange="invoicedue(event);" required="" value="2018-05-10 00:00:00" type="date">
 
           <div class="form-group">
               <label for="sex">Sex:</label>
@@ -55,6 +55,7 @@
                 <option value="unknown">Unknown</option>
               </select>
           </div>
+
 
           <button type="submit" class="btn btn-primary">Ajouter</button>
       </form>

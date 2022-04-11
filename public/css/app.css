@@ -11304,8 +11304,23 @@ textarea.form-control-lg {
 .no-account, .has-account {
   position: absolute;
   top: auto;
-  bottom: 0;
-  margin-left: 10%;
+  bottom: 2%;
+  margin-left: 20%;
+}
+
+.has-account-home {
+  position: absolute;
+  top: auto;
+  bottom: 2%;
+  margin-left: 30%;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.login-home {
+  padding-left: 2%;
+  color: #F2865E;
 }
 
 .container-home-page {
@@ -11351,4 +11366,31 @@ textarea.form-control-lg {
 .add-pet-title {
   font-size: 18px;
   text-align: center;
+}
+
+.get-started {
+  position: absolute;
+  top: auto;
+  bottom: 10%;
+  margin-left: 30%;
+  display:inline-block;
+  color:#444;
+  background:#827EF2;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+  cursor:pointer;
+  vertical-align:middle;
+  padding: 10px 23px;
+  text-align: center;
+  border-radius: 9px;
+}
+
+.get-started a {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.cards-pets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

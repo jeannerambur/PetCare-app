@@ -6,7 +6,41 @@
   .uper {
     margin-top: 40px;
   }
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
 </style>
+
+<div class="container-home-page">
+    <div class="presentation">
+        <div class="username">
+            Hi <strong>{{ Auth::user()->name }}</strong>
+        </div>
+        <div class="username-subtitle">
+            Let’s take care of your pets
+        </div>
+
+    </div>
+    <div class="pets-card">
+        <div class="my-pets">
+            My Pets
+        </div>
+        <button class="button-add-pet" onclick="window.location.href = '{{ url('/pets/create') }}' ">+</button>
+
+    </div>
+
+
+</div>
 
 <div class="uper">
 
@@ -15,41 +49,23 @@
       {{ session()->get('success') }}
     </div><br />
   @endif
+  <div class="cards-pets">
+      @foreach($pets as $pet)
+      <div class="card">
+        <div class="container">
 
-  <table class="table table-striped">
+          <h4><b>{{$pet->name}}</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+        <a href="{{ route('pets.edit', $pet->id)}}" class="btn btn-primary">Edit</a>
+        <form action="{{ route('pets.destroy', $pet->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </div>
+      @endforeach
+  </div>
 
-    <thead>
-        <tr>
-          <td>ID</td>
-          <td>Proprietaire</td>
-          <td>Name</td>
-          <td>Type</td>
-          <td>Birthday</td>
-          <td>Sex</td>
-          <td colspan="2">Action</td>
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach($pets as $pet)
-        <tr>
-            <td>{{$pet->id}}</td>
-            <td>{{$pet->user_id}}</td>
-            <td>{{$pet->name}}</td>
-            <td>{{$pet->type}}</td>
-            <td>{{$pet->date_of_birth}}</td>
-            <td>{{$pet->sex}}</td>
-            <td><a href="{{ route('pets.edit', $pet->id)}}" class="btn btn-primary">Modifier</a></td>
-            <td>
-                <form action="{{ route('pets.destroy', $pet->id)}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Supprimer</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
-  </table>
 <div>
 @endsection
