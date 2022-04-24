@@ -19,13 +19,17 @@ class DatabaseSeeder extends Seeder
 		User::create([
 			'name'=> 'toto',
 			'email'=> 'toto@gmail.com',
-			'password'=> Hash::make('totototo')
+			'password'=> Hash::make('totototo'),
+			'image' => 'default.jpg',
+			'about' => "Hello je m'appelle toto"
 		]);
 
 		User::create([
 			'name'=> 'Jeanne',
 			'email'=> 'jeanne_rambur@hotmail.fr',
-			'password'=> Hash::make('Jeannette')
+			'password'=> Hash::make('Jeannette'),
+			'image' => 'default.jpg',
+			'about' => "Hello je m'appelle Jeanne"
 		]);
 
 		Pet::factory()->count(2)->create();

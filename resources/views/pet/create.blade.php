@@ -45,7 +45,7 @@
           </div>
 
           <label for="birth">Birth date:</label>
-          <input name="date" id="date" class="form-control" style="width: 100%; display: inline;" onchange="invoicedue(event);" required="" value="2018-05-10 00:00:00" type="date">
+          <input type="date" id="birth" name="birth" class="birth-form" value="{{ old('birth') }}">
 
           <div class="form-group">
               <label for="sex">Sex:</label>

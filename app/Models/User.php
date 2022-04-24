@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Pet;
+use App\Models\Profile;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -22,6 +23,8 @@ class User extends Authenticatable
 		'name',
 		'email',
 		'password',
+		'image',
+		'about'
 	];
 
 	/**
@@ -45,5 +48,9 @@ class User extends Authenticatable
 
 	public function pets() {
 		return $this->hasMany(Pet::class);
+	}
+
+	public function profile() {
+		return $this->hasOne(Profile::class, 'user_id');
 	}
 }

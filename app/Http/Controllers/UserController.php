@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\Car;
+use App\Http\Requests\User\UpdateProfileRequest;
 
-class CarController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class CarController extends Controller
      */
     public function index()
     {
-        $voitures = Car::all();
-        return view('car/index', compact('voitures'));
+        //
+        return view('user/index')->with('user', User::all());
     }
 
     /**
@@ -25,7 +26,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        return view('car/create');
+        //
     }
 
     /**
@@ -36,14 +37,7 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'marque' => 'required|max:255',
-            'prix' => 'required',
-        ]);
-
-        $car = Car::create($validatedData);
-
-        return redirect('/cars')->with('success', 'Voiture créer avec succèss');
+        //
     }
 
     /**
@@ -63,10 +57,10 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        $car = Car::findOrFail($id);
-        return view('car/edit', compact('car'));
+        //
+        return view('user.edit')->with('user', auth()->user());
     }
 
     /**
@@ -76,15 +70,19 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateProfileRequest $request)
     {
-        $validatedData = $request->validate([
-            'marque' => 'required|max:255',
-            'prix' => 'required'
+        $user = auth()->user();
+
+        $user->update([
+            'name' => $request->name,
+            'about' => $request->about
         ]);
 
-        Car::whereId($id)->update($validatedData);
-        return redirect('/cars')->with('success', 'Voiture mise à jour avec succèss');
+
+        $request->session()->now('status', 'User updated successfully');
+
+        return redirect()->back();
     }
 
     /**
@@ -95,9 +93,6 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        $car = Car::findOrFail($id);
-        $car->delete();
-
-        return redirect('/cars')->with('success', 'Voiture supprimer avec succèss');
+        //
     }
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Routes;
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\PetController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +26,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-//Route::view('/pets/create', 'pet/create-pet')->name('create-pet');
-
 Route::post('/pets/store', [PetController::class, 'store'])->name('pets.store');
 
 Route::resource('pets', PetController::class);
 
-Route::post('pets', [PetController::class, 'upload'])->name('pets.upload');
+Route::get('user/profile', [UserController::class, 'edit'])->name('user.edit-profile');
+Route::put('user/profile', [UserController::class, 'update'])->name('user.update-profile');

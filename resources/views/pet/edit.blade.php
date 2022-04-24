@@ -47,7 +47,7 @@
 
 
           <label for="birth">Birth date:</label>
-          <input type="date" id="start" name="trip-start" value="2022-04-22">
+          <input type="date" id="birth" name="birth" class="birth-form" value="{{ old('birth') }}">
 
           <div class="form-group">
               <label for="sex">Sex:</label>

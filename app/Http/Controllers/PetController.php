@@ -44,32 +44,20 @@ class PetController extends Controller
 
 
         $path = $request->file('image')->store('public/images');
-        $birthday = Carbon::parse($request->date_of_birth)->format('Y-m-d');
-
         $pet = new Pet;
 
         $pet->name = $request->name;
         $pet->user_id = Auth::id();
         $pet->type = $request->type;
         $pet->sex = $request->sex;
-        $pet->date_of_birth = $birthday;
+        $pet->birth = $request->birth;
         $pet->image = $path;
         $pet->created_at = now();
         $pet->updated_at = now();
 
         $pet->save();
 
-        // $pet = Pet::create([
-        //     "name" => $request->name,
-        //     "user_id" => Auth::id(),
-        //     "type" => $request->type,
-        //     "sex" => $request->sex,
-        //     "date_of_birth" => $birthday,
-        //     "created_at" => now(),
-        //     "updated_at" => now()
-        //     ]);
-
-
+    
         return redirect('/pets')->with('success', 'Animal créer avec succèss');
     }
 
@@ -121,7 +109,7 @@ class PetController extends Controller
         $pet->user_id = Auth::id();
         $pet->type = $request->type;
         $pet->sex = $request->sex;
-        $pet->date_of_birth = $birthday;
+        $pet->birth = $request->birth;
         $pet->updated_at = now();
 
         $pet->save();

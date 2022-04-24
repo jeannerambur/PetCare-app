@@ -17,7 +17,7 @@ class PetFactory extends Factory
             'name'=> $this->faker->name,
             'user_id'=> 1,
             'type' => 'dog',
-            'date_of_birth' => '2021-02-28',
+            'birth' => '2021-02-28',
             'sex' => 'female',
             'image' => 'default.jpg'
         ];

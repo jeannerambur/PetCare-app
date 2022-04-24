@@ -55,7 +55,6 @@
         <div class="container">
         <img src="{{ Storage::url($pet->image) }}" height="75" width="75" alt="" />
           <h4><b>{{$pet->name}}</b></h4>
-          <p>Architect & Engineer</p>
         </div>
         <a href="{{ route('pets.edit', $pet->id)}}" class="btn btn-primary">Edit</a>
         <form action="{{ route('pets.destroy', $pet->id)}}" method="post">
