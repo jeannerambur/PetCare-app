@@ -30,6 +30,25 @@
             Let’s take care of your pets
         </div>
 
+    <div class="button-health">
+        <div class="button-soins">
+          <button onclick="window.location.href = '/pets';"></button>
+        </div>
+
+        <div class="button-sante">
+          <button onclick="window.location.href = '/pets';"></button>
+        </div>
+
+        <div class="button-mesure">
+          <button onclick="window.location.href = '/pets';"></button>
+        </div>
+
+        <div class="button-hygiene">
+          <button onclick="window.location.href = '/pets';"></button>
+        </div>
+
+    </div>
+
     </div>
     <div class="pets-card">
         <div class="my-pets">
@@ -51,17 +70,17 @@
   @endif
   <div class="cards-pets">
       @foreach($pets as $pet)
-      <div class="card">
-        <div class="container">
-        <img src="{{ Storage::url($pet->image) }}" height="75" width="75" alt="" />
-          <h4><b>{{$pet->name}}</b></h4>
+      <div class="card-pet">
+        <a href="{{ route('pets.show', $pet->id)}}">
+        <div class="pet-container">
+          <div class="pet-img">
+          <img src="{{ Storage::url($pet->image) }}" height="75" width="75" alt="" />
+          </div>
+          <div class="pet-name">
+            <h4><b>{{$pet->name}}</b></h4>
+          </div>
         </div>
-        <a href="{{ route('pets.edit', $pet->id)}}" class="btn btn-primary">Edit</a>
-        <form action="{{ route('pets.destroy', $pet->id)}}" method="post">
-          @csrf
-          @method('DELETE')
-          <button class="btn btn-danger" type="submit">Delete</button>
-        </form>
+        </a>
       </div>
       @endforeach
   </div>

@@ -12,6 +12,16 @@ use Image;
 
 class PetController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -41,8 +51,6 @@ class PetController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $path = $request->file('image')->store('public/images');
         $pet = new Pet;
 
@@ -57,7 +65,7 @@ class PetController extends Controller
 
         $pet->save();
 
-    
+
         return redirect('/pets')->with('success', 'Animal créer avec succèss');
     }
 
@@ -70,7 +78,7 @@ class PetController extends Controller
     public function show($id)
     {
         $pet = Pet::find($id);
-        return view('pets.show')->with('pet', $pet);
+        return view('pet.show')->with('pet', $pet);
 
     }
 

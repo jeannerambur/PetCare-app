@@ -4502,17 +4502,6 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -11339,7 +11328,7 @@ textarea.form-control-lg {
 }
 
 .pets-card {
-  margin-top: 70%;
+  margin-top: 30%;
   flex-direction: row;
   justify-content: space-between;
   display: flex;
@@ -11389,8 +11378,168 @@ textarea.form-control-lg {
   font-size: 18px;
 }
 
-.cards-pets {
+
+.button-health {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 34px;
+}
+
+.button-soins > button{
+  border: none;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #B1A7F2;
+}
+
+.button-sante > button{
+  border: none;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #F2865E;
+}
+
+.button-mesure > button{
+  border: none;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #F2CA80;
+}
+
+.button-hygiene > button{
+  border: none;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #FFB5B1;
+}
+
+.cards-pets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15%;
+  flex-wrap: wrap;
+}
+
+.card-pet {
+  width: 45%;
+  background-color: #ffffff;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+.card-pet > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-pet-detail {
+  width: 80%;
+  background-color: #ffffff;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 0 5%;
+}
+
+.pet-img {
+  position: relative;
+  height: 150px;
+  width: 100%;
+}
+
+.pet-img > img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 5px;
+  object-position: center;
+}
+
+.pet-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12%;
+}
+
+.pet-name {
+  padding-top: 10%;
+}
+
+.pet-name > h4 {
+  padding: 0 20px;
+
+}
+
+.care-button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.mesures,
+.sante,
+.soins,
+.hygiene,
+.veterinaire {
+  width: 45%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  height: 53px;
+  margin-top: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 12px #aaa;
+}
+
+.mesures > .button,
+.sante > .button,
+.soins > .button,
+.hygiene > .button,
+.veterinaire > .button {
+  border: none;
+  width: 25%;
+  border-radius: 5px;
+  margin: 3%;
+}
+
+.mesures > .button {
+  background-color: #F2CA80;
+}
+
+.sante > .button {
+  background-color: #F2865E;
+}
+
+.soins > .button {
+  background-color: #B1A7F2;
+}
+
+.hygiene > .button {
+  background-color: #FFB5B1;
+}
+
+.veterinaire > .button {
+  background-color: #63A5F1;
+}
+
+.mesures > .button > button,
+.sante > .button > button,
+.soins > .button > button,
+.hygiene > .button > button,
+.veterinaire > .button > button {
+  background-color: transparent;
+  border: none;
+}
+
+.mesures > p,
+.sante > p ,
+.soins > p,
+.hygiene > p,
+.veterinaire > p {
+  align-self: end;
 }

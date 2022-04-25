@@ -37,7 +37,7 @@
             @endif
         </div> -->
         <div class="get-started">
-            <a href="{{ url('/home') }}">Get Started</a>
+            <a href="{{ url('/pets') }}">Get Started</a>
         </div>
 
         <div class='has-account-home'>

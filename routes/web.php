@@ -30,5 +30,7 @@ Route::post('/pets/store', [PetController::class, 'store'])->name('pets.store');
 
 Route::resource('pets', PetController::class);
 
+
+Route::get('user', [UserController::class, 'index'])->name('user.index');
 Route::get('user/profile', [UserController::class, 'edit'])->name('user.edit-profile');
 Route::put('user/profile', [UserController::class, 'update'])->name('user.update-profile');
