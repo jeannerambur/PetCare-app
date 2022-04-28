@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PetFactory extends Factory
+class AppetitFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,11 +15,11 @@ class PetFactory extends Factory
     public function definition()
     {
         return [
-            'name'=> $this->faker->name,
-            'user_id'=> 1,
-            'birth' => '2021-02-28',
-            'sex' => 'female',
-            'image' => 'default.jpg'
+            'appetit'=> 'bof',
+            'pet_id'=> 1,
+            'date' => '2021-02-28',
+            'heure' => '12',
+            'documents' => 'pres.pdf'
         ];
     }
 }

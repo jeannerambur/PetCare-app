@@ -23,7 +23,7 @@
 
 <div class="container-home-page">
     <div class="presentation">
-        <div class="username">
+        <div class="username-hi">
             Hi <strong>{{ Auth::user()->name }}</strong>
         </div>
         <div class="username-subtitle">

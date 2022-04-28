@@ -17,33 +17,44 @@
 
     <div class="care-button">
         <div class="mesures">
-            <div class="button">
-            </div>
-            <p>Mesures</p>
+            <a href="{{ route('mesures', $pet->id)}}">
+                <div class="button">
+                </div>
+                <p>Mesures</p>
+            </a>
         </div>
 
+
         <div class="sante">
-            <div class="button">
-            </div>
-          <p>Santé</p>
+            <a href="/">
+                <div class="button">
+                </div>
+                <p>Santé</p>
+            </a>
         </div>
 
         <div class="soins">
-            <div class="button">
-            </div>
-          <p>Soins</p>
+            <a href="/">
+                <div class="button">
+                </div>
+                <p>Soins</p>
+            </a>
         </div>
 
         <div class="hygiene">
-            <div class="button">
-            </div>
-          <p>Hygiène</p>
+            <a href="/">
+                <div class="button">
+                </div>
+                <p>Hygiène</p>
+            </a>
         </div>
 
         <div class="veterinaire">
-            <div class="button">
-            </div>
-          <p>Vétérinaire</p>
+            <a href="/">
+                <div class="button">
+                </div>
+                <p>Veterinaire</p>
+            </a>
         </div>
 
     </div>

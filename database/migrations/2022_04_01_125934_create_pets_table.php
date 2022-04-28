@@ -17,7 +17,6 @@ class CreatePetsTable extends Migration
             $table->increments("id");
             $table->unsignedInteger("user_id");
             $table->string("name");
-            $table->string("type");
             $table->dateTime('birth');
             $table->string('sex');
             $table->string('image');

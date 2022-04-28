@@ -33,21 +33,8 @@
               <input type="text" class="form-control" name="name" value="{{ $pet->name }}"/>
           </div>
 
-          <div class="form-row align-items-center">
-            <div class="form-group col-auto my-1">
-                <label class="mr-sm-2" for="type ">Type:</label>
-                <select class="custom-select mr-sm-2" name="type" id="type">
-                  <option selected>Choose...</option>
-                  <option value="none">None</option>
-                  <option value="cat">Cat</option>
-                  <option value="dog">Dog</option>
-                </select>
-            </div>
-          </div>
-
-
           <label for="birth">Birth date:</label>
-          <input type="date" id="birth" name="birth" class="birth-form" value="{{ old('birth') }}">
+          <input type="date" id="birth" name="birth" class="birth-form" value="{{ old('$pet->birth') }}">
 
           <div class="form-group">
               <label for="sex">Sex:</label>
@@ -60,11 +47,11 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Post Image:</strong>
+                <strong>Pet Image:</strong>
                  <input type="file" name="image" class="form-control" placeholder="Post Title">
-                @error('image')
-                  <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-               @enderror
+                  @error('image')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                  @enderror
             </div>
             <div class="form-group">
               <img src="{{ Storage::url($pet->image) }}" height="200" width="200" alt="" />

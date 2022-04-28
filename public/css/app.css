@@ -11487,59 +11487,119 @@ textarea.form-control-lg {
 .veterinaire {
   width: 45%;
   background-color: white;
-  display: flex;
-  flex-direction: row;
-  height: 53px;
   margin-top: 5%;
   margin-right: 5%;
   border-radius: 5px;
   box-shadow: 5px 5px 12px #aaa;
 }
 
-.mesures > .button,
-.sante > .button,
-.soins > .button,
-.hygiene > .button,
-.veterinaire > .button {
+.mesures > a,
+.sante > a,
+.soins > a,
+.hygiene > a,
+.veterinaire > a {
+  display: flex;
+  flex-direction: row;
+  height: 53px;
+  color: black;
+  text-decoration: none;
+}
+
+.mesures > a > .button,
+.sante > a > .button,
+.soins > a >  .button,
+.hygiene > a >  .button,
+.veterinaire > a >  .button {
   border: none;
   width: 25%;
   border-radius: 5px;
   margin: 3%;
 }
 
-.mesures > .button {
+.mesures > a > .button {
   background-color: #F2CA80;
 }
 
-.sante > .button {
+.sante > a >  .button {
   background-color: #F2865E;
 }
 
-.soins > .button {
+.soins > a >  .button {
   background-color: #B1A7F2;
 }
 
-.hygiene > .button {
+.hygiene > a >  .button {
   background-color: #FFB5B1;
 }
 
-.veterinaire > .button {
+.veterinaire > a >  .button {
   background-color: #63A5F1;
 }
 
-.mesures > .button > button,
-.sante > .button > button,
-.soins > .button > button,
-.hygiene > .button > button,
-.veterinaire > .button > button {
-  background-color: transparent;
-  border: none;
+
+.mesures > a > p,
+.sante > a >  p ,
+.soins > a >  p,
+.hygiene > a >  p,
+.veterinaire > a >  p {
+  align-self: center;
 }
 
-.mesures > p,
-.sante > p ,
-.soins > p,
-.hygiene > p,
-.veterinaire > p {
-  align-self: end;
+.container-user-profile {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.user-img > img {
+  border-radius: 45px;
+}
+
+.general-infos {
+  margin-top: 15%;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.username {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.username > .logo {
+  width: 40%;
+  font-size: 18px;
+}
+
+.username > .name {
+  font-size: 18px;
+}
+
+.description {
+  position: relative;
+  width: 95%;
+  padding: 2% 4%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 2%;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.contact-infos {
+  margin: 11% 0 0 10%;
+}
+
+.contact-infos > .title {
+  text-align: left;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

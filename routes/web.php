@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Routes;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Mesures\AppetitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,10 @@ Route::post('/pets/store', [PetController::class, 'store'])->name('pets.store');
 
 Route::resource('pets', PetController::class);
 
+Route::get('user/profile', [UserController::class, 'index'])->name('user.index');
+Route::get('user/profile/edit', [UserController::class, 'edit'])->name('user.edit-profile');
+Route::put('user/profile/edit', [UserController::class, 'update'])->name('user.update-profile');
 
-Route::get('user', [UserController::class, 'index'])->name('user.index');
-Route::get('user/profile', [UserController::class, 'edit'])->name('user.edit-profile');
-Route::put('user/profile', [UserController::class, 'update'])->name('user.update-profile');
+Route::view('pets/{id}/mesures', 'mesures.index')->name('mesures');
+
+Route::get('pets/{id}/mesures/appetit', [AppetitController::class, 'index'])->name('appetit');

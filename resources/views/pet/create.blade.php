@@ -27,17 +27,6 @@
 
       <form method="post" action="{{ route('pets.store') }}" enctype="multipart/form-data">
          @csrf
-         <div class="form-row align-items-center">
-            <div class="form-group col-auto my-1">
-                <label class="mr-sm-2" for="type ">Type:</label>
-                <select class="custom-select mr-sm-2" name="type" id="type">
-                  <option selected>Choose...</option>
-                  <option value="none">None</option>
-                  <option value="cat">Cat</option>
-                  <option value="dog">Dog</option>
-                </select>
-            </div>
-          </div>
 
           <div class="form-group">
               <label for="name">Name:</label>
@@ -45,7 +34,7 @@
           </div>
 
           <label for="birth">Birth date:</label>
-          <input type="date" id="birth" name="birth" class="birth-form" value="{{ old('birth') }}">
+          <input type="date" id="birth" name="birth" class="birth-form">
 
           <div class="form-group">
               <label for="sex">Sex:</label>

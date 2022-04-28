@@ -72,17 +72,38 @@ class UserController extends Controller
      */
     public function update(UpdateProfileRequest $request)
     {
+        // $user = auth()->user();
+
+
+        //     $path = $request->file('image')->store('public/images');
+        //     $user->image = $path;
+
+
+        // $user->update([
+        //     'name' => $request->name,
+        //     'about' => $request->about,
+        //     'image' => $request->image
+        // ]);
+
+
+        // return redirect('/user/profile')->with('success', 'User modifié avec succèss');
+
+
+
+
         $user = auth()->user();
 
-        $user->update([
-            'name' => $request->name,
-            'about' => $request->about
-        ]);
+        if($request->hasFile('image')){
+            $path = $request->file('image')->store('public/images');
+            $user->image = $path;
+        }
 
+        $user->name = $request->name;
+        $user->about = $request->about;
 
-        $request->session()->now('status', 'User updated successfully');
+        $user->save();
 
-        return redirect()->back();
+        return redirect('/user/profile')->with('success', 'Animal mis à jour avec succèss');
     }
 
     /**

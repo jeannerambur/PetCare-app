@@ -51,12 +51,16 @@ class PetController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'birth' => 'required',
+            'image' => 'required'
+        ]);
+
         $path = $request->file('image')->store('public/images');
         $pet = new Pet;
 
         $pet->name = $request->name;
         $pet->user_id = Auth::id();
-        $pet->type = $request->type;
         $pet->sex = $request->sex;
         $pet->birth = $request->birth;
         $pet->image = $path;
@@ -64,7 +68,6 @@ class PetController extends Controller
         $pet->updated_at = now();
 
         $pet->save();
-
 
         return redirect('/pets')->with('success', 'Animal créer avec succèss');
     }
@@ -90,6 +93,7 @@ class PetController extends Controller
      */
     public function edit($id)
     {
+
         $pet = Pet::findOrFail($id);
 
         return view('pet/edit', compact('pet'));
@@ -115,20 +119,11 @@ class PetController extends Controller
 
         $pet->name = $request->name;
         $pet->user_id = Auth::id();
-        $pet->type = $request->type;
         $pet->sex = $request->sex;
         $pet->birth = $request->birth;
         $pet->updated_at = now();
 
         $pet->save();
-
-        // Pet::whereId($id)->update([
-        //     "name" => $request->name,
-        //     "type" => $request->type,
-        //     "sex" => $request->sex,
-        //     "date_of_birth" => $request->date_of_birth->format('Y-m-d'),
-        //     "updated_at" => now()
-        // ]);
 
         return redirect('/pets')->with('success', 'Animal mis à jour avec succèss');
     }
