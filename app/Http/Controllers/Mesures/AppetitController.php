@@ -16,7 +16,8 @@ class AppetitController extends Controller
      */
     public function index($id)
     {
-        return view('mesures.appetit.index');
+       $appetits = Appetit::where('pet_id',$id)->get();
+       return view('mesures.appetit.index', compact('appetits'));
     }
 
     /**
@@ -26,7 +27,7 @@ class AppetitController extends Controller
      */
     public function create()
     {
-        //
+        return view('mesures.appetit.create');
     }
 
     /**
@@ -35,9 +36,20 @@ class AppetitController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
+        $appetit = new Appetit;
 
+        $appetit->appetit = $request->appetit;
+        $appetit->pet_id = $id;
+        $appetit->date = $request->date;
+        $appetit->heure = $request->heure;
+        $appetit->created_at = now();
+        $appetit->updated_at = now();
+
+        $appetit->save();
+
+        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'appetit créer avec succèss');
     }
 
     /**
@@ -46,9 +58,11 @@ class AppetitController extends Controller
      * @param  \App\Models\Appetit  $appetit
      * @return \Illuminate\Http\Response
      */
-    public function show(Appetit $appetit)
+    public function show($id)
     {
-       //
+        $appetit = Appetit::find($id);
+        return view('mesures.appetit.show')->with('appetit', $appetit);
+
     }
 
     /**
@@ -57,9 +71,11 @@ class AppetitController extends Controller
      * @param  \App\Models\Appetit  $appetit
      * @return \Illuminate\Http\Response
      */
-    public function edit(Appetit $appetit)
+    public function edit($id)
     {
-        //
+        $appetit = Appetit::findOrFail($id);
+
+        return view('mesures.appetit.edit', compact('appetit'));
     }
 
     /**
@@ -69,9 +85,21 @@ class AppetitController extends Controller
      * @param  \App\Models\Appetit  $appetit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Appetit $appetit)
+    public function update(Request $request, $id)
     {
-        //
+
+        //Dd($request->all());
+        $appetit = Appetit::find($id);
+
+        $appetit->appetit = $request->appetit;
+        $appetit->date = $request->date;
+        $appetit->heure = $request->heure;
+        $appetit->updated_at = now();
+
+        $appetit->save();
+
+        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'appetit modifié avec succèss');
+
     }
 
     /**
@@ -80,8 +108,11 @@ class AppetitController extends Controller
      * @param  \App\Models\Appetit  $appetit
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Appetit $appetit)
+    public function destroy($id)
     {
-        //
+        $appetit = Appetit::findOrFail($id);
+        $appetit->delete();
+
+        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'Appetit supprimer avec succèss');
     }
 }

@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Appetit extends Model
 {
     use HasFactory;
-    protected $fillable = ['appetit','pet_id', 'date', 'heure', 'documents'];
+    protected $fillable = ['appetit','pet_id', 'date', 'heure'];
 }

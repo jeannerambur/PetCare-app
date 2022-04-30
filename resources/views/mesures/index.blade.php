@@ -2,16 +2,15 @@
 
 @section('content')
 
-<div class="container-home-page">
+<div class="container-mesures-page">
 
     <div class="button-mesures">
-        <div class="button-appetit"></div>
-        <a href="{{ route('appetit', $pet->id)}}">Appetit</a>
+        <div class="button-appetit">
+            <a href="{{ route('appetit', Route::current()->parameter('id'))}}">Appetit</a>
         </div>
 
         <div class="button-poids">
-          <button onclick="window.location.href = '/';">Poids</button>
-        </div>
+            <a href="{{ route('poids', Route::current()->parameter('id'))}}">Poids</a>
         </div>
     </div>
 </div>

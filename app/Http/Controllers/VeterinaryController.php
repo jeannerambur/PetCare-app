@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Veterinary;
 use Illuminate\Http\Request;
-use App\Http\Requests\User\UpdateProfileRequest;
 
-class UserController extends Controller
+class VeterinaryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
-        return view('user/index')->with('user', User::all());
+       $veterinary = Veterinary::where('pet_id',$id)->get();
+       return view('veterinary.index', compact('veterinary'));
     }
 
     /**
@@ -59,8 +58,7 @@ class UserController extends Controller
      */
     public function edit()
     {
-        //
-        return view('user.edit')->with('user', auth()->user());
+        
     }
 
     /**
@@ -72,21 +70,7 @@ class UserController extends Controller
      */
     public function update(UpdateProfileRequest $request)
     {
-        
 
-        $user = auth()->user();
-
-        if($request->hasFile('image')){
-            $path = $request->file('image')->store('public/images');
-            $user->image = $path;
-        }
-
-        $user->name = $request->name;
-        $user->about = $request->about;
-
-        $user->save();
-
-        return redirect('/user/profile')->with('success', 'Animal mis à jour avec succèss');
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppetitsTable extends Migration
+class CreatePoidsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateAppetitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('appetits', function (Blueprint $table) {
+        Schema::create('poids', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger("pet_id");
-            $table->string("appetit");
+            $table->string("poids");
             $table->dateTime('date');
-            $table->string('heure')->nullable();
 
             $table->timestamps();
 
@@ -33,6 +32,6 @@ class CreateAppetitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appetits');
+        Schema::dropIfExists('poids');
     }
 }

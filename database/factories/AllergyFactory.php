@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class AppetitFactory extends Factory
+class AllergyFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,10 +15,10 @@ class AppetitFactory extends Factory
     public function definition()
     {
         return [
-            'appetit'=> 'bof',
+            'type'=> 'Rage',
             'pet_id'=> 1,
-            'date' => '2021-02-28',
-            'heure' => '12'
+            'name' => 'rage',
+            'date' => '2021-02-28'
         ];
     }
 }

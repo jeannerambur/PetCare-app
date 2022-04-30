@@ -26,7 +26,7 @@
 
 
         <div class="sante">
-            <a href="/">
+            <a href="{{ route('health', $pet->id)}}">
                 <div class="button">
                 </div>
                 <p>Santé</p>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="veterinaire">
-            <a href="/">
+            <a href="{{ route('veterinary', $pet->id)}}">
                 <div class="button">
                 </div>
                 <p>Veterinaire</p>
