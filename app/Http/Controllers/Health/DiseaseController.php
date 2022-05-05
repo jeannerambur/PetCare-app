@@ -58,10 +58,12 @@ class DiseaseController extends Controller
      * @param  \App\Models\Disease  $disease
      * @return \Illuminate\Http\Response
      */
-    public function show(Disease $disease)
+    public function show($id)
     {
-        //
+        $disease = Disease::find($id);
+        return view('health.diseases.show')->with('disease', $disease);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -89,7 +91,6 @@ class DiseaseController extends Controller
          $disease = Disease::find($id);
 
          $disease->type = $request->type;
-         $disease->pet_id = $id;
          $disease->name = $request->name;
          $disease->begin_date = $request->begin_date;
          $disease->healing_date = $request->healing_date;

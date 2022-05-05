@@ -2,6 +2,10 @@
 
 @section('content')
 
+<navbarmesures :title="'Add Appetit'"></navbarmesures>
+
+
+
   <div class="pet-details">
     <div class="card-pet-detail">
         <div class="pet-container">

@@ -11,6 +11,7 @@ use App\Models\Appetit;
 use App\Models\Veterinary;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Treatment;
 
 class DatabaseSeeder extends Seeder
 {
@@ -57,6 +58,13 @@ class DatabaseSeeder extends Seeder
             'pet_id'=> 1,
 			'wound_date' => '2021-02-28',
 			'healing_date' => '2021-04-28'
+		]);
+
+		Treatment::create([
+            'name'=> 'Pensement',
+            'pet_id'=> 1,
+			'date' => '2021-02-28',
+			'quantite' => '2'
         ]);
 
 		Appetit::factory()->count(3)->create();

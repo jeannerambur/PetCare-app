@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<navbarmesures :title="'Mesures'"></navbarmesures>
 
 <div class="container-mesures-page">
 

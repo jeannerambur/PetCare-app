@@ -57,9 +57,10 @@ class WoundController extends Controller
      * @param  \App\Models\Wound  $wound
      * @return \Illuminate\Http\Response
      */
-    public function show(Wound $wound)
+    public function show($id)
     {
-        //
+        $wound = Wound::find($id);
+        return view('health.wound.show')->with('wound', $wound);
     }
 
     /**

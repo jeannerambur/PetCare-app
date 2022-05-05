@@ -6,23 +6,14 @@
 
 @foreach($diseases as $disease)
 <div class="container-appetit">
+<a href="{{ route('diseases.show', $disease->id)}}">
     <div class="appetit-card">
         <div class="date-appetit">
             <h1>{{ $disease->name}}</h1>
         </div>
     </div>
-
+</a>
 <div>
-
-
-<div class="edit-pet">
-        <a href="{{ route('diseases.edit', $disease->id)}}" class="btn btn-primary">Edit</a>
-        <form action="{{ route('diseases.destroy', $disease->id)}}" method="post">
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger" type="submit">Delete</button>
-        </form>
-    </div>
 
 @endforeach
 

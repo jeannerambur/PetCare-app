@@ -1,8 +1,10 @@
-<!-- create.blade.php -->
-
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
+
+
+<navbarpets :title="'Add Pets'" :color="blue"></navbarpets>
+
 <style>
   .uper {
     margin-top: 40px;

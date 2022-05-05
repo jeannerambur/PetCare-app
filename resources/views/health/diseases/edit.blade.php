@@ -13,7 +13,7 @@
     Modifier la Blessure
   </div>
 
-  <form method="post" action="{{ route('diseases.update', $disease->id ) }}" enctype="multipart/form-data">
+  <form method="post" action="{{ route('diseases.update-disease', $disease->id ) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 

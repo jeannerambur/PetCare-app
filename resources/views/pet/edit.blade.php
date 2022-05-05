@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+<navbarpets :title="'Edit Pets'" :color="blue"></navbarpets>
+
 <style>
   .uper {
     margin-top: 40px;

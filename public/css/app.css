@@ -675,6 +675,7 @@ progress {
   width: 100%;
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -4502,6 +4503,17 @@ textarea.form-control-lg {
   color: #fff;
 }
 
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -11274,369 +11286,633 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-
-.login-title, .register-title {
-  font-size: 36px;
+.pet-details {
+  margin-top: 4%;
 }
-
-.container-login, .container-register {
-  padding-left: 35px;
-  margin-top: 50%;
+.pet-details .card-pet-detail {
+  width: 80%;
+  margin-left: 10%;
 }
-
-.login-subtitle, .username-subtitle {
-  font-size: 18px;
-  color: black;
-  opacity: 0.5;
+.pet-details .card-pet-detail .pet-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 3%;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px grey;
 }
-
-.no-account, .has-account {
-  position: absolute;
-  top: auto;
-  bottom: 2%;
-  margin-left: 20%;
+.pet-details .card-pet-detail .pet-container .pet-img {
+  width: 100%;
+  height: 155px;
 }
-
-.has-account-home {
-  position: absolute;
-  top: auto;
-  bottom: 2%;
-  margin-left: 30%;
+.pet-details .card-pet-detail .pet-container .pet-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.pet-details .care-button {
   display: flex;
   flex-direction: row;
-  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.5%;
+}
+.pet-details .care-button .mesures, .pet-details .care-button .sante, .pet-details .care-button .soins,
+.pet-details .care-button .hygiene, .pet-details .care-button .veterinaire {
+  width: 38%;
+  background-color: white;
+  border-radius: 9px;
+  padding: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin: 2.5% 5%;
+  box-shadow: 1px 2px 5px grey;
+}
+.pet-details .care-button .mesures a, .pet-details .care-button .sante a, .pet-details .care-button .soins a,
+.pet-details .care-button .hygiene a, .pet-details .care-button .veterinaire a {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  text-decoration: none;
+}
+.pet-details .care-button .mesures a .button, .pet-details .care-button .sante a .button, .pet-details .care-button .soins a .button,
+.pet-details .care-button .hygiene a .button, .pet-details .care-button .veterinaire a .button {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+.pet-details .care-button .mesures a p, .pet-details .care-button .sante a p, .pet-details .care-button .soins a p,
+.pet-details .care-button .hygiene a p, .pet-details .care-button .veterinaire a p {
+  align-self: center;
+  padding-left: 8%;
+  margin: 0;
+}
+.pet-details .care-button .mesures .button {
+  background-color: #F2CA80;
+}
+.pet-details .care-button .sante .button {
+  background-color: #F2865E;
+}
+.pet-details .care-button .soins .button {
+  background-color: #B1A7F2;
+}
+.pet-details .care-button .hygiene .button {
+  background-color: #FFB5B1;
+}
+.pet-details .care-button .veterinaire .button {
+  background-color: #63A5F1;
+}
+.pet-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12%;
+}
+.pet-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.pet-details .edit-pet form {
+  width: 40%;
+}
+.pet-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
 }
 
-.login-home {
-  padding-left: 2%;
+.container-mesures-page {
+  height: calc(100vh - 100px);
+}
+.container-mesures-page .button-mesures {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+.container-mesures-page .button-mesures .button-appetit, .container-mesures-page .button-mesures .button-poids {
+  width: 55%;
+  padding: 4%;
+  background-color: #F2CA80;
+  opacity: 0.8;
+  border-radius: 9px;
+  box-shadow: 1px 2px 5px grey;
+}
+.container-mesures-page .button-mesures .button-appetit a, .container-mesures-page .button-mesures .button-poids a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+.container-mesures-page .button-mesures .button-allergies, .container-mesures-page .button-mesures .button-wound,
+.container-mesures-page .button-mesures .button-diseases {
+  width: 55%;
+  padding: 4%;
+  background-color: #F2865E;
+  opacity: 0.8;
+  border-radius: 9px;
+  box-shadow: 1px 2px 5px grey;
+  margin-top: 8.8%;
+}
+.container-mesures-page .button-mesures .button-allergies a, .container-mesures-page .button-mesures .button-wound a,
+.container-mesures-page .button-mesures .button-diseases a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+.container-mesures-page .button-mesures .button-allergies {
+  margin-top: 0;
+}
+.container-mesures-page .button-mesures .button-poids {
+  margin-top: 8.8%;
+}
+
+.container-care-page {
+  height: calc(100vh - 100px);
+}
+.container-care-page .button-care {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+.container-care-page .button-care .button-parasites, .container-care-page .button-care .button-wound,
+.container-care-page .button-care .button-vaccines, .container-care-page .button-care .button-vermifuge {
+  width: 55%;
+  padding: 4%;
+  background-color: #B1A7F2;
+  opacity: 0.8;
+  border-radius: 9px;
+  box-shadow: 1px 2px 5px grey;
+  margin-top: 8.8%;
+}
+.container-care-page .button-care .button-parasites a, .container-care-page .button-care .button-wound a,
+.container-care-page .button-care .button-vaccines a, .container-care-page .button-care .button-vermifuge a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+.container-care-page .button-care .button-parasites {
+  margin-top: 0 !important;
+}
+
+.container-hygiene-page {
+  height: calc(100vh - 100px);
+}
+.container-hygiene-page .button-hygiene {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+.container-hygiene-page .button-hygiene .button-baths, .container-hygiene-page .button-hygiene .button-claws,
+.container-hygiene-page .button-hygiene .button-foods, .container-hygiene-page .button-hygiene .button-grooming,
+.container-hygiene-page .button-hygiene .button-litters, .container-hygiene-page .button-hygiene .button-teeth {
+  width: 55%;
+  padding: 4%;
+  background-color: #FFB5B1;
+  opacity: 0.8;
+  border-radius: 9px;
+  box-shadow: 1px 2px 5px grey;
+  margin-top: 8.8%;
+}
+.container-hygiene-page .button-hygiene .button-baths a, .container-hygiene-page .button-hygiene .button-claws a,
+.container-hygiene-page .button-hygiene .button-foods a, .container-hygiene-page .button-hygiene .button-grooming a,
+.container-hygiene-page .button-hygiene .button-litters a, .container-hygiene-page .button-hygiene .button-teeth a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+.container-hygiene-page .button-hygiene .button-baths {
+  margin-top: 0 !important;
+}
+
+.start-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 30px);
+  padding-bottom: 6%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.start-container .get-started  {
+  text-align: center;
+  width: 35%;
+  background-color: #827EF2;
+  padding: 2%;
+  border-radius: 9px;
+}
+.start-container .get-started  a {
+  color: white;
+  font-size: 18px;
+}
+.start-container .has-account-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 17.6%;
+}
+.start-container .has-account-home .account {
+  margin-right: 2%;
+}
+
+.container-login {
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 45px);
+  justify-content: center;
+  align-items: center;
+}
+.container-login .login {
+  width: 100%;
+}
+.container-login .login .login-title {
+  font-size: 36px;
+  font-weight: 600;
+}
+.container-login .login .login-subtitle {
+  font-size: 18px;
+  opacity: 0.5;
+}
+.container-login .login .card-body {
+  margin-top: 14%;
+  flex: 0;
+  padding: 0;
+}
+.container-login .login .card-body .form .form-email {
+  display: flex;
+  flex-direction: row;
+}
+.container-login .login .card-body .form .form-email .reset-password {
+  position: absolute;
+  right: 12%;
+  margin-top: 4%;
+  top: auto;
+  font-weight: bold;
+  font-size: 12px;
   color: #F2865E;
+  text-decoration: none;
+}
+.container-login .login .card-body .form .form-email #email, .container-login .login .card-body .form .form-email #password {
+  box-shadow: 1px 5px 5px lightgrey;
+  padding: 4%;
+  background-color: #fff;
+  border: none;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.container-login .login .card-body .button-login .button-submit {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.container-login .login .card-body .button-login .button-submit .submit {
+  width: 40%;
+  border: none;
+  background-color: #827EF2;
+  color: #fff;
+  padding: 2% 0;
+  font-size: 18px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+.no-account {
+  padding-bottom: 1%;
+}
+.no-account > div {
+  text-align: center;
+  font-size: 18px;
+}
+.no-account > div a {
+  color: #F2865E;
+  text-decoration: none;
+}
+
+.container-register {
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 45px);
+  justify-content: center;
+  align-items: center;
+}
+.container-register .register {
+  width: 100%;
+}
+.container-register .register .register-title {
+  font-size: 36px;
+  font-weight: 600;
+}
+.container-register .register .card-body {
+  margin-top: 14%;
+  flex: 0;
+  padding: 0;
+}
+.container-register .register .card-body #name, .container-register .register .card-body #email, .container-register .register .card-body #password, .container-register .register .card-body #password-confirm {
+  box-shadow: 1px 5px 5px lightgrey;
+  padding: 4%;
+  background-color: #fff;
+  border: none;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.container-register .register .card-body .button-submit {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.container-register .register .card-body .button-submit .btn-submit {
+  width: 40%;
+  border: none;
+  background-color: #827EF2;
+  color: #fff;
+  padding: 2% 0;
+  font-size: 18px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+.has-account {
+  padding-bottom: 1%;
+}
+.has-account > div {
+  text-align: center;
+  font-size: 18px;
+}
+.has-account > div a {
+  color: #F2865E;
+  text-decoration: none;
+}
+
+.container-appetit .container {
+  margin-top: 6.4%;
+}
+.container-appetit .container:first-child {
+  margin-top: 18%;
+}
+.container-appetit .appetit-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+
+.add-appetit {
+  text-align: center;
+  margin-top: 10%;
+  padding-bottom: 5%;
+}
+.add-appetit a {
+  padding: 2% 7%;
+  background-color: #827EF2;
+  border-color: transparent;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.create-appetit .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-appetit .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-appetit .card-body form .form-appetit .appetit {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-appetit .card-body form .form-appetit #appetit {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-appetit .card-body form .form-heure {
+  margin-top: 6%;
+}
+.create-appetit .card-body form .form-heure .heure {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-appetit .card-body form .form-heure #heure {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-appetit .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-appetit .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.edit-appetit .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-appetit .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-appetit .card-body form .form-appetit .appetit {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-appetit .card-body form .form-appetit #appetit {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-appetit .card-body form .form-heure {
+  margin-top: 6%;
+}
+.edit-appetit .card-body form .form-heure .heure {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-appetit .card-body form .form-heure #heure {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-appetit .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.edit-appetit .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.container {
+  padding: 0 !important;
+}
+
+.white--text {
+  color: white;
+}
+
+body {
+  background-color: #F2F2F2;
 }
 
 .container-home-page {
-  margin-top: 20%;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 5% 5% 0 5%;
 }
-
-.username {
+.container-home-page .presentation .username-hi {
   font-size: 24px;
-  font-weight: 300;
 }
-
-.username strong {
+.container-home-page .presentation .username-subtitle {
+  font-size: 18px;
+  opacity: 0.5;
+}
+.container-home-page .presentation .button-health {
+  display: flex;
+  flex-direction: row;
+  margin-top: 11%;
+}
+.container-home-page .presentation .button-health .button-soins, .container-home-page .presentation .button-health .button-sante,
+.container-home-page .presentation .button-health .button-mesure, .container-home-page .presentation .button-health .button-hygiene {
+  width: 55px;
+  height: 55px;
+  border-radius: 9px;
+  box-shadow: 1px 2px 5px grey;
+}
+.container-home-page .presentation .button-health .button-soins button, .container-home-page .presentation .button-health .button-sante button,
+.container-home-page .presentation .button-health .button-mesure button, .container-home-page .presentation .button-health .button-hygiene button {
+  width: 100%;
+  height: 100%;
+}
+.container-home-page .presentation .button-health .button-soins p, .container-home-page .presentation .button-health .button-sante p,
+.container-home-page .presentation .button-health .button-mesure p, .container-home-page .presentation .button-health .button-hygiene p {
+  text-align: center;
+  font-size: 12px;
   font-weight: 600;
 }
-
-.pets-card {
-  margin-top: 30%;
+.container-home-page .presentation .button-health .button-soins {
+  background-color: #B1A7F2;
+  margin-right: 9%;
+}
+.container-home-page .presentation .button-health .button-sante {
+  background-color: #F2865E;
+  margin-right: 9%;
+}
+.container-home-page .presentation .button-health .button-mesure {
+  background-color: #F2CA80;
+  margin-right: 9%;
+}
+.container-home-page .presentation .button-health .button-hygiene {
+  background-color: #FFB5B1;
+}
+.container-home-page .pets-card {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  display: flex;
+  margin-top: 20%;
 }
-
-.my-pets {
+.container-home-page .pets-card .my-pets {
   font-size: 24px;
 }
-.button-add-pet {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 100px;
-  outline: none;
-  background: #F2865E;
+.container-home-page .pets-card button {
+  width: 33px;
+  height: 33px;
   color: white;
-  cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-.add-pet {
-  margin-top: 10%;
-}
-.add-pet-title {
-  font-size: 18px;
-  text-align: center;
-}
-
-.get-started {
-  position: absolute;
-  top: auto;
-  bottom: 10%;
-  margin-left: 30%;
-  display:inline-block;
-  color:#444;
-  background:#827EF2;
-  box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
-  cursor:pointer;
-  vertical-align:middle;
-  padding: 10px 23px;
-  text-align: center;
-  border-radius: 9px;
-}
-
-.get-started a {
-  color: #ffffff;
-  font-size: 18px;
-}
-
-
-.button-health {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 34px;
-}
-
-.button-soins > button{
-  border: none;
-  border-radius: 5px;
-  padding: 30px;
-  background-color: #B1A7F2;
-}
-
-.button-sante > button{
-  border: none;
-  border-radius: 5px;
-  padding: 30px;
   background-color: #F2865E;
+  border-radius: 20px;
 }
 
-.button-mesure > button{
-  border: none;
-  border-radius: 5px;
-  padding: 30px;
-  background-color: #F2CA80;
-}
-
-.button-hygiene > button{
-  border: none;
-  border-radius: 5px;
-  padding: 30px;
-  background-color: #FFB5B1;
-}
-
-.cards-pets {
+.uper .cards-pets {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 15%;
   flex-wrap: wrap;
 }
-
-.card-pet {
-  width: 45%;
-  background-color: #ffffff;
-  padding: 2px;
-  border-radius: 5px;
-  margin: 2%;
-}
-
-.card-pet > a {
-  color: #000;
-  text-decoration: none;
-}
-
-.card-pet-detail {
-  width: 80%;
-  background-color: #ffffff;
-  padding: 2px;
-  border-radius: 5px;
-  margin: 0 5%;
-}
-
-.pet-img {
-  position: relative;
-  height: 150px;
-  width: 100%;
-}
-
-.pet-img > img {
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-  border-radius: 5px;
-  object-position: center;
-}
-
-.pet-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 12%;
-}
-
-.pet-name {
-  padding-top: 10%;
-}
-
-.pet-name > h4 {
-  padding: 0 20px;
-
-}
-
-.care-button {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.mesures,
-.sante,
-.soins,
-.hygiene,
-.veterinaire {
-  width: 45%;
-  background-color: white;
-  margin-top: 5%;
-  margin-right: 5%;
-  border-radius: 5px;
-  box-shadow: 5px 5px 12px #aaa;
-}
-
-.mesures > a,
-.sante > a,
-.soins > a,
-.hygiene > a,
-.veterinaire > a {
-  display: flex;
-  flex-direction: row;
-  height: 53px;
-  color: black;
-  text-decoration: none;
-}
-
-.mesures > a > .button,
-.sante > a > .button,
-.soins > a >  .button,
-.hygiene > a >  .button,
-.veterinaire > a >  .button {
-  border: none;
-  width: 25%;
-  border-radius: 5px;
-  margin: 3%;
-}
-
-.mesures > a > .button {
-  background-color: #F2CA80;
-}
-
-.sante > a >  .button {
-  background-color: #F2865E;
-}
-
-.soins > a >  .button {
-  background-color: #B1A7F2;
-}
-
-.hygiene > a >  .button {
-  background-color: #FFB5B1;
-}
-
-.veterinaire > a >  .button {
-  background-color: #63A5F1;
-}
-
-
-.mesures > a > p,
-.sante > a >  p ,
-.soins > a >  p,
-.hygiene > a >  p,
-.veterinaire > a >  p {
-  align-self: center;
-}
-
-.container-user-profile {
-  width: 100%;
-  position: relative;
-  text-align: center;
-  margin-top: 15%;
-}
-
-.user-img > img {
-  border-radius: 45px;
-}
-
-.general-infos {
-  margin-top: 15%;
-  text-align: left;
-  margin-left: 10%;
-}
-
-.username {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.username > .logo {
+.uper .cards-pets .card-pet {
+  margin: 9% 3% 0 3%;
   width: 40%;
-  font-size: 18px;
 }
-
-.username > .name {
-  font-size: 18px;
-}
-
-.description {
-  position: relative;
-  width: 95%;
-  padding: 2% 4%;
-  background-color: white;
-  border-radius: 10px;
-  margin-top: 2%;
-}
-
-p {
-  margin-bottom: 0;
-}
-
-.contact-infos {
-  margin: 11% 0 0 10%;
-}
-
-.contact-infos > .title {
-  text-align: left;
-}
-
-.contact {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.button-mesures {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: calc(100vh - 40px);
-  justify-content: center;
-}
-
-.button-appetit, .button-poids {
-  padding: 5%;
-  margin: 3%;
-  width: 60%;
-  text-align: center;
-  background-color: #F2CA80;
-  border-radius: 5px;
-  box-shadow: 1px 5px 5px rgb(0 0 0 / 28%);
-}
-
-.button-appetit > a, .button-poids > a {
-  color: white;
+.uper .cards-pets .card-pet a {
+  color: #000000;
   text-decoration: none;
 }
-
-.container-appetit {
+.uper .cards-pets .card-pet a .pet-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.appetit-card {
-  position: relative;
-  width: 90%;
-  text-align: center;
+  padding: 3%;
+  border-radius: 5px;
   background-color: white;
-  padding: 5% 9%;
-  box-shadow: 3px 2px 12px grey;
+}
+.uper .cards-pets .card-pet a .pet-container .pet-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 115px;
+}
+.uper .cards-pets .card-pet a .pet-container .pet-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+}
+.uper .cards-pets .card-pet a .pet-container .pet-name {
+  padding: 4% 1%;
+}
+.uper .cards-pets .card-pet a .pet-container .pet-name p {
+  font-size: 20px;
 }

@@ -2,6 +2,8 @@
 
 @section('content')
 
+<navbarmesures :title="'Poids'"></navbarmesures>
+
 <a href="{{ route('poids.create-poids', Route::current()->parameter('id'))}}" class="btn btn-primary">Add</a>
 
 

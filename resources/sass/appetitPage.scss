@@ -1,0 +1,154 @@
+.container-appetit {
+    .container {
+        &:first-child {
+            margin-top: 18%;
+        }
+        margin-top: 6.4%;
+    }
+
+    .appetit-card {
+        width: 88%;
+        margin-left: 6%;
+        background-color: #fff;
+        border-radius: 9px;
+        padding: 2.5% 6%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.add-appetit {
+    text-align: center;
+    margin-top: 10%;
+    padding-bottom: 5%;
+
+    a {
+        padding: 2% 7%;
+        background-color: #827EF2;
+        border-color: transparent;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+}
+
+.create-appetit {
+    .card-body {
+        margin-top: 15%;
+        flex: 0;
+        padding: 0;
+
+        form {
+            width: 80%;
+            margin-left: 10%;
+
+            .form-appetit {
+                .appetit {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #appetit {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+            .form-heure {
+                margin-top: 6%;
+                .heure {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #heure {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+            .btn-submit {
+                text-align: center;
+                margin-top: 50%;
+                button {
+                    color: #fff;
+                    background-color: #827EF2;
+                    padding: 3% 8%;
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 8px;
+                    box-shadow: 1px 5px 8px lightgrey;
+                }
+            }
+        }
+    }
+
+
+}
+
+.edit-appetit {
+    .card-body {
+        margin-top: 15%;
+        flex: 0;
+        padding: 0;
+
+        form {
+            width: 80%;
+            margin-left: 10%;
+
+            .form-appetit {
+                .appetit {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #appetit {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+            .form-heure {
+                margin-top: 6%;
+                .heure {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #heure {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+            .btn-submit {
+                text-align: center;
+                margin-top: 50%;
+                button {
+                    color: #fff;
+                    background-color: #827EF2;
+                    padding: 3% 8%;
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 8px;
+                    box-shadow: 1px 5px 8px lightgrey;
+                }
+            }
+        }
+    }
+}

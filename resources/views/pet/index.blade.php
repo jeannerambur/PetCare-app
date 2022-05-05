@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+<navbarpets :title="'Pets'" :color="blue"></navbarpets>
+
 <style>
   .uper {
     margin-top: 40px;
@@ -22,6 +25,7 @@
 </style>
 
 <div class="container-home-page">
+
     <div class="presentation">
         <div class="username-hi">
             Hi <strong>{{ Auth::user()->name }}</strong>
@@ -33,18 +37,22 @@
     <div class="button-health">
         <div class="button-soins">
           <button onclick="window.location.href = '/pets';"></button>
+          <p>Soins</p>
         </div>
 
         <div class="button-sante">
           <button onclick="window.location.href = '/pets';"></button>
+          <p>Santé</p>
         </div>
 
         <div class="button-mesure">
           <button onclick="window.location.href = '/pets';"></button>
+          <p>Mesures</p>
         </div>
 
         <div class="button-hygiene">
           <button onclick="window.location.href = '/pets';"></button>
+          <p>Hygiène</p>
         </div>
 
     </div>
@@ -77,7 +85,7 @@
           <img src="{{ Storage::url($pet->image) }}" height="75" width="75" alt="" />
           </div>
           <div class="pet-name">
-            <h4><b>{{$pet->name}}</b></h4>
+            <p>{{$pet->name}}</p>
           </div>
         </div>
         </a>

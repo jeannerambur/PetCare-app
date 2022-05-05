@@ -1,0 +1,33 @@
+.container-care-page {
+    height: calc(100vh - 100px);
+
+    .button-care {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+
+        .button-parasites, .button-wound,
+        .button-vaccines, .button-vermifuge {
+            width: 55%;
+            padding: 4%;
+            background-color: #B1A7F2;
+            opacity: 0.8;
+            border-radius: 9px;
+            box-shadow: 1px 2px 5px grey;
+            margin-top: 8.8%;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+        .button-parasites {
+            margin-top: 0 !important;
+        }
+    }
+}

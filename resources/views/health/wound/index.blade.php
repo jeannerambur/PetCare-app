@@ -6,23 +6,14 @@
 
 @foreach($wounds as $wound)
 <div class="container-appetit">
+<a href="{{ route('wounds.show', $wound->id)}}">
     <div class="appetit-card">
         <div class="date-appetit">
             <h1>{{ $wound->name}}</h1>
         </div>
     </div>
-
+</a>
 <div>
-
-
-<div class="edit-pet">
-        <a href="{{ route('wounds.edit', $wound->id)}}" class="btn btn-primary">Edit</a>
-        <form action="{{ route('wounds.destroy', $wound->id)}}" method="post">
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger" type="submit">Delete</button>
-        </form>
-    </div>
 
 @endforeach
 

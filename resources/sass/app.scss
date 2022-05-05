@@ -6,3 +6,140 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// pet details
+@import 'petDetails';
+@import 'mesuresPage';
+@import 'carePage';
+@import 'hygienePage';
+@import 'startPage';
+@import 'loginPage';
+@import 'registerPage';
+@import 'appetitPage';
+
+.container {
+    padding: 0 !important;
+}
+.white--text {
+    color: white;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+.container-home-page {
+    padding: 5% 5% 0 5%;
+
+    .presentation {
+        .username-hi {
+            font-size: 24px;
+        }
+        .username-subtitle {
+            font-size: 18px;
+            opacity: 0.5;
+        }
+
+        .button-health {
+            display: flex;
+            flex-direction: row;
+            margin-top: 11%;
+            .button-soins, .button-sante,
+            .button-mesure, .button-hygiene {
+                width: 55px;
+                height: 55px;
+                border-radius: 9px;
+                box-shadow: 1px 2px 5px grey;
+                button {
+                    width: 100%;
+                    height: 100%;
+                }
+                p {
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 600;
+                }
+            }
+            .button-soins {
+                background-color: #B1A7F2;
+                margin-right: 9%;
+            }
+            .button-sante {
+                background-color: #F2865E;
+                margin-right: 9%;
+            }
+            .button-mesure {
+                background-color: #F2CA80;
+                margin-right: 9%;
+            }
+            .button-hygiene {
+                background-color: #FFB5B1;
+            }
+        }
+    }
+
+    .pets-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20%;
+        .my-pets {
+            font-size: 24px;
+        }
+        button {
+            width: 33px;
+            height: 33px;
+            color: white;
+            background-color: #F2865E;
+            border-radius: 20px;
+        }
+    }
+}
+
+.uper {
+    .cards-pets {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .card-pet {
+            margin: 9% 3% 0 3%;
+            width: 40%;
+
+            a {
+                color: #000000;
+                text-decoration: none;
+
+                .pet-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 3%;
+                    border-radius: 5px;
+                    background-color: white;
+
+                    .pet-img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 115px;
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            border-radius: 5px;
+                            height: 100%;
+                        }
+                    }
+                    .pet-name {
+                        padding: 4% 1%;
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

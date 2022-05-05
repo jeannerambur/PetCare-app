@@ -2,6 +2,8 @@
 
 @section('content')
 
+<navbarpets :title="'Pet Details'"></navbarpets>
+
   <div class="pet-details">
     <div class="card-pet-detail">
         <div class="pet-container">
@@ -9,7 +11,7 @@
             <img src="{{ Storage::url($pet->image) }}" height="75" width="75" alt="" />
             </div>
             <div class='pet-name'>
-                <h4><b>{{$pet->name}}</b></h4>
+                <p>{{$pet->name}}</p>
             </div>
 
         </div>
@@ -34,7 +36,7 @@
         </div>
 
         <div class="soins">
-            <a href="/">
+            <a href="{{ route('care', $pet->id)}}">
                 <div class="button">
                 </div>
                 <p>Soins</p>
@@ -42,7 +44,7 @@
         </div>
 
         <div class="hygiene">
-            <a href="/">
+            <a href="{{ route('hygiene', $pet->id)}}">
                 <div class="button">
                 </div>
                 <p>Hygiène</p>

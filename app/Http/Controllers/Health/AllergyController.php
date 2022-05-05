@@ -58,9 +58,10 @@ class AllergyController extends Controller
      * @param  \App\Models\Allergy  $allergy
      * @return \Illuminate\Http\Response
      */
-    public function show(Allergy $allergy)
+    public function show($id)
     {
-        //
+        $allergy = Allergy::find($id);
+        return view('health.allergies.show')->with('allergy', $allergy);
     }
 
     /**
