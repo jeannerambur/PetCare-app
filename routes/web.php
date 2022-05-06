@@ -35,8 +35,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::post('/pets/store', [PetController::class, 'store'])->name('pets.store');
 
 Route::resource('pets', PetController::class);
