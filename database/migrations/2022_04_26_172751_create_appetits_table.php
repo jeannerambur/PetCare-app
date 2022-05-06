@@ -17,7 +17,7 @@ class CreateAppetitsTable extends Migration
             $table->increments("id");
             $table->unsignedInteger("pet_id");
             $table->string("appetit");
-            $table->dateTime('date');
+            $table->date('date');
             $table->string('heure')->nullable();
 
             $table->timestamps();

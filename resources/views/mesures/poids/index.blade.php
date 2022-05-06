@@ -2,7 +2,8 @@
 
 @section('content')
 
-<navbarmesures :title="'Poids'"></navbarmesures>
+@include('layouts.navbar', ['title'=>'Poids', 'color'=>'#F2CA80'])
+
 
 <a href="{{ route('poids.create-poids', Route::current()->parameter('id'))}}" class="btn btn-primary">Add</a>
 

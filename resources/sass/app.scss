@@ -16,6 +16,7 @@
 @import 'loginPage';
 @import 'registerPage';
 @import 'appetitPage';
+@import 'navbarPage';
 
 .container {
     padding: 0 !important;
@@ -44,6 +45,7 @@ body {
             display: flex;
             flex-direction: row;
             margin-top: 11%;
+            justify-content: center;
             .button-soins, .button-sante,
             .button-mesure, .button-hygiene {
                 width: 55px;

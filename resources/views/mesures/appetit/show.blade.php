@@ -2,8 +2,7 @@
 
 @section('content')
 
-<navbarmesures :title="'Add Appetit'"></navbarmesures>
-
+@include('layouts.navbar', ['title'=>'Appetit', 'color'=>'#F2CA80'])
 
 
   <div class="pet-details">

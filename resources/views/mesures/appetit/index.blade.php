@@ -2,9 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-<navbarmesures :title="'Appetit'"></navbarmesures>
-
-
+@include('layouts.navbar', ['title'=>'Appetit', 'color'=>'#F2CA80'])
 
 <div class="container-appetit">
 @foreach($appetits as $appetit)
@@ -12,7 +10,8 @@
         <a href="{{ route('appetit.show', $appetit->id)}}">
             <div class="appetit-card">
                 <div class="date-appetit">
-                    <p>{{ $appetit->date}}</p>
+
+                    <p>{{ date('d', strtotime($appetit->date)) }}</p>
                 </div>
                 <div class="info-appetit">
                     <div class="appetit">

@@ -1,12 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'Add Poids', 'color'=>'#F2CA80'])
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
+
 
 <div class="card uper">
   <div class="card-header">

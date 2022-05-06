@@ -3,6 +3,9 @@
 @extends('layout')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'Add Poids', 'color'=>'#F2CA80'])
+
+
 <style>
   .uper {
     margin-top: 40px;

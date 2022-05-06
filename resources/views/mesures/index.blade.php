@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<navbarmesures :title="'Mesures'"></navbarmesures>
+@include('layouts.navbar', ['title'=>'Mesures', 'color'=>'#F2CA80'])
+
 
 <div class="container-mesures-page">
 

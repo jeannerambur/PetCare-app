@@ -11,6 +11,21 @@ window.Vue = require('vue').default;
 
 
 import vuetify from './vuetify';
+
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import specific icons */
+import { faAngleLeft, faBars } from '@fortawesome/free-solid-svg-icons'
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* add icons to the library */
+library.add(faAngleLeft, faBars)
+
+/* add font awesome icon component */
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -25,7 +40,7 @@ import vuetify from './vuetify';
 Vue.component('welcome', require('./components/Welcome.vue').default);
 
 Vue.component('navbarpets', require('./components/NavBarPets.vue').default);
-Vue.component('navbarmesures', require('./components/NavBarMesures.vue').default);
+Vue.component('iconcomponent', require('./components/IconComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
