@@ -48,6 +48,8 @@ class AppetitController extends Controller
         $appetit->created_at = now();
         $appetit->updated_at = now();
 
+        Dd($request->all());
+
         $appetit->save();
 
         return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'appetit créer avec succèss');
@@ -89,11 +91,11 @@ class AppetitController extends Controller
     public function update(Request $request, $id)
     {
 
-        //Dd($request->all());
+        Dd($request->all());
         $appetit = Appetit::find($id);
 
         $appetit->appetit = $request->appetit;
-        $appetit->date = $request->date;
+        $appetit->AppetitDate = $request->AppetitDate;
         $appetit->heure = $request->heure;
         $appetit->updated_at = now();
 

@@ -13,6 +13,7 @@
             <div class='pet-name'>
                 <p>{{$pet->name}}</p>
             </div>
+            {{ $pet->created_at->format('d') }}
 
         </div>
       </div>
