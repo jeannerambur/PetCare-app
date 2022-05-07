@@ -2,7 +2,7 @@
 
 @section('content')
 
-<navbarpets :title="'Pet Details'"></navbarpets>
+@include('layouts.navbar', ['title'=>'Pet Details', 'color'=>'#827EF2'])
 
   <div class="pet-details">
     <div class="card-pet-detail">

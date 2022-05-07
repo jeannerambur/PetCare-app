@@ -1,12 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
+@include('layouts.navbar', ['title'=>'Edit Blessure', 'color'=>'#F2865E'])
 
 <div class="card uper">
   <div class="card-header">

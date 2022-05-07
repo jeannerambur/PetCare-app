@@ -2,6 +2,9 @@
 
 @section('content')
 
+@include('layouts.navbar', ['title'=>'Soins', 'color'=>'#B1A7F2'])
+
+
 <div class="container-care-page">
 
     <div class="button-care">

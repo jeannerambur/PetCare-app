@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'Traitements', 'color'=>'#B1A7F2'])
 
 <a href="{{ route('treatments.create-treatment', Route::current()->parameter('id'))}}" class="btn btn-primary">Add</a>
 

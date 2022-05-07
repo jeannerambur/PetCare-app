@@ -3,6 +3,9 @@
 
 @section('content')
 
+@include('layouts.navbar', ['title'=>'Blessure', 'color'=>'#F2865E'])
+
+
   <div class="pet-details">
     <div class="card-pet-detail">
         <div class="pet-container">

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'Vaccines', 'color'=>'#B1A7F2'])
 
 <a href="{{ route('vaccines.create-vaccine', Route::current()->parameter('id'))}}" class="btn btn-primary">Add</a>
 

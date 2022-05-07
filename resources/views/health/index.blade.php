@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'Santé', 'color'=>'#F2865E'])
 
 <div class="container-health-page">
 

@@ -9,20 +9,23 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
-
+import Velocity from 'velocity-animate'
 import vuetify from './vuetify';
+import Burger from './components/Burger'
+
+import "@mdi/font/css/materialdesignicons.css"
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
-import { faAngleLeft, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faBars, faCamera, faVenus, faMars, faPen } from '@fortawesome/free-solid-svg-icons'
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* add icons to the library */
-library.add(faAngleLeft, faBars)
+library.add(faAngleLeft, faBars, faCamera, faVenus, faMars, faPen)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -39,8 +42,11 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.component('welcome', require('./components/Welcome.vue').default);
 
-Vue.component('navbarpets', require('./components/NavBarPets.vue').default);
 Vue.component('iconcomponent', require('./components/IconComponent.vue').default);
+
+Vue.component('calendar', require('./components/CalendarComponent.vue').default);
+
+//Vue.component('burgermenu', require('./components/BurgerMenu.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -50,5 +56,44 @@ Vue.component('iconcomponent', require('./components/IconComponent.vue').default
 
 const app = new Vue({
     el: '#app',
-    vuetify
-});
+    vuetify,
+    data: {
+        isMobile: window.innerWidth <= 991,
+        globalOverlay: {
+            active: false
+        },
+        menuActive: window.innerWidth > 991
+    },
+    methods: {
+        beforeEnter () {
+            if (this.isMobile) {
+                this.globalOverlay.active = true
+            }
+        },
+        enter (el, done) {
+            Velocity(el, {
+                marginLeft: 0
+            }, {
+                complete: done
+            }, {
+                duration: 300
+            })
+        },
+        leave (el, done) {
+            Velocity(el, {
+                marginLeft: '-100%'
+            }, {
+                complete: done
+            }, {
+                duration: 300
+            }).then(() => {
+                if (this.isMobile) {
+                    this.globalOverlay.active = false
+                }
+            })
+        },
+    },
+    components: {
+        'burger-menu': Burger,
+    }
+})

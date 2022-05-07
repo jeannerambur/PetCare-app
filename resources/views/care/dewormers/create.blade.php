@@ -1,8 +1,8 @@
-<!-- create.blade.php -->
-
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'Add Vermifuge', 'color'=>'#B1A7F2'])
+
 <style>
   .uper {
     margin-top: 40px;

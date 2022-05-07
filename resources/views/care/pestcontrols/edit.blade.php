@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'Edit Anti-parasite', 'color'=>'#B1A7F2'])
 
 <style>
   .uper {

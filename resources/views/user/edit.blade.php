@@ -1,11 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'My Profile', 'color'=>'#827EF2'])
+
 <div class="container">
-    <div class="card">
-        <div class="card-header">
-            My Profile
-        </div>
+    <div class="edit-profile">
         <div class="card-body">
             <form action="{{ route('user.update-profile') }}" method="POST">
                 @csrf

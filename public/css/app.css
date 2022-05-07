@@ -11390,6 +11390,205 @@ textarea.form-control-lg {
   border-color: transparent;
 }
 
+.pet-image-form {
+  margin-top: 8%;
+}
+.pet-image-form .pet-image {
+  width: 29.5%;
+  height: 100px;
+  margin-left: 35%;
+}
+.pet-image-form .pet-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 9px;
+}
+.pet-image-form .image-form {
+  width: 8%;
+  position: absolute;
+  top: 17%;
+  margin-left: 60%;
+  padding: 4px;
+  padding: 3px;
+  text-align: center;
+  background-color: #F2865E;
+  border-radius: 20px;
+}
+.pet-image-form .image-form #file-input {
+  display: none;
+}
+
+.name-form {
+  padding: 0 10%;
+  margin-top: 12%;
+}
+.name-form .form-control {
+  box-shadow: 1px 5px 5px lightgrey;
+  padding: 4%;
+  background-color: #fff;
+  border: none;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+
+.btn-submit {
+  margin-left: 30%;
+  margin-top: 20%;
+  box-shadow: 1px 2px 8px lightgrey;
+  width: 40%;
+  border: none;
+  background-color: #827EF2;
+  color: #fff !important;
+  padding: 2% 0;
+  font-size: 18px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+.form-group input {
+  display: none;
+}
+.form-group input + div > span {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0);
+  transition: all 0.5s ease-in-out;
+}
+.form-group input + div > span span {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  color: black;
+  transform: translateX(-50%);
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+}
+.form-group input + div > span span:first-of-type {
+  transform: rotateY(0deg) translateX(-50%);
+}
+.form-group input + div > span span:last-of-type {
+  transform: rotateY(0deg) translateX(0%) scaleX(0.75) skew(23deg, 0deg);
+}
+.form-group input#female:checked ~ div > span span:first-of-type {
+  transform: rotateY(0deg) translateX(-50%);
+}
+.form-group input#female:checked ~ div > span span:last-of-type {
+  transform: rotateY(0deg) translateX(0%) scaleX(0.75) skew(23deg, 0deg);
+}
+.form-group input#male:checked ~ div > span {
+  margin: 0 -10px;
+}
+.form-group input#male:checked ~ div > span span:first-of-type {
+  transform: rotateY(90deg) translateX(-50%);
+}
+.form-group input#male:checked ~ div > span span:last-of-type {
+  transform: rotateY(0deg) translateX(-50%) scaleX(1) skew(0deg, 0deg);
+}
+.form-group input + div + div {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form-group input + div + div label {
+  display: block;
+  padding: 6px 10px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  background: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 30%;
+  font-size: 64px;
+  cursor: pointer;
+  cursor: pointer;
+}
+.form-group input + div + div label:first-child {
+  float: left;
+  box-shadow: inset 0 0 0 4px #1597ff, 0 15px 15px -10px rgba(0, 125, 225, 0.375);
+}
+.form-group input + div + div label:last-child {
+  float: right;
+}
+.form-group input#female:checked ~ div + div label:first-child {
+  box-shadow: inset 0 0 0 4px #1597ff, 0 15px 15px -10px rgba(0, 125, 225, 0.375);
+}
+.form-group input#female:checked ~ div + div label:last-child {
+  box-shadow: inset 0 0 0 0px #1597ff, 0 10px 15px -20px rgba(21, 151, 255, 0);
+}
+.form-group input#male:checked ~ div + div label:first-child {
+  box-shadow: inset 0 0 0 0px #1597ff, 0 10px 15px -20px rgba(21, 151, 255, 0);
+}
+.form-group input#male:checked ~ div + div label:last-child {
+  box-shadow: inset 0 0 0 4px #1597ff, 0 15px 15px -10px rgba(0, 125, 225, 0.375);
+}
+
+.birth-date, .form-group {
+  margin-top: 6.5%;
+}
+
+.birth-date {
+  text-align: center;
+}
+.birth-date label {
+  font-size: 18px;
+}
+
+.getfatnone {
+  display: none;
+}
+
+#venus {
+  background-color: #FFB5B1;
+  margin-right: 5%;
+}
+
+#mars {
+  background-color: #63A5F1;
+}
+
+/* Removes the clear button from date inputs */
+input[type=date]::-webkit-clear-button {
+  display: none;
+}
+
+/* Removes the spin button */
+input[type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+
+/* Always display the drop down caret */
+input[type=date]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type=date] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  color: #95a5a6;
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 18px;
+  border: 1px solid #ecf0f1;
+  background: #ecf0f1;
+  padding: 5px;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+input[type=date], focus {
+  color: #95a5a6;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
 .container-mesures-page {
   height: calc(100vh - 100px);
 }
@@ -11801,16 +12000,153 @@ textarea.form-control-lg {
 .navbar-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   height: 100%;
   align-items: center;
 }
+.navbar-container .user-profile {
+  width: 12.8%;
+}
+.navbar-container .user-profile .nav-link {
+  padding: 0;
+}
+.navbar-container .user-profile img {
+  width: 100%;
+  border-radius: 9px;
+}
 .navbar-container .previous {
-  width: 35%;
+  width: 8%;
 }
 .navbar-container .title {
-  width: 58%;
+  width: 50%;
+  text-align: center;
+}
+
+#navbarNav {
+  width: 100%;
+}
+
+.global-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.77);
+  z-index: 50;
+}
+
+@media only screen and (min-width: 992px) {
+  #navbarNav {
+    float: right;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .navbar {
+    z-index: 100;
+  }
+
+  #navbarNav {
+    display: block;
+    margin-left: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 20px;
+    background: rgb(248, 249, 250);
+  }
+  #navbarNav .nav-link {
+    color: #000000;
+  }
+}
+.container-health-page {
+  height: calc(100vh - 100px);
+}
+.container-health-page .button-health {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+.container-health-page .button-health .button-allergies, .container-health-page .button-health .button-wound,
+.container-health-page .button-health .button-diseases {
+  width: 55%;
+  padding: 4%;
+  background-color: #F2865E;
+  opacity: 0.8;
+  border-radius: 9px;
+  box-shadow: 1px 2px 5px grey;
+  margin-top: 8.8%;
+}
+.container-health-page .button-health .button-allergies a, .container-health-page .button-health .button-wound a,
+.container-health-page .button-health .button-diseases a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+.container-health-page .button-health .button-allergies {
+  margin-top: 0 !important;
+}
+
+.container-user-profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container-user-profile .user-details {
+  margin-top: 6.5%;
+}
+.container-user-profile .user-details .user-img {
+  width: 28%;
+  margin-left: 36%;
+}
+.container-user-profile .user-details .user-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.container-user-profile .user-details .general-infos, .container-user-profile .user-details .contact-infos {
+  text-align: left;
+  margin-top: 10.5%;
+  margin-left: 10%;
+  width: 80%;
+}
+.container-user-profile .user-details .general-infos .title p, .container-user-profile .user-details .contact-infos .title p {
+  font-size: 18px;
+  opacity: 0.5;
+}
+.container-user-profile .user-details .general-infos .description, .container-user-profile .user-details .contact-infos .description {
+  background-color: white;
+  border-radius: 9px;
+  padding: 2% 5%;
+  margin-top: 2.5%;
+}
+.container-user-profile .user-details .general-infos .description .username, .container-user-profile .user-details .general-infos .description .contact, .container-user-profile .user-details .contact-infos .description .username, .container-user-profile .user-details .contact-infos .description .contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2%;
+}
+.container-user-profile .user-details .general-infos .description .username .logo p, .container-user-profile .user-details .general-infos .description .contact .logo p, .container-user-profile .user-details .contact-infos .description .username .logo p, .container-user-profile .user-details .contact-infos .description .contact .logo p {
+  font-size: 12px;
+  opacity: 0.8;
+  margin: 0;
+}
+.container-user-profile .edit-user {
+  position: absolute;
+  top: 16%;
+  margin-left: 55%;
+}
+.container-user-profile .edit-user a {
+  background-color: #fff;
+  border-radius: 33px;
+  border-color: lightcoral;
+  padding: 30% 60%;
+  color: #000;
 }
 
 .container {
@@ -11823,6 +12159,14 @@ textarea.form-control-lg {
 
 body {
   background-color: #F2F2F2;
+}
+
+.v-sheet {
+  z-index: 100;
+}
+
+.dropdown-item {
+  padding: 0;
 }
 
 .container-home-page {
@@ -11840,6 +12184,7 @@ body {
   flex-direction: row;
   margin-top: 11%;
   justify-content: center;
+  padding-bottom: 8%;
 }
 .container-home-page .presentation .button-health .button-soins, .container-home-page .presentation .button-health .button-sante,
 .container-home-page .presentation .button-health .button-mesure, .container-home-page .presentation .button-health .button-hygiene {
@@ -11874,11 +12219,20 @@ body {
 .container-home-page .presentation .button-health .button-hygiene {
   background-color: #FFB5B1;
 }
+.container-home-page .presentation .calendar-pets {
+  width: 100%;
+  height: 100px;
+  margin-top: 5.3%;
+  background-color: #827EF2;
+  position: relative;
+  border-radius: 9px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
 .container-home-page .pets-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 .container-home-page .pets-card .my-pets {
   font-size: 24px;

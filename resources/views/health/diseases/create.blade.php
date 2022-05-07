@@ -1,8 +1,8 @@
-<!-- create.blade.php -->
-
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'Add Maladie', 'color'=>'#F2865E'])
+
 <style>
   .uper {
     margin-top: 40px;

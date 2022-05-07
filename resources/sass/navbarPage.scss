@@ -1,14 +1,69 @@
 .navbar-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     height: 100%;
     align-items: center;
+
+    .user-profile {
+        width: 12.8%;
+        .nav-link {
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            border-radius: 9px;
+        }
+    }
     .previous {
-        width: 35%;
+        width: 8%;
     }
     .title {
-        width: 58%;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+
+#navbarNav {
+    width: 100%;
+}
+
+
+.global-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(1,1,1,.77);
+    z-index: 50;
+}
+
+@media only screen and (min-width: 992px) {
+    #navbarNav {
+        float: right;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+    .navbar {
+        z-index: 100;
+    }
+
+    #navbarNav {
+        display: block;
+        margin-left: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        background: rgb(248, 249, 250);
+
+        .nav-link {
+            color: #000000;
+        }
     }
 }

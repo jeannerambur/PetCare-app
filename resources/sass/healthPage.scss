@@ -1,0 +1,32 @@
+.container-health-page {
+    height: calc(100vh - 100px);
+
+    .button-health {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+
+        .button-allergies, .button-wound,
+        .button-diseases {
+            width: 55%;
+            padding: 4%;
+            background-color: #F2865E;
+            opacity: 0.8;
+            border-radius: 9px;
+            box-shadow: 1px 2px 5px grey;
+            margin-top: 8.8%;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+        .button-allergies {
+            margin-top: 0 !important;
+        }
+    }
+}

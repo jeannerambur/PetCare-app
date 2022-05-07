@@ -9,6 +9,7 @@
 
 // pet details
 @import 'petDetails';
+@import 'petEdit';
 @import 'mesuresPage';
 @import 'carePage';
 @import 'hygienePage';
@@ -17,6 +18,8 @@
 @import 'registerPage';
 @import 'appetitPage';
 @import 'navbarPage';
+@import 'healthPage';
+@import 'profilePage';
 
 .container {
     padding: 0 !important;
@@ -27,6 +30,14 @@
 
 body {
     background-color: #F2F2F2;
+}
+
+.v-sheet {
+    z-index: 100;
+}
+
+.dropdown-item {
+    padding: 0;
 }
 
 .container-home-page {
@@ -46,6 +57,7 @@ body {
             flex-direction: row;
             margin-top: 11%;
             justify-content: center;
+            padding-bottom: 8%;
             .button-soins, .button-sante,
             .button-mesure, .button-hygiene {
                 width: 55px;
@@ -78,13 +90,23 @@ body {
                 background-color: #FFB5B1;
             }
         }
+
+        .calendar-pets {
+            width: 100%;
+            height: 100px;
+            margin-top: 5.3%;
+            background-color: #827EF2;
+            position: relative;
+            border-radius: 9px;
+            box-shadow: 1px 5px 8px lightgrey;
+        }
     }
 
     .pets-card {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 20%;
+        margin-top: 10%;
         .my-pets {
             font-size: 24px;
         }
@@ -144,4 +166,3 @@ body {
         }
     }
 }
-

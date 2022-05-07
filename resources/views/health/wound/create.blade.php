@@ -1,13 +1,7 @@
-<!-- create.blade.php -->
-
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
+@include('layouts.navbar', ['title'=>'Add Blessure', 'color'=>'#F2865E'])
 
 <div class="add-pet">
   <div class="add-pet-title">

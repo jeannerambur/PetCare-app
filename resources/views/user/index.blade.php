@@ -1,25 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.navbar', ['title'=>'My Profile', 'color'=>'#827EF2'])
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-  .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-</style>
 
 <div class="container-user-profile">
     <div class="user-details">
@@ -74,7 +57,7 @@
 
     </div>
     <div class="edit-user">
-        <a href="/user/profile/edit" class="btn btn-primary">Edit</a>
+        <a href="/user/profile/edit" class="btn btn-primary"><font-awesome-icon icon="fa-solid fa-pen" /></a>
     </div>
 </div>
 

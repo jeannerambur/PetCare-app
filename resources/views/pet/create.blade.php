@@ -3,7 +3,7 @@
 @section('content')
 
 
-<navbarpets :title="'Add Pets'" :color="blue"></navbarpets>
+@include('layouts.navbar', ['title'=>'Add Pet', 'color'=>'#827EF2'])
 
 <style>
   .uper {
@@ -12,9 +12,7 @@
 </style>
 
 <div class="add-pet">
-  <div class="add-pet-title">
-    Add Pet
-  </div>
+
 
   <div class="card-body">
     @if ($errors->any())
@@ -30,34 +28,44 @@
       <form method="post" action="{{ route('pets.store') }}" enctype="multipart/form-data">
          @csrf
 
-          <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" class="form-control" name="name"/>
-          </div>
-
-          <label for="birth">Birth date:</label>
-          <input type="date" id="birth" name="birth" class="birth-form">
-
-          <div class="form-group">
-              <label for="sex">Sex:</label>
-              <select name="sex" id="sex">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="unknown">Unknown</option>
-              </select>
-          </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Pet Image:</strong>
-                 <input type="file" name="image" class="form-control" placeholder="Post Title">
-                @error('image')
-                  <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-               @enderror
+         <div class="pet-image-form">
+            <div class="pet-image">
+              <img src="{{asset('/storage/images/'.Auth::user()->image)}}" height="200" width="200" alt="" />
             </div>
+            <div class="image-form">
+              <label for="file-input">
+                  <font-awesome-icon icon="fa-solid fa-camera" :style="{ color: 'white' }"/>
+              </label>
+              <input id="file-input" type="file" name="image" class="form-control">
+            </div>
+
+          </div>
+          <div class="name-form">
+              <input type="text" class="form-control" name="name" placeholder="Name">
           </div>
 
-          <button type="submit" class="btn btn-primary">Ajouter</button>
+          <div class="birth-date">
+            <label for="birth">Birth date : </label>
+            <input type="date" id="birth" name="birth" class="birth-form" value="{{ old('$pet->birth') }}">
+          </div>
+
+          <div class="form-group">
+            <input type="radio" id="female" name="sex" value="female">
+            <input type="radio" id="male" name="sex" value="male">
+
+            <div class="getfatnone">
+              GET F<span>A<span>A</span><span>I</span></span>T
+            </div>
+            <div>
+              <label id="venus" for="female"><font-awesome-icon icon="fa-solid fa-venus" :style="{ color: 'white' }" /></label>
+              <label id="mars" for="male"><font-awesome-icon icon="fa-solid fa-mars" :style="{ color: 'white' }"/></label>
+            </div>
+
+          </div>
+
+
+
+          <button type="submit" class="btn-submit">Ajouter</button>
       </form>
   </div>
 </div>
