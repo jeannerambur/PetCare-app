@@ -36,7 +36,7 @@
 
 
           <div class="form-group">
-            <input type="radio" id="female" name="sex" value="female">
+            <input type="radio" id="female" name="sex" value="female" checked>
             <input type="radio" id="male" name="sex" value="male">
 
             <div class="getfatnone">

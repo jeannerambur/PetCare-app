@@ -3,7 +3,7 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'History', 'color'=>'#827EF2'])
 
-<div class="history">
+<div class="history-home-page">
 
   @if(session()->get('success'))
     <div class="alert alert-success">

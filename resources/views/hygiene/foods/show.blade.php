@@ -13,7 +13,7 @@
             </div>
 
             <div class='food-quantite'>
-                <p><span>Quantite</span> {{ date('d/m/y', strtotime($food->quantite)) }}</p>
+                <p><span>Quantite</span> {{$food->quantite}} g</p>
             </div>
 
         </div>

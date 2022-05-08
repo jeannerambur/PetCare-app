@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Pet;
 use App\Models\Bath;
 use App\Models\Claw;
@@ -79,7 +80,7 @@ class HistoryController extends Controller
         $litterHistories = Litter::where('pet_id',$id)->orderBy('date', 'desc')->get();
         $foodHistories = Food::where('pet_id',$id)->orderBy('date', 'desc')->get();
         $groomHistories = Groom::where('pet_id',$id)->orderBy('date', 'desc')->get();
-
+        $todayDate = Carbon::now()->format('Y-m-d');
         $array = $appetitHistories->mergeRecursive($poidsHistories)
                                   ->mergeRecursive($allergyHistories)
                                   ->mergeRecursive($woundHistories)
@@ -98,7 +99,7 @@ class HistoryController extends Controller
 
         $sorted = $array->sortByDesc('date');
 
-        return view('history.show', compact('sorted'));
+        return view('history.show', compact('sorted', 'todayDate'));
 
     }
 

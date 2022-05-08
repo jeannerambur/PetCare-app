@@ -30,8 +30,11 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ URL::to( '/pets') }}">Home</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('user.index')}}">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ URL::to( '/history') }}">Historique</a>
                         </li>
                         <li class="nav-item">
                             <a class="dropdown-item" href="{{ route('logout') }}"

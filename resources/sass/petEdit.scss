@@ -1,9 +1,14 @@
+#birth {
+    border: 1px solid lightgray;
+}
 .pet-image-form {
     margin-top: 8%;
     .pet-image {
         width: 29.5%;
         height: 100px;
         margin-left: 35%;
+        border: 1px solid lightcoral;
+        border-radius: 10px;
         img {
             width: 100%;
             object-fit: cover;
@@ -61,7 +66,7 @@
 
 .form-group {
     input {
-        //display: none;
+        display: none;
         + div > span {
             display: inline-block;
             position: relative;

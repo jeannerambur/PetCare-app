@@ -15,7 +15,7 @@
             Let’s take care of your pets
         </div>
 
-    <div class="button-health">
+    <!-- <div class="button-health">
         <div class="button-soins">
           <button onclick="window.location.href = '/pets';"></button>
           <p>Soins</p>
@@ -36,9 +36,14 @@
           <p>Hygiène</p>
         </div>
 
-    </div>
+    </div>-->
     <a href="{{  url('/history')}}">
       <div class="history-pets">
+        <div class="history-widget">
+          <font-awesome-icon icon="fa-solid fa-clock-rotate-left" size="2x" />
+
+        </div>
+        <p>Historique</p>
       </div>
     </a>
 

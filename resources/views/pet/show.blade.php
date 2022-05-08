@@ -13,7 +13,21 @@
             <div class='pet-name'>
                 <p>{{$pet->name}}</p>
             </div>
-            {{ $pet->created_at->format('d') }}
+            <div class="pet-infos">
+                <div class="birth-date">
+                   <p>{{ date('d/m/y', strtotime($pet->birth)) }}</p>
+                </div>
+
+                @if(($pet->sex) == 'male')
+                <div class="pet-sex">
+                    <font-awesome-icon icon="fa-solid fa-mars" />
+                </div>
+                @else
+                <div class="pet-sex">
+                    <font-awesome-icon icon="fa-solid fa-venus" />
+                </div>
+                @endif
+            </div>
 
         </div>
       </div>

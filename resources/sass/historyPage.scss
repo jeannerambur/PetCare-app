@@ -1,4 +1,4 @@
-.history {
+.history-home-page {
     margin-top: 50%;
     .title {
         font-size: 24px;
@@ -47,5 +47,72 @@
                 }
             }
         }
+    }
+}
+
+.history {
+    margin-top: 20%;
+    .card-history {
+        .container {
+            margin-top: 5%;
+        }
+    }
+}
+.history-container {
+    width: 80%;
+    background-color: white;
+    margin-left: 10%;
+    border-radius: 10px;
+
+    a {
+        color: #000;
+        text-decoration: none;
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .date-wound {
+                display: flex;
+                flex-direction: column;
+                padding: 5%;
+                width: 30%;
+                .day {
+                    p {
+                        font-size: 30px;
+                        margin: 0;
+                    }
+                }
+                .month_year {
+                    display: flex;
+                    flex-direction: row;
+                    p {
+                        margin: 0;
+                    }
+                    .month {
+                        margin-right: 8%;
+                        font-size: 12px;
+                    }
+                    .year {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .infos {
+                padding: 2%;
+                width: 70%;
+                p {
+                    margin: 0;
+                }
+                .history-name {
+                    font-size: 20px;
+
+                }
+                .duree {
+                    opacity: 0.6;
+                }
+            }
+        }
+
     }
 }

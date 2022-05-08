@@ -11302,6 +11302,12 @@ textarea.form-control-lg {
   border-radius: 5px;
   box-shadow: 1px 2px 5px grey;
 }
+.pet-details .card-pet-detail .pet-container p {
+  margin: 0;
+}
+.pet-details .card-pet-detail .pet-container .pet-name {
+  font-size: 26px;
+}
 .pet-details .card-pet-detail .pet-container .pet-img {
   width: 100%;
   height: 155px;
@@ -11312,6 +11318,17 @@ textarea.form-control-lg {
   width: 100%;
   height: 100%;
   border-radius: 5px;
+}
+.pet-details .card-pet-detail .pet-container .pet-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 2%;
+}
+.pet-details .card-pet-detail .pet-container .pet-infos .birth-date {
+  text-align: left;
+  margin: 0;
+  opacity: 0.7;
 }
 .pet-details .care-button {
   display: flex;
@@ -11390,6 +11407,10 @@ textarea.form-control-lg {
   border-color: transparent;
 }
 
+#birth {
+  border: 1px solid lightgray;
+}
+
 .pet-image-form {
   margin-top: 8%;
 }
@@ -11397,6 +11418,8 @@ textarea.form-control-lg {
   width: 29.5%;
   height: 100px;
   margin-left: 35%;
+  border: 1px solid lightcoral;
+  border-radius: 10px;
 }
 .pet-image-form .pet-image img {
   width: 100%;
@@ -11447,6 +11470,9 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 10px lightgrey;
 }
 
+.form-group input {
+  display: none;
+}
 .form-group input + div > span {
   display: inline-block;
   position: relative;
@@ -12410,28 +12436,28 @@ input[type=date], focus {
   color: #000;
 }
 
-.history {
+.history-home-page {
   margin-top: 50%;
 }
-.history .title {
+.history-home-page .title {
   font-size: 24px;
   text-align: center;
 }
-.history .cards-pets {
+.history-home-page .cards-pets {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.history .cards-pets .card-pet {
+.history-home-page .cards-pets .card-pet {
   margin: 9% 3% 0 3%;
   width: 40%;
 }
-.history .cards-pets .card-pet a {
+.history-home-page .cards-pets .card-pet a {
   color: #000000;
   text-decoration: none;
 }
-.history .cards-pets .card-pet a .pet-container {
+.history-home-page .cards-pets .card-pet a .pet-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -12439,24 +12465,84 @@ input[type=date], focus {
   border-radius: 5px;
   background-color: white;
 }
-.history .cards-pets .card-pet a .pet-container .pet-img {
+.history-home-page .cards-pets .card-pet a .pet-container .pet-img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 115px;
 }
-.history .cards-pets .card-pet a .pet-container .pet-img img {
+.history-home-page .cards-pets .card-pet a .pet-container .pet-img img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   border-radius: 5px;
   height: 100%;
 }
-.history .cards-pets .card-pet a .pet-container .pet-name {
+.history-home-page .cards-pets .card-pet a .pet-container .pet-name {
   padding: 4% 1%;
 }
-.history .cards-pets .card-pet a .pet-container .pet-name p {
+.history-home-page .cards-pets .card-pet a .pet-container .pet-name p {
   font-size: 20px;
+}
+
+.history {
+  margin-top: 20%;
+}
+.history .card-history .container {
+  margin-top: 5%;
+}
+
+.history-container {
+  width: 80%;
+  background-color: white;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+.history-container a {
+  color: #000;
+  text-decoration: none;
+}
+.history-container a .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.history-container a .container .date-wound {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  width: 30%;
+}
+.history-container a .container .date-wound .day p {
+  font-size: 30px;
+  margin: 0;
+}
+.history-container a .container .date-wound .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.history-container a .container .date-wound .month_year p {
+  margin: 0;
+}
+.history-container a .container .date-wound .month_year .month {
+  margin-right: 8%;
+  font-size: 12px;
+}
+.history-container a .container .date-wound .month_year .year {
+  font-size: 12px;
+}
+.history-container a .container .infos {
+  padding: 2%;
+  width: 70%;
+}
+.history-container a .container .infos p {
+  margin: 0;
+}
+.history-container a .container .infos .history-name {
+  font-size: 20px;
+}
+.history-container a .container .infos .duree {
+  opacity: 0.6;
 }
 
 .container-poids a {
@@ -14494,6 +14580,10 @@ input[type=date], focus {
   box-shadow: 1px 5px 8px lightgrey;
 }
 
+.form-date #date {
+  border: 1px solid lightgrey;
+}
+
 .container {
   padding: 0 !important;
 }
@@ -14516,6 +14606,7 @@ body {
 
 .container-home-page {
   padding: 5% 5% 0 5%;
+  height: calc(100vh - 140px);
 }
 .container-home-page .presentation .username-hi {
   font-size: 24px;
@@ -14564,7 +14655,14 @@ body {
 .container-home-page .presentation .button-health .button-hygiene {
   background-color: #FFB5B1;
 }
-.container-home-page .presentation .history-pets {
+.container-home-page .presentation a {
+  color: #fff;
+  text-decoration: none;
+}
+.container-home-page .presentation a .history-pets {
+  display: flex;
+  flex-direction: row;
+  padding: 12%;
   width: 100%;
   height: 100px;
   margin-top: 5.3%;
@@ -14572,6 +14670,12 @@ body {
   position: relative;
   border-radius: 9px;
   box-shadow: 1px 5px 8px lightgrey;
+}
+.container-home-page .presentation a .history-pets p {
+  font-size: 20px;
+}
+.container-home-page .presentation a .history-pets .history-widget {
+  margin-right: 10%;
 }
 .container-home-page .pets-card {
   display: flex;

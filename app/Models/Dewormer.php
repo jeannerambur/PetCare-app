@@ -10,7 +10,7 @@ class Dewormer extends Model
     use HasFactory;
 
     protected $attributes = [
-		'title_name' => 'Griffe'
+		'title_name' => 'Vermifuge'
     ];
 
     protected $fillable = [

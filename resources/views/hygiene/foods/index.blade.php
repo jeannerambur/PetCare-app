@@ -40,7 +40,7 @@
 
 
 <div class="add-health">
-    <a href="{{ route('appetit.create-appetit', Route::current()->parameter('id'))}}" class="btn btn-primary">Ajouter</a>
+    <a href="{{ route('foods.create-food', Route::current()->parameter('id'))}}" class="btn btn-primary">Ajouter</a>
 </div>
 
 @endsection
