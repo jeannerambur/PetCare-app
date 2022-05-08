@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class PestControl extends Model
 {
     use HasFactory;
+    protected $attributes = [
+		'title_name' => 'Anti-parasites'
+    ];
+
+    protected $fillable = [
+		'title_name',
+        'type',
+        'name',
+        'dose',
+		'date'
+	];
 }

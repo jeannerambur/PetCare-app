@@ -8,7 +8,7 @@
 
   <div class="card-body">
 
-      <form method="post" action="{{ route('claws.store-claw', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
+      <form method="post" action="{{ route('grooms.store-groom', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
           <label for="date">Date:</label>

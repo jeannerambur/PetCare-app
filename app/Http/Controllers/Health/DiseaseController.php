@@ -42,7 +42,7 @@ class DiseaseController extends Controller
         $disease->type = $request->type;
         $disease->pet_id = $id;
         $disease->name = $request->name;
-        $disease->begin_date = $request->begin_date;
+        $disease->date = $request->date;
         $disease->healing_date = $request->healing_date;
         $disease->created_at = now();
         $disease->updated_at = now();
@@ -92,7 +92,7 @@ class DiseaseController extends Controller
 
          $disease->type = $request->type;
          $disease->name = $request->name;
-         $disease->begin_date = $request->begin_date;
+         $disease->date = $request->date;
          $disease->healing_date = $request->healing_date;
          $disease->updated_at = now();
 

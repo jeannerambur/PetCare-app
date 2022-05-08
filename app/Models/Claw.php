@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Claw extends Model
 {
     use HasFactory;
+
+    protected $attributes = [
+		'title_name' => 'Griffe'
+    ];
+
+    protected $fillable = [
+		'title_name',
+		'date'
+	];
 }

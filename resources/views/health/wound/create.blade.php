@@ -16,8 +16,8 @@
          <label for="name">Name :</label>
         <input type="text" class="form-control" name="name"/>
 
-        <label for="wound_date">Date:</label>
-          <input type="date" id="date" name="wound_date" class="date-form">
+        <label for="date">Date:</label>
+          <input type="date" id="date" name="date" class="date-form">
 
           <label for="healing_date">Date:</label>
           <input type="date" id="date" name="healing_date" class="date-form">

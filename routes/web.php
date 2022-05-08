@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Routes;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\VeterinaryController;
 use App\Http\Controllers\Care\VaccineController;
 use App\Http\Controllers\Health\WoundController;
@@ -52,8 +53,9 @@ Route::view('pets/{id}/mesures', 'mesures.index')->name('mesures');
 Route::view('pets/{id}/health', 'health.index')->name('health');
 Route::view('pets/{id}/care', 'care.index')->name('care');
 Route::view('pets/{id}/hygiene', 'hygiene.index')->name('hygiene');
-Route::view('calendar', 'pet.calendar.index')->name('calendar');
 
+Route::get('history', [HistoryController::class, 'index'])->name('history');
+Route::resource('history', HistoryController::class);
 
 Route::get('pets/{id}/mesures/appetit', [AppetitController::class, 'index'])->name('appetit');
 Route::put('pets/{id}/mesures/appetit/edit', [AppetitController::class, 'update'])->name('appetit.update-appetit');

@@ -11,7 +11,6 @@ use App\Models\Wound;
 use App\Models\Litter;
 use App\Models\Allergy;
 use App\Models\Appetit;
-use App\Models\EventList;
 use App\Models\Treatment;
 use App\Models\Veterinary;
 use Illuminate\Database\Seeder;
@@ -58,7 +57,7 @@ class DatabaseSeeder extends Seeder
 		Wound::create([
             'name'=> 'Bras Casse',
             'pet_id'=> 1,
-			'wound_date' => '2021-02-28',
+			'date' => '2021-02-28',
 			'healing_date' => '2021-04-28'
 		]);
 
@@ -82,13 +81,35 @@ class DatabaseSeeder extends Seeder
 		Dent::create([
             'pet_id'=> 1,
 			'date' => '2021-02-28'
-        ]);
+		]);
 
 
-		Appetit::factory()->count(3)->create();
-		Poids::factory()->count(2)->create();
+		Appetit::factory()->count(2)->create();
+
+		Appetit::create([
+			'appetit'=> 'bof',
+            'pet_id'=> 1,
+            'date' => '2021-02-15',
+            'heure' => '12'
+		]);
+
+		Appetit::create([
+			'appetit'=> 'bof',
+            'pet_id'=> 1,
+            'date' => '2022-04-12',
+            'heure' => '12'
+		]);
+
+
+		Poids::create([
+			'pet_id'=> 1,
+            'poids'=> '12',
+            'date' => '2022-05-22',
+		]);
+
+
+		Poids::factory()->count(1)->create();
 		Allergy::factory()->count(2)->create();
 
-		EventList::factory()->count(2)->create();
 	}
 }

@@ -19,7 +19,8 @@ class CreateFoodsTable extends Migration
             $table->string("type");
             $table->string("marque")->nullable();
             $table->string("quantite")->nullable();
-            $table->dateTime('date');
+            $table->string('title_name');
+            $table->date('date');
 
             $table->timestamps();
 

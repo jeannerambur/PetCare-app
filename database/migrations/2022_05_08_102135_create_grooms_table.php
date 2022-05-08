@@ -16,7 +16,8 @@ class CreateGroomsTable extends Migration
         Schema::create('grooms', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger("pet_id");
-            $table->dateTime('date');
+            $table->string('title_name');
+            $table->date('date');
 
             $table->timestamps();
 

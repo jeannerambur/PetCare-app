@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Dent extends Model
 {
     use HasFactory;
+
+    protected $attributes = [
+		'title_name' => 'Dent'
+    ];
+
+    protected $fillable = [
+		'title_name',
+		'date'
+	];
 }

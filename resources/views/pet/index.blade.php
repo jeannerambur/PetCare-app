@@ -37,10 +37,10 @@
         </div>
 
     </div>
-    <calendar-component></calendar-component>
-    <div class="calendar-pets">
-
-    </div>
+    <a href="{{  url('/history')}}">
+      <div class="history-pets">
+      </div>
+    </a>
 
 
     <div class="pets-card">

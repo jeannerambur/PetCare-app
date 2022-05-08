@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Poids extends Model
 {
     use HasFactory;
-    protected $fillable = ['poids','pet_id', 'date'];
+    protected $attributes = [
+		'title_name' => 'Poids'
+    ];
+
+    protected $fillable = ['title_name', 'poids', 'date'];
 }

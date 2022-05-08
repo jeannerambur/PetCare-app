@@ -16,6 +16,7 @@ class CreateAppetitsTable extends Migration
         Schema::create('appetits', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger("pet_id");
+            $table->string('title_name');
             $table->string("appetit");
             $table->date('date');
             $table->string('heure')->nullable();

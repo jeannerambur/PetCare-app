@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Treatment extends Model
 {
     use HasFactory;
+
+    protected $attributes = [
+		'title_name' => 'Traitement'
+    ];
+
+    protected $fillable = [
+		'title_name',
+        'name',
+        'date',
+        'quantite'
+	];
 }

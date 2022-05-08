@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Groom extends Model
 {
     use HasFactory;
+    protected $attributes = [
+		'title_name' => 'Toilettage'
+    ];
+
+    protected $fillable = [
+		'title_name',
+		'date'
+	];
 }

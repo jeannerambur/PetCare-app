@@ -16,7 +16,8 @@ class CreateClawsTable extends Migration
         Schema::create('claws', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger("pet_id");
-            $table->dateTime('date');
+            $table->string('title_name');
+            $table->date('date');
 
             $table->timestamps();
 

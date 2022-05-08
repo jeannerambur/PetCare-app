@@ -16,6 +16,7 @@ class CreatePoidsTable extends Migration
         Schema::create('poids', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger("pet_id");
+            $table->string('title_name');
             $table->string("poids");
             $table->dateTime('date');
 

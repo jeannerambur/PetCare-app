@@ -15,8 +15,9 @@ class CreateAllergiesTable extends Migration
     {
         Schema::create('allergies', function (Blueprint $table) {
             $table->increments("id");
-            $table->string("type");
             $table->unsignedInteger("pet_id");
+            $table->string("type");
+            $table->string('title_name');
             $table->string("name")->nullable();
             $table->dateTime('date');
 

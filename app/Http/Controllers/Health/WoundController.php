@@ -41,7 +41,7 @@ class WoundController extends Controller
 
         $wound->name = $request->name;
         $wound->pet_id = $id;
-        $wound->wound_date = $request->wound_date;
+        $wound->date = $request->date;
         $wound->healing_date = $request->healing_date;
         $wound->created_at = now();
         $wound->updated_at = now();
@@ -90,7 +90,7 @@ class WoundController extends Controller
 
         $wound->name = $request->name;
         $wound->pet_id = $id;
-        $wound->wound_date = $request->wound_date;
+        $wound->date = $request->date;
         $wound->healing_date = $request->healing_date;
         $wound->updated_at = now();
 

@@ -16,9 +16,10 @@ class CreateWoundsTable extends Migration
         Schema::create('wounds', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger("pet_id");
+            $table->string('title_name');
             $table->string("name");
-            $table->dateTime('wound_date');
-            $table->dateTime('healing_date');
+            $table->date('date');
+            $table->date('healing_date');
 
             $table->timestamps();
 

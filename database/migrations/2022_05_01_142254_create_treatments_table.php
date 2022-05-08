@@ -16,8 +16,9 @@ class CreateTreatmentsTable extends Migration
         Schema::create('treatments', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger("pet_id");
+            $table->string('title_name');
             $table->string("name");
-            $table->dateTime('date');
+            $table->date('date');
             $table->string("quantite");
 
             $table->timestamps();

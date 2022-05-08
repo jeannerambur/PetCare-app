@@ -16,7 +16,8 @@ class CreateLittersTable extends Migration
         Schema::create('litters', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger("pet_id");
-            $table->dateTime('date');
+            $table->string('title_name');
+            $table->date('date');
 
             $table->timestamps();
 
