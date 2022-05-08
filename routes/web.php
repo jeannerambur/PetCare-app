@@ -47,6 +47,7 @@ Route::view('pets/{id}/mesures', 'mesures.index')->name('mesures');
 Route::view('pets/{id}/health', 'health.index')->name('health');
 Route::view('pets/{id}/care', 'care.index')->name('care');
 Route::view('pets/{id}/hygiene', 'hygiene.index')->name('hygiene');
+Route::view('calendar', 'pet.calendar.index')->name('calendar');
 
 
 Route::get('pets/{id}/mesures/appetit', [AppetitController::class, 'index'])->name('appetit');

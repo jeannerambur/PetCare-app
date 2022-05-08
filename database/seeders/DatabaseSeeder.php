@@ -8,10 +8,11 @@ use App\Models\Poids;
 use App\Models\Wound;
 use App\Models\Allergy;
 use App\Models\Appetit;
+use App\Models\EventList;
+use App\Models\Treatment;
 use App\Models\Veterinary;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Treatment;
 
 class DatabaseSeeder extends Seeder
 {
@@ -68,5 +69,7 @@ class DatabaseSeeder extends Seeder
 		Appetit::factory()->count(3)->create();
 		Poids::factory()->count(2)->create();
 		Allergy::factory()->count(2)->create();
+
+		EventList::factory()->count(2)->create();
 	}
 }

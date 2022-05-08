@@ -37,9 +37,9 @@
         </div>
 
     </div>
-
+    <calendar-component></calendar-component>
     <div class="calendar-pets">
-      <div></div>
+
     </div>
 
 
