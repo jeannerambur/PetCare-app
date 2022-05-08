@@ -46,7 +46,7 @@
 
           <div class="birth-date">
             <label for="birth">Birth date : </label>
-            <input type="date" id="birth" name="birth" class="birth-form" value="{{ old('$pet->birth') }}">
+            <input type="date" id="birth" name="birth" class="birth-form" placeholder="yyyy-mm-dd">
           </div>
 
           <div class="form-group">

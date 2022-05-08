@@ -2,11 +2,7 @@
 
 @section('content')
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
+@include('layouts.navbar', ['title'=>'Edit Food', 'color'=>'#FFB5B1'])
 
 <div class="card uper">
   <div class="card-header">

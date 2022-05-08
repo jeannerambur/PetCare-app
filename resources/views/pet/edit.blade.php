@@ -30,14 +30,14 @@
 
           <div class="birth-date">
             <label for="birth">Birth date : </label>
-            <input type="date" id="birth" name="birth" class="birth-form" value="{{ old('$pet->birth') }}">
+            <input type="date" id="birth" name="birth" class="birth-form" placeholder="yyyy-mm-dd">
           </div>
 
 
 
           <div class="form-group">
             <input type="radio" id="female" name="sex" value="female">
-            <input type="radio" id="male" name="sex" value="male">>
+            <input type="radio" id="male" name="sex" value="male">
 
             <div class="getfatnone">
               GET F<span>A<span>A</span><span>I</span></span>T

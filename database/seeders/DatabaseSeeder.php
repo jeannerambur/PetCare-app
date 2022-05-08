@@ -3,9 +3,12 @@
 namespace Database\Seeders;
 
 use App\Models\Pet;
+use App\Models\Claw;
+use App\Models\Dent;
 use App\Models\User;
 use App\Models\Poids;
 use App\Models\Wound;
+use App\Models\Litter;
 use App\Models\Allergy;
 use App\Models\Appetit;
 use App\Models\EventList;
@@ -64,7 +67,23 @@ class DatabaseSeeder extends Seeder
             'pet_id'=> 1,
 			'date' => '2021-02-28',
 			'quantite' => '2'
+		]);
+
+		Claw::create([
+            'pet_id'=> 1,
+			'date' => '2021-02-28'
+		]);
+
+		Litter::create([
+            'pet_id'=> 1,
+			'date' => '2021-02-28'
+		]);
+
+		Dent::create([
+            'pet_id'=> 1,
+			'date' => '2021-02-28'
         ]);
+
 
 		Appetit::factory()->count(3)->create();
 		Poids::factory()->count(2)->create();

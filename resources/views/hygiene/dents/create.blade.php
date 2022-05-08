@@ -2,13 +2,13 @@
 
 @section('content')
 
-@include('layouts.navbar', ['title'=>'Create Litter', 'color'=>'#FFB5B1'])
+@include('layouts.navbar', ['title'=>'Create dent', 'color'=>'#FFB5B1'])
 
-<div class="add-litter">
+<div class="add-dent">
 
   <div class="card-body">
 
-      <form method="post" action="{{ route('litters.store-litter', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
+      <form method="post" action="{{ route('dents.store-dent', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
           <label for="date">Date:</label>

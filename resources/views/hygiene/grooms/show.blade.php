@@ -4,12 +4,12 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Claw', 'color'=>'#FFB5B1'])
 
-  <div class="claw-details">
-    <div class="card-claw-detail">
+  <div class="groom-details">
+    <div class="card-groom-detail">
         <div class="pet-container">
 
-            <div class='claw-date'>
-                <h4><b>{{$claw->date}}</b></h4>
+            <div class='groom-date'>
+                <h4><b>{{$groom->date}}</b></h4>
             </div>
 
         </div>
@@ -18,8 +18,8 @@
 
 
 <div class="edit-pet">
-        <a href="{{ route('claws.edit', $claw->id)}}" class="btn btn-primary">Edit</a>
-        <form action="{{ route('claws.destroy', $claw->id)}}" method="post">
+        <a href="{{ route('grooms.edit', $groom->id)}}" class="btn btn-primary">Edit</a>
+        <form action="{{ route('grooms.destroy', $groom->id)}}" method="post">
             @csrf
             @method('DELETE')
             <button class="btn btn-danger" type="submit">Delete</button>

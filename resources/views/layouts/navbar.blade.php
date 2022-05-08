@@ -1,3 +1,4 @@
+
 <v-app-bar
     color= "{{$color}}"
     dense
@@ -26,6 +27,9 @@
             <div id="navbarNav" v-show="menuActive">
                 <div class="col-xl-6 offset-xl-6">
                     <ul class="navbar-nav float-xl-right">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ URL::to( '/pets') }}">Home</a>
+                        </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ route('user.index')}}">My Profile</a>
                         </li>

@@ -9,12 +9,17 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VeterinaryController;
 use App\Http\Controllers\Care\VaccineController;
 use App\Http\Controllers\Health\WoundController;
+use App\Http\Controllers\Hygiene\BathController;
+use App\Http\Controllers\Hygiene\ClawController;
+use App\Http\Controllers\Hygiene\DentController;
 use App\Http\Controllers\Hygiene\FoodController;
 use App\Http\Controllers\Care\DewormerController;
+use App\Http\Controllers\Hygiene\GroomController;
 use App\Http\Controllers\Mesures\PoidsController;
 use App\Http\Controllers\Care\TreatmentController;
 use App\Http\Controllers\Health\AllergyController;
 use App\Http\Controllers\Health\DiseaseController;
+use App\Http\Controllers\Hygiene\LitterController;
 use App\Http\Controllers\Mesures\AppetitController;
 use App\Http\Controllers\Care\PestControlController;
 
@@ -117,5 +122,34 @@ Route::get('pets/{id}/hygiene/foods/create', [FoodController::class, 'create'])-
 Route::post('pets/{id}/hygiene/foods/create', [FoodController::class, 'store'])->name('foods.store-food');
 Route::resource('foods', FoodController::class);
 
+Route::get('pets/{id}/hygiene/claws', [ClawController::class, 'index'])->name('claws');
+Route::put('pets/{id}/hygiene/claws/edit', [ClawController::class, 'update'])->name('claws.update-claw');
+Route::get('pets/{id}/hygiene/claws/create', [ClawController::class, 'create'])->name('claws.create-claw');
+Route::post('pets/{id}/hygiene/claws/create', [ClawController::class, 'store'])->name('claws.store-claw');
+Route::resource('claws', ClawController::class);
+
+Route::get('pets/{id}/hygiene/litters', [LitterController::class, 'index'])->name('litters');
+Route::put('pets/{id}/hygiene/litters/edit', [LitterController::class, 'update'])->name('litters.update-litter');
+Route::get('pets/{id}/hygiene/litters/create', [LitterController::class, 'create'])->name('litters.create-litter');
+Route::post('pets/{id}/hygiene/litters/create', [LitterController::class, 'store'])->name('litters.store-litter');
+Route::resource('litters', LitterController::class);
+
+Route::get('pets/{id}/hygiene/grooms', [GroomController::class, 'index'])->name('grooms');
+Route::put('pets/{id}/hygiene/grooms/edit', [GroomController::class, 'update'])->name('grooms.update-groom');
+Route::get('pets/{id}/hygiene/grooms/create', [GroomController::class, 'create'])->name('grooms.create-groom');
+Route::post('pets/{id}/hygiene/grooms/create', [GroomController::class, 'store'])->name('grooms.store-groom');
+Route::resource('grooms', GroomController::class);
+
+Route::get('pets/{id}/hygiene/baths', [BathController::class, 'index'])->name('baths');
+Route::put('pets/{id}/hygiene/baths/edit', [BathController::class, 'update'])->name('baths.update-bath');
+Route::get('pets/{id}/hygiene/baths/create', [BathController::class, 'create'])->name('baths.create-bath');
+Route::post('pets/{id}/hygiene/baths/create', [BathController::class, 'store'])->name('baths.store-bath');
+Route::resource('baths', BathController::class);
+
+Route::get('pets/{id}/hygiene/dents', [DentController::class, 'index'])->name('dents');
+Route::put('pets/{id}/hygiene/dents/edit', [DentController::class, 'update'])->name('dents.update-dent');
+Route::get('pets/{id}/hygiene/dents/create', [DentController::class, 'create'])->name('dents.create-dent');
+Route::post('pets/{id}/hygiene/dents/create', [DentController::class, 'store'])->name('dents.store-dent');
+Route::resource('dents', DentController::class);
 
 Route::get('pets/{id}/veterinary', [VeterinaryController::class, 'index'])->name('veterinary');

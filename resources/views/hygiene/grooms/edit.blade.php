@@ -2,11 +2,11 @@
 
 @section('content')
 
-@include('layouts.navbar', ['title'=>'Edit Litter', 'color'=>'#FFB5B1'])
+@include('layouts.navbar', ['title'=>'Edit grooms', 'color'=>'#FFB5B1'])
 
-<div class="edit-litter">
+<div class="edit-groom">
 
-  <form method="post" action="{{ route('litters.update', $litter->id ) }}" enctype="multipart/form-data">
+  <form method="post" action="{{ route('grooms.update', $groom->id ) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 

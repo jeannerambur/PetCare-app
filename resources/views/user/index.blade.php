@@ -7,7 +7,7 @@
 <div class="container-user-profile">
     <div class="user-details">
         <div class="user-img">
-          <img src="default-user.jpg" height="75" width="75" alt="" />
+          <img src="{{asset('public/images/'.Auth::user()->image)}}" height="75" width="75" alt="" />
         </div>
         <div class="description-user">
           {{ Auth::user()->about }}

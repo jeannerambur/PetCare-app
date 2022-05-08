@@ -39,7 +39,7 @@ class FoodController extends Controller
     public function store(Request $request, $id)
     {
         $food = new Food;
-
+        //Dd($request->all());
         $food->type = $request->type;
         $food->pet_id = $id;
         $food->marque = $request->marque;
