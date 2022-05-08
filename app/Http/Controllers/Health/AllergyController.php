@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Health;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Allergy;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AllergyController extends Controller
 {
@@ -16,7 +17,9 @@ class AllergyController extends Controller
     public function index($id)
     {
        $allergies = Allergy::where('pet_id',$id)->get();
-       return view('health.allergies.index', compact('allergies'));
+       $todayDate = Carbon::now()->format('Y-m-d');
+
+       return view('health.allergies.index', compact('allergies', 'todayDate'));
     }
 
     /**

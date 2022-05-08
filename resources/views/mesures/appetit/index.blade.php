@@ -11,8 +11,18 @@
         <a href="{{ route('appetit.show', $appetit->id)}}">
             <div class="appetit-card">
                 <div class="date-appetit">
+                    <div class="day">
+                        <p>{{ date('d', strtotime($appetit->date)) }}</p>
+                    </div>
+                    <div class="month_year">
+                        <div class="month">
+                            <p>{{ date('M', strtotime($appetit->date)) }}</p>
+                        </div>
+                        <div class="year">
+                            <p>{{ date('y', strtotime($appetit->date)) }}</p>
+                        </div>
+                    </div>
 
-                    <p>{{ date('d', strtotime($appetit->date)) }}</p>
                 </div>
                 <div class="info-appetit">
                     <div class="appetit">

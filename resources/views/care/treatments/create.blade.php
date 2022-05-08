@@ -1,36 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Add Traitement', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Add Vermifuge', 'color'=>'#B1A7F2'])
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-
-<div class="add-pet">
-  <div class="add-pet-title">
-    Add Treatment
-  </div>
+<div class="create-treatment">
 
   <div class="card-body">
 
       <form method="post" action="{{ route('treatments.store-treatment', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
-          <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" class="form-control" name="name"/>
+          <div class="form-name">
+              <label for="name" class="name">Name:</label>
+              <input type="text" class="form-control" name="name" placeholder="name" id="name"/>
           </div>
 
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
+          <div class="form-quantite">
+            <label for="dose" class="quantite">Quantite:</label>
+            <input type="text" class="form-control" name="quantite"/>
+          </div>
 
-          <label for="quantite">Quantite:</label>
-          <input type="text" class="form-control" name="quantite"/>
+          <div class="form-date">
+              <label for="date" class="date" >Date:</label>
+              <input type="date" id="date" name="date" class="date-form">
+          </div>
 
-          <button type="submit" class="btn btn-primary">Ajouter</button>
+
+          <button type="submit" class="btn-submit">Ajouter</button>
+
       </form>
   </div>
 </div>

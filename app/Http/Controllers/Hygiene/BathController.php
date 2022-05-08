@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Hygiene;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Bath;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class BathController extends Controller
 {
@@ -16,7 +17,9 @@ class BathController extends Controller
     public function index($id)
     {
         $baths = Bath::where('pet_id',$id)->get();
-        return view('hygiene.baths.index', compact('baths'));
+
+        $todayDate = Carbon::now()->format('Y-m-d');
+        return view('hygiene.baths.index', compact('baths', 'todayDate'));
     }
 
     /**

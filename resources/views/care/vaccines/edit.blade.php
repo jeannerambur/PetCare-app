@@ -1,36 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Edit Vaccines', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Edit Vermifuge', 'color'=>'#B1A7F2'])
 
+<div class="edit-vaccine">
 
-<div class="card uper">
-  <div class="card-header">
-    Modifier le Vaccin
-  </div>
+  <div class="card-body">
 
-  <form method="post" action="{{ route('vaccines.update', $vaccine->id ) }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('vaccines.update', $vaccine->id ) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
+        <div class="form-type">
+              <label for="name" class="type">Type:</label>
+              <input type="text" class="form-control" name="type" id="type"/>
+          </div>
 
-        <label for="type">Type :</label>
-        <input type="text" class="form-control" name="type" value="{{ $vaccine->type }}"/>
+          <div class="form-name">
+              <label for="name" class="name">Name:</label>
+              <input type="text" class="form-control" name="name" id="name"/>
+          </div>
 
-        <label for="name">Name :</label>
-        <input type="text" class="form-control" name="name" value="{{ $vaccine->name }}"/>
+          <div class="form-dose">
+            <label for="dose" class="dose">Dose:</label>
+            <input type="text" class="form-control" name="dose"/>
+          </div>
 
-        <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
+          <div class="form-date">
+            <label for="date" class="date" >Date:</label>
+            <input type="date" id="date" name="date" class="date-form">
+          </div>
 
-          <label for="dose">Dose:</label>
-          <input type="text" class="form-control" name="dose" value="{{ $vaccine->dose }}"/>
+          <div class="btn-submit">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+        </div>
+    </form>
+  </div>
 
-          <button type="submit" class="btn btn-primary">Modifier</button>
-      </form>
 </div>
 @endsection
-
-
-
-

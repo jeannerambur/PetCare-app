@@ -1,37 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Edit Traitement', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Edit Vermifuge', 'color'=>'#B1A7F2'])
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
+<div class="edit-treatment">
 
-<div class="card uper">
-  <div class="card-header">
-    Modifier le Traitement
-  </div>
+  <div class="card-body">
 
-  <form method="post" action="{{ route('treatments.update', $treatment->id ) }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('treatments.update', $treatment->id ) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
-        <label for="name">Name :</label>
-        <input type="text" class="form-control" name="name" value="{{ $treatment->name }}"/>
+          <div class="form-name">
+            <label for="Name" class="name">Name:</label>
+            <input type="text" class="form-control" name="name"/>
+          </div>
 
-        <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
+          <div class="form-quantite">
+            <label for="dose" class="quantite">Quantite:</label>
+            <input type="text" class="form-control" name="quantite"/>
+          </div>
 
-          <label for="quantite">Quantite:</label>
-          <input type="text" class="form-control" name="quantite" value="{{ $treatment->quantite }}"/>
+          <div class="form-date">
+            <label for="date" class="date" >Date:</label>
+            <input type="date" id="date" name="date" class="date-form">
+          </div>
 
-          <button type="submit" class="btn btn-primary">Modifier</button>
-      </form>
+          <div class="btn-submit">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+        </div>
+    </form>
+  </div>
+
 </div>
 @endsection
-
-
-
-

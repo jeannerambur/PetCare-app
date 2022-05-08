@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Hygiene;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Litter;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class LitterController extends Controller
 {
@@ -16,7 +17,9 @@ class LitterController extends Controller
     public function index($id)
     {
         $litters = Litter::where('pet_id',$id)->get();
-        return view('hygiene.litters.index', compact('litters'));
+
+        $todayDate = Carbon::now()->format('Y-m-d');
+        return view('hygiene.litters.index', compact('litters','todayDate'));
     }
 
     /**

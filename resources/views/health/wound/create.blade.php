@@ -3,26 +3,28 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Add Blessure', 'color'=>'#F2865E'])
 
-<div class="add-pet">
-  <div class="add-pet-title">
-    Add Wound
-  </div>
-
+<div class="create-wound">
   <div class="card-body">
 
       <form method="post" action="{{ route('wounds.store-wound', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
-         <label for="name">Name :</label>
-        <input type="text" class="form-control" name="name"/>
+         <div class="form-name">
+            <label for="name" class="name">Name :</label>
+            <input type="text" class="form-control" name="name"/>
+          </div>
 
-        <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
+          <div class="form-date">
+            <label for="date" class="date">Date:</label>
+            <input type="date" id="date" name="date" class="date-form">
+          </div>
 
-          <label for="healing_date">Date:</label>
-          <input type="date" id="date" name="healing_date" class="date-form">
+          <div class="form-healing-date">
+            <label for="healing_date" class="healing-date">Healing date:</label>
+            <input type="date" id="healing-date" name="healing_date" class="date-form">
+          </div>
 
-          <button type="submit" class="btn btn-primary">Ajouter</button>
+          <button type="submit" class="btn-submit">Ajouter</button>
       </form>
   </div>
 </div>

@@ -2,15 +2,21 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Traitement', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Vermifuge', 'color'=>'#B1A7F2'])
 
 
-  <div class="pet-details">
-    <div class="card-pet-detail">
-        <div class="pet-container">
+<div class="treatment-details">
+    <div class="card-treatment-detail">
+        <div class="treatment-container">
 
-            <div class='pet-name'>
-                <p>{{$treatment->name}}</p>
+            <div class='treatment-name'>
+                <p><span>Name</span> {{$treatment->name}}</p>
+            </div>
+            <div class='treatment-quantite'>
+                <p><span>Quantite</span> {{$treatment->quantite}}</p>
+            </div>
+            <div class='treatment-date'>
+                <p><span>Date</span> {{ date('d/m/y', strtotime($treatment->date)) }}</p>
             </div>
 
         </div>

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Hygiene;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Dent;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DentController extends Controller
 {
@@ -16,7 +17,9 @@ class DentController extends Controller
     public function index($id)
     {
         $dents = Dent::where('pet_id',$id)->get();
-        return view('hygiene.dents.index', compact('dents'));
+
+        $todayDate = Carbon::now()->format('Y-m-d');
+        return view('hygiene.dents.index', compact('dents', 'todayDate'));
     }
 
     /**

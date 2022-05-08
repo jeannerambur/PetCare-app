@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Hygiene;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Claw;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ClawController extends Controller
 {
@@ -16,7 +17,9 @@ class ClawController extends Controller
     public function index($id)
     {
         $claws = Claw::where('pet_id',$id)->get();
-        return view('hygiene.claws.index', compact('claws'));
+        $todayDate = Carbon::now()->format('Y-m-d');
+
+        return view('hygiene.claws.index', compact('claws', 'todayDate'));
     }
 
     /**

@@ -2,14 +2,24 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Anti-parasite', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Vermifuge', 'color'=>'#B1A7F2'])
 
-  <div class="pet-details">
-    <div class="card-pet-detail">
-        <div class="pet-container">
 
-            <div class='pet-name'>
-                <h4><b>{{$pestcontrol->name}}</b></h4>
+<div class="pestcontrol-details">
+    <div class="card-pestcontrol-detail">
+        <div class="pestcontrol-container">
+
+            <div class='pestcontrol-type'>
+                <p><span>Type</span> {{$pestcontrol->type}}</p>
+            </div>
+            <div class='pestcontrol-name'>
+                <p><span>Name</span> {{$pestcontrol->name}}</p>
+            </div>
+            <div class='pestcontrol-dose'>
+                <p><span>Dose</span> {{$pestcontrol->dose}}</p>
+            </div>
+            <div class='pestcontrol-date'>
+                <p><span>Date</span> {{ date('d/m/y', strtotime($pestcontrol->date)) }}</p>
             </div>
 
         </div>

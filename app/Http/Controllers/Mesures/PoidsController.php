@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Mesures;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Poids;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PoidsController extends Controller
 {
@@ -16,7 +17,9 @@ class PoidsController extends Controller
     public function index($id)
     {
        $poids = Poids::where('pet_id',$id)->get();
-       return view('mesures.poids.index', compact('poids'));
+
+       $todayDate = Carbon::now()->format('Y-m-d');
+       return view('mesures.poids.index', compact('poids', 'todayDate'));
     }
     /**
      * Show the form for creating a new resource.
@@ -27,6 +30,7 @@ class PoidsController extends Controller
     {
         return view('mesures.poids.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -55,9 +59,11 @@ class PoidsController extends Controller
      * @param  \App\Models\Poids  $poids
      * @return \Illuminate\Http\Response
      */
-    public function show(Poids $poids)
+    public function show($id)
     {
-        //
+        $poids = Poids::find($id);
+        return view('mesures.poids.show')->with('poids', $poids);
+
     }
 
     /**

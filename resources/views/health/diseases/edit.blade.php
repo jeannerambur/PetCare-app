@@ -3,36 +3,40 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Edit Maladie', 'color'=>'#F2865E'])
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
+<div class="edit-disease">
+  <div class="card-body">
 
-<div class="card uper">
-  <div class="card-header">
-    Modifier la Blessure
-  </div>
 
   <form method="post" action="{{ route('diseases.update-disease', $disease->id ) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
-        <label for="name">Name :</label>
-        <input type="text" class="form-control" name="name"/>
+        <div class="form-name">
+            <label for="Name" class="name">Name:</label>
+            <input type="text" class="form-control" name="name"/>
+        </div>
 
-        <label for="type">Type :</label>
-        <input type="text" class="form-control" name="type"/>
+       <div class="form-type">
+          <label for="type" class="type">Type :</label>
+          <input type="text" class="form-control" name="type"/>
+        </div>
 
 
-        <label for="date">Date:</label>
+        <div class="form-date">
+          <label for="date" class="date">Date:</label>
           <input type="date" id="date" name="date" class="date-form">
+        </div>
 
-          <label for="healing_date">Date:</label>
-          <input type="date" id="date" name="healing_date" class="date-form">
-          <button type="submit" class="btn btn-primary">Modifier</button>
+        <div class="form-healing-date">
+          <label for="healing_date" class="healing-date">Healing date:</label>
+          <input type="date" id="healing-date" name="healing_date" class="date-form">
+        </div>
+
+        <button type="submit" class="btn-submit">Modifier</button>
       </form>
+  </div>
 </div>
+
 @endsection
 
 

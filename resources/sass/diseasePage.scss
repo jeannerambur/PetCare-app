@@ -1,4 +1,4 @@
-.container-appetit {
+.container-diseases {
     a {
         color: #000;
         text-decoration: none;
@@ -14,7 +14,7 @@
         margin: 0;
     }
 
-    .appetit-card {
+    .disease-card {
         width: 88%;
         margin-left: 6%;
         background-color: #fff;
@@ -23,7 +23,7 @@
         display: flex;
         flex-direction: row;
 
-        .date-appetit {
+        .date-disease {
             width: 30%;
             display: flex;
             flex-direction: column;
@@ -49,17 +49,12 @@
             }
         }
 
-        .info-appetit {
+        .info-disease {
             width: 70%;
             align-self: center;
             padding-left: 10%;
 
-            .appetit {
-                p {
-                    font-size: 20px;
-                }
-            }
-            .appetit-heure {
+            .disease-type{
                 p {
                     font-size: 16px;
                     opacity: 0.6;
@@ -70,21 +65,23 @@
     }
 }
 
-.add-appetit {
+.add-disease{
+    margin-top: 30%;
+}
+.btn-submit {
+    text-decoration: none;
     text-align: center;
-    margin-top: 10%;
-    padding-bottom: 5%;
-
-    a {
-        padding: 2% 7%;
-        background-color: #827EF2;
-        border-color: transparent;
-        font-size: 18px;
-        border-radius: 10px;
-    }
+    margin-top: 50%;
+    color: #fff;
+    background-color: #827EF2;
+    padding: 3% 8%;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 5px 8px lightgrey;
 }
 
-.create-appetit {
+.create-disease {
     .card-body {
         margin-top: 15%;
         flex: 0;
@@ -94,12 +91,29 @@
             width: 80%;
             margin-left: 10%;
 
-            .form-appetit {
-                .appetit {
+            .form-type {
+                .type {
                     font-size: 20px;
                     font-weight: 600;
                 }
-                #appetit {
+            }
+
+            .form-name {
+                margin-top: 6%;
+                .name {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+
+            .form-date {
+                margin-top: 6%;
+                .date {
+                    font-size: 20px;
+                    font-weight: 600;
+
+                }
+                #date {
                     margin-top: 3%;
                     margin-top: 3%;
                     padding: 3%;
@@ -110,13 +124,13 @@
                 }
             }
 
-            .form-heure {
+            .form-healing-date {
                 margin-top: 6%;
-                .heure {
+                .healing-date {
                     font-size: 20px;
                     font-weight: 600;
                 }
-                #heure {
+                #healing-date {
                     margin-top: 3%;
                     margin-top: 3%;
                     padding: 3%;
@@ -142,25 +156,105 @@
             }
         }
     }
-
-
 }
 
-.appetit-details {
+.edit-disease {
+    .card-body {
+        margin-top: 15%;
+        flex: 0;
+        padding: 0;
+
+        form {
+            width: 80%;
+            margin-left: 10%;
+
+            .form-type {
+                .type {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+
+            .form-type {
+                margin-top: 6%;
+                .type {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+            .form-name {
+                margin-top: 6%;
+                .name {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+
+            .form-date {
+                margin-top: 6%;
+                .date {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #date {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+            .form-healing-date {
+                margin-top: 6%;
+                .healing-date  {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #healing-date {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+            .btn-submit {
+                text-align: center;
+                margin-top: 50%;
+                button {
+                    color: #fff;
+                    background-color: #827EF2;
+                    padding: 3% 8%;
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+.disease-details {
     margin-top: 15%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    .card-appetit-detail {
+    .card-disease-detail {
         width: 85%;
         margin-left: 7.5%;
         background-color: white;
         border-radius: 10px;
-        .appetit-container {
+        .disease-container {
             padding-top: 5%;
-            .appetit-name, .appetit-date {
+            .disease-type, .disease-name, .disease-date, .disease-healing-date {
                 text-align: left;
-                margin-left: 30%;
+                margin-left: 20%;
                 span {
                     font-size: 20px;
                     margin-right: 4%;
@@ -191,65 +285,6 @@
                 color: #fff;
                 background-color: #FF6F6F;
                 border-color: transparent;
-            }
-        }
-    }
-}
-
-.edit-appetit {
-    .card-body {
-        margin-top: 15%;
-        flex: 0;
-        padding: 0;
-
-        form {
-            width: 80%;
-            margin-left: 10%;
-
-            .form-appetit {
-                .appetit {
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-                #appetit {
-                    margin-top: 3%;
-                    margin-top: 3%;
-                    padding: 3%;
-                    background-color: #fff;
-                    border: 0.5px solid lightgray;
-                    margin-bottom: 7%;
-                    border-radius: 9px;
-                }
-            }
-
-            .form-heure {
-                margin-top: 6%;
-                .heure {
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-                #heure {
-                    margin-top: 3%;
-                    margin-top: 3%;
-                    padding: 3%;
-                    background-color: #fff;
-                    border: 0.5px solid lightgray;
-                    margin-bottom: 7%;
-                    border-radius: 9px;
-                }
-            }
-
-            .btn-submit {
-                text-align: center;
-                margin-top: 50%;
-                button {
-                    color: #fff;
-                    background-color: #827EF2;
-                    padding: 3% 8%;
-                    font-size: 18px;
-                    border: none;
-                    border-radius: 8px;
-                }
             }
         }
     }

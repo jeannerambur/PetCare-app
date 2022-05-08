@@ -7,12 +7,6 @@
 @include('layouts.navbar', ['title'=>'Add Appetit', 'color'=>'#F2CA80'])
 
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-
 <div class="edit-appetit">
 
   <div class="card-body">

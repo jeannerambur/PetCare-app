@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Care;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Vaccine;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class VaccineController extends Controller
 {
@@ -16,7 +17,8 @@ class VaccineController extends Controller
     public function index($id)
     {
        $vaccines = Vaccine::where('pet_id',$id)->get();
-       return view('care.vaccines.index', compact('vaccines'));
+       $todayDate = Carbon::now()->format('Y-m-d');
+       return view('care.vaccines.index', compact('vaccines', 'todayDate'));
     }
 
 

@@ -1,35 +1,38 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Add Anti-parasite', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Add Vermifuge', 'color'=>'#B1A7F2'])
 
-<div class="add-pet">
-  <div class="add-pet-title">
-    Add pestcontrol
-  </div>
+<div class="create-dewormer">
 
   <div class="card-body">
 
-      <form method="post" action="{{ route('pestcontrols.store-pestcontrol', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
+      <form method="post" action="{{ route('dewormers.store-dewormer', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
-         <div class="form-group">
-              <label for="type">Type:</label>
-              <input type="text" class="form-control" name="type"/>
+          <div class="form-type">
+              <label for="type" class="type" >Type:</label>
+              <input type="text" class="form-control" name="type" placeholder="Selection du type" id="type"/>
           </div>
 
-          <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" class="form-control" name="name"/>
+          <div class="form-name">
+              <label for="name" class="name">Name:</label>
+              <input type="text" class="form-control" name="name" placeholder="name" id="name"/>
           </div>
 
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
+          <div class="form-dose">
+            <label for="dose" class="dose">Dose:</label>
+            <input type="text" class="form-control" name="dose"/>
+          </div>
 
-          <label for="dose">Dose:</label>
-          <input type="text" class="form-control" name="dose"/>
+          <div class="form-date">
+              <label for="date" class="date" >Date:</label>
+              <input type="date" id="date" name="date" class="date-form">
+          </div>
 
-          <button type="submit" class="btn btn-primary">Ajouter</button>
+
+          <button type="submit" class="btn-submit">Ajouter</button>
+
       </form>
   </div>
 </div>

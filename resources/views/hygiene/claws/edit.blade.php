@@ -4,16 +4,23 @@
 
 @include('layouts.navbar', ['title'=>'Edit Claw', 'color'=>'#FFB5B1'])
 
-<div class="edit-claw">
+<div class="edit-health">
 
-  <form method="post" action="{{ route('claws.update', $claw->id ) }}" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
+    <div class="card-body">
 
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form" placeholder="yyyy-mm-dd">
+        <form method="post" action="{{ route('claws.update', $claw->id ) }}" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
 
-          <button type="submit" class="btn btn-primary">Modifier</button>
-      </form>
+            <div class="form-date">
+              <label for="date" class="date" >Date:</label>
+              <input type="date" id="date" name="date" class="date-form">
+            </div>
+
+            <div class="btn-submit">
+                <button type="submit" class="btn btn-primary">Modifier</button>
+            </div>
+        </form>
+    </div>
 </div>
 @endsection

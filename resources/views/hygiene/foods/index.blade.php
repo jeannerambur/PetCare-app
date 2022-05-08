@@ -3,22 +3,44 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Add food', 'color'=>'#FFB5B1'])
 
-<a href="{{ route('foods.create-food', Route::current()->parameter('id'))}}" class="btn btn-primary">Add</a>
 
-
+<div class="container-food">
 @foreach($foods as $food)
-<div class="container-appetit">
-<a href="{{ route('foods.show', $food->id)}}">
-    <div class="appetit-card">
-        <div class="date-appetit">
-            <h1>{{ $food->marque}}</h1>
-        </div>
+    <div class="container">
+        <a href="{{ route('foods.show', $food->id)}}">
+            <div class="food-card">
+                <div class="date-food">
+                    <div class="day">
+                        <p>{{ date('d', strtotime($food->date)) }}</p>
+                    </div>
+                    <div class="month_year">
+                        <div class="month">
+                            <p>{{ date('M', strtotime($food->date)) }}</p>
+                        </div>
+                        <div class="year">
+                            <p>{{ date('y', strtotime($food->date)) }}</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-food">
+                    <div class="food-type">
+                        <p>{{ $food->type }}</p>
+                    </div>
+                    <div class="food-quantite">
+                        <p>{{ $food->quantite}} g</p>
+                    </div>
+                </div>
+
+            </div>
+        </a>
     </div>
-</a>
-<div>
-
 @endforeach
+</div>
 
 
+<div class="add-health">
+    <a href="{{ route('appetit.create-appetit', Route::current()->parameter('id'))}}" class="btn btn-primary">Ajouter</a>
+</div>
 
 @endsection

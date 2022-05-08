@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Hygiene;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Groom;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class GroomController extends Controller
 {
@@ -16,7 +17,9 @@ class GroomController extends Controller
     public function index($id)
     {
         $grooms = Groom::where('pet_id',$id)->get();
-        return view('hygiene.grooms.index', compact('grooms'));
+
+        $todayDate = Carbon::now()->format('Y-m-d');
+        return view('hygiene.grooms.index', compact('grooms','todayDate'));
     }
 
 

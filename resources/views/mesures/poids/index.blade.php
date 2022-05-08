@@ -5,26 +5,55 @@
 @include('layouts.navbar', ['title'=>'Poids', 'color'=>'#F2CA80'])
 
 
-<a href="{{ route('poids.create-poids', Route::current()->parameter('id'))}}" class="btn btn-primary">Add</a>
-
-
+<div class="container-poids">
 @foreach($poids as $poid)
-<div class="uper">
+    <div class="container">
+        <a href="{{ route('poids.show', $poid->id)}}">
+            <div class="poids-card">
+                <div class="date-poids">
+                    <div class="day">
+                        <p>{{ date('d', strtotime($poid->date)) }}</p>
+                    </div>
+                    <div class="month_year">
+                        <div class="month">
+                            <p>{{ date('M', strtotime($poid->date)) }}</p>
+                        </div>
+                        <div class="year">
+                            <p>{{ date('y', strtotime($poid->date)) }}</p>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="info-poids">
+                    <div class="poids">
+                        <p>{{ $poid->poids}} kg</p>
 
-  <h1>Poids : {{ $poid->poids}} kg</h1>
-<div>
+                    </div>
+                    <div class="duree">
+                    @if( ( (strtotime($todayDate) - strtotime($poid->date) )/86400 ) < 0 )
+                      <p>Dans {{ -(strtotime($todayDate) - strtotime($poid->date))/86400 }} jours</p>
+                    @elseif( ( (strtotime($todayDate) - strtotime($poid->date)) /86400 ) == 0)
+                        <p>Aujourd'hui </p>
+                    @elseif( ( (strtotime($todayDate) - strtotime($poid->date) )/86400 ) > 365 )
+                        <p>Il y a 1 an et {{ ((strtotime($todayDate) - strtotime($poid->date) )/86400) - 365 }} jours</p>
+                    @elseif( ( (strtotime($todayDate) - strtotime($poid->date) )/86400 ) == 1)
+                        <p>Il y a 1 jour</p>
 
+                    @else
+                        <p>Il y a {{ (strtotime($todayDate) - strtotime($poid->date) )/86400 }} jours</p>
+                    @endif
+                    </div>
+                </div>
 
-<div class="edit-pet">
-        <a href="{{ route('poids.edit', $poid->id)}}" class="btn btn-primary">Edit</a>
-        <form action="{{ route('poids.destroy', $poid->id)}}" method="post">
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger" type="submit">Delete</button>
-        </form>
+            </div>
+        </a>
     </div>
 @endforeach
+</div>
 
+
+<div class="add-poid">
+    <a href="{{ route('poids.create-poids', Route::current()->parameter('id'))}}" class="btn-submit">Ajouter</a>
+</div>
 
 @endsection

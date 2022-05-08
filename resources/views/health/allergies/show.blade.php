@@ -4,12 +4,17 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Allergie', 'color'=>'#F2865E'])
 
-  <div class="pet-details">
-    <div class="card-pet-detail">
-        <div class="pet-container">
 
-            <div class='pet-name'>
-                <h4><b>{{$allergy->type}}</b></h4>
+<div class="allergy-details">
+    <div class="card-allergy-detail">
+        <div class="allergy-container">
+
+            <div class='allergy-name'>
+
+                <p><span>Allergy</span> {{$allergy->name}}</p>
+            </div>
+            <div class='allergy-date'>
+                <p><span>Date</span> {{ date('d/m/y', strtotime($allergy->date)) }}</p>
             </div>
 
         </div>

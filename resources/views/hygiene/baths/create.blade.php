@@ -2,20 +2,21 @@
 
 @section('content')
 
-@include('layouts.navbar', ['title'=>'Create bath', 'color'=>'#FFB5B1'])
+@include('layouts.navbar', ['title'=>'Create groom', 'color'=>'#FFB5B1'])
 
-<div class="add-bath">
+<div class="create-health">
 
   <div class="card-body">
 
       <form method="post" action="{{ route('baths.store-bath', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form" placeholder="yyyy-mm-dd">
+         <div class="form-date">
+              <label for="date" class="date" >Date:</label>
+              <input type="date" id="date" name="date" class="date-form">
+        </div>
 
-
-          <button type="submit" class="btn btn-primary">Ajouter</button>
+        <button type="submit" class="btn-submit">Ajouter</button>
       </form>
   </div>
 </div>

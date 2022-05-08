@@ -3,71 +3,34 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Edit Allergie', 'color'=>'#F2865E'])
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
+<div class="edit-allergy">
 
-<div class="card uper">
-  <div class="card-header">
-    Modifier l'Allergie
-  </div>
+  <div class="card-body">
 
-  <form method="post" action="{{ route('allergies.update', $allergy->id ) }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('allergies.update', $allergy->id ) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
-        <label for="type">Type :</label>
-        <input type="text" class="form-control" name="type" value="{{ $allergy->type }}"/>
-
-        <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
-
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" name="name" value="{{ $allergy->name }}"/>
-
-          <button type="submit" class="btn btn-primary">Modifier</button>
-      </form>
-</div>
-@endsection
-
-
-
-
-
-
-@extends('layouts.app')
-
-@section('content')
-
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-
-<div class="card uper">
-  <div class="card-header">
-    Modifier l'Allergie
-  </div>
-
-  <form method="post" action="{{ route('allergies.update', $allergy->id ) }}" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
-
-        <div class="form-group">
-              <label for="type">Type:</label>
+          <div class="form-type">
+              <label for="type" class='type'>Type:</label>
               <input type="text" class="form-control" name="type"/>
           </div>
 
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
+          <div class="form-name">
+            <label for="Name" class="name">Name:</label>
+            <input type="text" class="form-control" name="name"/>
+          </div>
 
-          <label for="Name">Name:</label>
-          <input type="text" class="form-control" name="name"/>
+          <div class="form-date">
+            <label for="date" class="date" >Date:</label>
+            <input type="date" id="date" name="date" class="date-form">
+          </div>
 
-          <button type="submit" class="btn btn-primary">Modifier</button>
-      </form>
+          <div class="btn-submit">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+        </div>
+    </form>
+  </div>
+
 </div>
 @endsection

@@ -4,11 +4,6 @@
 
 @include('layouts.navbar', ['title'=>'Add Appetit', 'color'=>'#F2CA80'])
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
 
 <div class="create-appetit">
 
@@ -32,9 +27,8 @@
               <input type="text" class="form-control" name="heure" placeholder="16" id="heure"/>
           </div>
 
-          <div class="btn-submit">
-            <button type="submit" class="btn btn-primary">Ajouter</button>
-          </div>
+          <button type="submit" class="btn-submit">Ajouter</button>
+
       </form>
   </div>
 </div>

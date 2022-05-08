@@ -1,4 +1,4 @@
-.container-appetit {
+.container-wound{
     a {
         color: #000;
         text-decoration: none;
@@ -14,7 +14,7 @@
         margin: 0;
     }
 
-    .appetit-card {
+    .wound-card {
         width: 88%;
         margin-left: 6%;
         background-color: #fff;
@@ -23,7 +23,7 @@
         display: flex;
         flex-direction: row;
 
-        .date-appetit {
+        .date-wound {
             width: 30%;
             display: flex;
             flex-direction: column;
@@ -49,118 +49,37 @@
             }
         }
 
-        .info-appetit {
+        .info-wound {
             width: 70%;
             align-self: center;
             padding-left: 10%;
 
-            .appetit {
+            .wound-name {
                 p {
                     font-size: 20px;
                 }
             }
-            .appetit-heure {
-                p {
-                    font-size: 16px;
-                    opacity: 0.6;
-                }
-            }
+
         }
 
     }
 }
 
-.add-appetit {
-    text-align: center;
-    margin-top: 10%;
-    padding-bottom: 5%;
-
-    a {
-        padding: 2% 7%;
-        background-color: #827EF2;
-        border-color: transparent;
-        font-size: 18px;
-        border-radius: 10px;
-    }
-}
-
-.create-appetit {
-    .card-body {
-        margin-top: 15%;
-        flex: 0;
-        padding: 0;
-
-        form {
-            width: 80%;
-            margin-left: 10%;
-
-            .form-appetit {
-                .appetit {
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-                #appetit {
-                    margin-top: 3%;
-                    margin-top: 3%;
-                    padding: 3%;
-                    background-color: #fff;
-                    border: 0.5px solid lightgray;
-                    margin-bottom: 7%;
-                    border-radius: 9px;
-                }
-            }
-
-            .form-heure {
-                margin-top: 6%;
-                .heure {
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-                #heure {
-                    margin-top: 3%;
-                    margin-top: 3%;
-                    padding: 3%;
-                    background-color: #fff;
-                    border: 0.5px solid lightgray;
-                    margin-bottom: 7%;
-                    border-radius: 9px;
-                }
-            }
-
-            .btn-submit {
-                text-align: center;
-                margin-top: 50%;
-                button {
-                    color: #fff;
-                    background-color: #827EF2;
-                    padding: 3% 8%;
-                    font-size: 18px;
-                    border: none;
-                    border-radius: 8px;
-                    box-shadow: 1px 5px 8px lightgrey;
-                }
-            }
-        }
-    }
-
-
-}
-
-.appetit-details {
+.wound-details {
     margin-top: 15%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    .card-appetit-detail {
+    .card-wound-detail {
         width: 85%;
         margin-left: 7.5%;
         background-color: white;
         border-radius: 10px;
-        .appetit-container {
+        .wound-container {
             padding-top: 5%;
-            .appetit-name, .appetit-date {
+            .wound-name, .wound-healing-date, .wound-date {
                 text-align: left;
-                margin-left: 30%;
+                margin-left: 20%;
                 span {
                     font-size: 20px;
                     margin-right: 4%;
@@ -196,7 +115,7 @@
     }
 }
 
-.edit-appetit {
+.edit-wound {
     .card-body {
         margin-top: 15%;
         flex: 0;
@@ -206,12 +125,21 @@
             width: 80%;
             margin-left: 10%;
 
-            .form-appetit {
-                .appetit {
+
+            .form-name {
+                margin-top: 6%;
+                .name {
                     font-size: 20px;
                     font-weight: 600;
                 }
-                #appetit {
+            }
+            .form-date {
+                margin-top: 6%;
+                .date {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #date {
                     margin-top: 3%;
                     margin-top: 3%;
                     padding: 3%;
@@ -222,13 +150,91 @@
                 }
             }
 
-            .form-heure {
+
+            .form-healing-date {
                 margin-top: 6%;
-                .heure {
+                .healing-date  {
                     font-size: 20px;
                     font-weight: 600;
                 }
-                #heure {
+                #healing-date {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+
+            .btn-submit {
+                text-align: center;
+                margin-top: 50%;
+                button {
+                    color: #fff;
+                    background-color: #827EF2;
+                    padding: 3% 8%;
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+.create-wound {
+    .card-body {
+        margin-top: 15%;
+        flex: 0;
+        padding: 0;
+
+        form {
+            width: 80%;
+            margin-left: 10%;
+
+            .form-type {
+                .type {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+
+            .form-name {
+                margin-top: 6%;
+                .name {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+
+            .form-date {
+                margin-top: 6%;
+                .date {
+                    font-size: 20px;
+                    font-weight: 600;
+
+                }
+                #date {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+            .form-healing-date {
+                margin-top: 6%;
+                .healing-date {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #healing-date {
                     margin-top: 3%;
                     margin-top: 3%;
                     padding: 3%;
@@ -249,6 +255,7 @@
                     font-size: 18px;
                     border: none;
                     border-radius: 8px;
+                    box-shadow: 1px 5px 8px lightgrey;
                 }
             }
         }

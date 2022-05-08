@@ -11861,11 +11861,18 @@ input[type=date], focus {
   text-decoration: none;
 }
 
+.container-appetit a {
+  color: #000;
+  text-decoration: none;
+}
 .container-appetit .container {
   margin-top: 6.4%;
 }
 .container-appetit .container:first-child {
   margin-top: 18%;
+}
+.container-appetit p {
+  margin: 0;
 }
 .container-appetit .appetit-card {
   width: 88%;
@@ -11875,6 +11882,39 @@ input[type=date], focus {
   padding: 2.5% 6%;
   display: flex;
   flex-direction: row;
+}
+.container-appetit .appetit-card .date-appetit {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-appetit .appetit-card .date-appetit .day p {
+  font-size: 32px;
+}
+.container-appetit .appetit-card .date-appetit .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-appetit .appetit-card .date-appetit .month_year .month {
+  margin-right: 6%;
+}
+.container-appetit .appetit-card .date-appetit .month_year .month p {
+  font-size: 12px;
+}
+.container-appetit .appetit-card .date-appetit .month_year .year p {
+  font-size: 12px;
+}
+.container-appetit .appetit-card .info-appetit {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-appetit .appetit-card .info-appetit .appetit p {
+  font-size: 20px;
+}
+.container-appetit .appetit-card .info-appetit .appetit-heure p {
+  font-size: 16px;
+  opacity: 0.6;
 }
 
 .add-appetit {
@@ -11942,6 +11982,53 @@ input[type=date], focus {
   box-shadow: 1px 5px 8px lightgrey;
 }
 
+.appetit-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.appetit-details .card-appetit-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.appetit-details .card-appetit-detail .appetit-container {
+  padding-top: 5%;
+}
+.appetit-details .card-appetit-detail .appetit-container .appetit-name, .appetit-details .card-appetit-detail .appetit-container .appetit-date {
+  text-align: left;
+  margin-left: 30%;
+}
+.appetit-details .card-appetit-detail .appetit-container .appetit-name span, .appetit-details .card-appetit-detail .appetit-container .appetit-date span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.appetit-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.appetit-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.appetit-details .edit-pet form {
+  width: 40%;
+}
+.appetit-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
 .edit-appetit .card-body {
   margin-top: 15%;
   flex: 0;
@@ -11991,7 +12078,6 @@ input[type=date], focus {
   font-size: 18px;
   border: none;
   border-radius: 8px;
-  box-shadow: 1px 5px 8px lightgrey;
 }
 
 .navbar-container {
@@ -12087,6 +12173,184 @@ input[type=date], focus {
 }
 .container-health-page .button-health .button-allergies {
   margin-top: 0 !important;
+}
+
+.container-health a {
+  color: #000;
+  text-decoration: none;
+}
+.container-health .container {
+  margin-top: 6.4%;
+}
+.container-health .container:first-child {
+  margin-top: 18%;
+}
+.container-health p {
+  margin: 0;
+}
+.container-health .health-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-health .health-card .date-health {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-health .health-card .date-health .day p {
+  font-size: 32px;
+}
+.container-health .health-card .date-health .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-health .health-card .date-health .month_year .month {
+  margin-right: 6%;
+}
+.container-health .health-card .date-health .month_year .month p {
+  font-size: 12px;
+}
+.container-health .health-card .date-health .month_year .year p {
+  font-size: 12px;
+}
+.container-health .health-card .info-health {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-health .health-card .info-health .health-title-name p, .container-health .health-card .info-health .health-date p {
+  font-size: 20px;
+}
+
+.health-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.health-details .card-health-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.health-details .card-health-detail .health-container {
+  padding-top: 5%;
+}
+.health-details .card-health-detail .health-container .health-date {
+  text-align: left;
+  margin-left: 30%;
+}
+.health-details .card-health-detail .health-container .health-date span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.health-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.health-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.health-details .edit-pet form {
+  width: 40%;
+}
+.health-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-health .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-health .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-health .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-health .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-health .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-health .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+.edit-health .card-body form .btn-submit button {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 18px;
+}
+
+.create-health .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-health .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-health .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-health .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-health .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-health .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-health .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
 }
 
 .container-user-profile {
@@ -12193,6 +12457,2041 @@ input[type=date], focus {
 }
 .history .cards-pets .card-pet a .pet-container .pet-name p {
   font-size: 20px;
+}
+
+.container-poids a {
+  color: #000;
+  text-decoration: none;
+}
+.container-poids .container {
+  margin-top: 6.4%;
+}
+.container-poids .container:first-child {
+  margin-top: 18%;
+}
+.container-poids p {
+  margin: 0;
+}
+.container-poids .poids-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-poids .poids-card .date-poids {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-poids .poids-card .date-poids .day p {
+  font-size: 32px;
+}
+.container-poids .poids-card .date-poids .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-poids .poids-card .date-poids .month_year .month {
+  margin-right: 6%;
+}
+.container-poids .poids-card .date-poids .month_year .month p {
+  font-size: 12px;
+}
+.container-poids .poids-card .date-poids .month_year .year p {
+  font-size: 12px;
+}
+.container-poids .poids-card .info-poids {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-poids .poids-card .info-poids .poids p {
+  font-size: 20px;
+}
+
+.add-poid {
+  margin-top: 30%;
+}
+
+.btn-submit {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.poids-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.poids-details .card-poids-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.poids-details .card-poids-detail .poids-container {
+  padding-top: 5%;
+}
+.poids-details .card-poids-detail .poids-container .poids-name, .poids-details .card-poids-detail .poids-container .poids-date {
+  text-align: left;
+  margin-left: 35%;
+}
+.poids-details .card-poids-detail .poids-container .poids-name span, .poids-details .card-poids-detail .poids-container .poids-date span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.poids-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.poids-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.poids-details .edit-pet form {
+  width: 40%;
+}
+.poids-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-poids .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-poids .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-poids .card-body form .form-poids .poids {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-poids .card-body form .form-poids #poids {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-poids .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-poids .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-poids .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-poids .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+.edit-poids .card-body form .btn-submit button {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 18px;
+}
+
+.create-poids .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-poids .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-poids .card-body form .form-poids .poids {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-poids .card-body form .form-poids #poids {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-poids .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-poids .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-poids .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-poids .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-poids .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.container-allergy a {
+  color: #000;
+  text-decoration: none;
+}
+.container-allergy .container {
+  margin-top: 6.4%;
+}
+.container-allergy .container:first-child {
+  margin-top: 18%;
+}
+.container-allergy p {
+  margin: 0;
+}
+.container-allergy .allergy-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-allergy .allergy-card .date-allergy {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-allergy .allergy-card .date-allergy .day p {
+  font-size: 32px;
+}
+.container-allergy .allergy-card .date-allergy .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-allergy .allergy-card .date-allergy .month_year .month {
+  margin-right: 6%;
+}
+.container-allergy .allergy-card .date-allergy .month_year .month p {
+  font-size: 12px;
+}
+.container-allergy .allergy-card .date-allergy .month_year .year p {
+  font-size: 12px;
+}
+.container-allergy .allergy-card .info-allergy {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-allergy .allergy-card .info-allergy .allergy p {
+  font-size: 20px;
+}
+
+.add-allergy {
+  margin-top: 30%;
+}
+
+.btn-submit {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.allergy-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.allergy-details .card-allergy-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.allergy-details .card-allergy-detail .allergy-container {
+  padding-top: 5%;
+}
+.allergy-details .card-allergy-detail .allergy-container .allergy-name, .allergy-details .card-allergy-detail .allergy-container .allergy-date {
+  text-align: left;
+  margin-left: 30%;
+}
+.allergy-details .card-allergy-detail .allergy-container .allergy-name span, .allergy-details .card-allergy-detail .allergy-container .allergy-date span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.allergy-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.allergy-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.allergy-details .edit-pet form {
+  width: 40%;
+}
+.allergy-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-allergy .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-allergy .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-allergy .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-allergy .card-body form .form-type #poids {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-allergy .card-body form .form-name {
+  margin-top: 6%;
+}
+.edit-allergy .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-allergy .card-body form .form-name #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-allergy .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-allergy .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-allergy .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-allergy .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+.edit-allergy .card-body form .btn-submit button {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 18px;
+}
+
+.create-allergy .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-allergy .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-allergy .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-allergy .card-body form .form-type #type {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-allergy .card-body form .form-name {
+  margin-top: 6%;
+}
+.create-allergy .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-allergy .card-body form .form-name #name {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-allergy .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-allergy .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-allergy .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-allergy .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-allergy .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.container-food a {
+  color: #000;
+  text-decoration: none;
+}
+.container-food .container {
+  margin-top: 6.4%;
+}
+.container-food .container:first-child {
+  margin-top: 18%;
+}
+.container-food p {
+  margin: 0;
+}
+.container-food .food-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-food .food-card .date-food {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-food .food-card .date-food .day p {
+  font-size: 32px;
+}
+.container-food .food-card .date-food .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-food .food-card .date-food .month_year .month {
+  margin-right: 6%;
+}
+.container-food .food-card .date-food .month_year .month p {
+  font-size: 12px;
+}
+.container-food .food-card .date-food .month_year .year p {
+  font-size: 12px;
+}
+.container-food .food-card .info-food {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-food .food-card .info-food .food-type p {
+  font-size: 20px;
+}
+.container-food .food-card .info-food .food-quantite p {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.add-health {
+  text-align: center;
+  margin-top: 10%;
+  padding-bottom: 5%;
+}
+.add-health a {
+  padding: 2% 7%;
+  background-color: #827EF2;
+  border-color: transparent;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.food-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.food-details .card-food-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.food-details .card-food-detail .food-container {
+  padding-top: 5%;
+}
+.food-details .card-food-detail .food-container .food-type, .food-details .card-food-detail .food-container .food-quantite {
+  text-align: left;
+  margin-left: 30%;
+}
+.food-details .card-food-detail .food-container .food-type span, .food-details .card-food-detail .food-container .food-quantite span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.food-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.food-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.food-details .edit-pet form {
+  width: 40%;
+}
+.food-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-food .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-food .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-food .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-food .card-body form .form-quantite {
+  margin-top: 6%;
+}
+.edit-food .card-body form .form-quantite .quantite {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-food .card-body form .form-marque {
+  margin-top: 6%;
+}
+.edit-food .card-body form .form-marque .marque {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-food .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-food .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-food .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-food .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.edit-food .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+}
+
+.container-diseases a {
+  color: #000;
+  text-decoration: none;
+}
+.container-diseases .container {
+  margin-top: 6.4%;
+}
+.container-diseases .container:first-child {
+  margin-top: 18%;
+}
+.container-diseases p {
+  margin: 0;
+}
+.container-diseases .disease-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-diseases .disease-card .date-disease {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-diseases .disease-card .date-disease .day p {
+  font-size: 32px;
+}
+.container-diseases .disease-card .date-disease .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-diseases .disease-card .date-disease .month_year .month {
+  margin-right: 6%;
+}
+.container-diseases .disease-card .date-disease .month_year .month p {
+  font-size: 12px;
+}
+.container-diseases .disease-card .date-disease .month_year .year p {
+  font-size: 12px;
+}
+.container-diseases .disease-card .info-disease {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-diseases .disease-card .info-disease .disease-type p {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.add-disease {
+  margin-top: 30%;
+}
+
+.btn-submit {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.create-disease .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-disease .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-disease .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-disease .card-body form .form-name {
+  margin-top: 6%;
+}
+.create-disease .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-disease .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-disease .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-disease .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-disease .card-body form .form-healing-date {
+  margin-top: 6%;
+}
+.create-disease .card-body form .form-healing-date .healing-date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-disease .card-body form .form-healing-date #healing-date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-disease .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-disease .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.edit-disease .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-disease .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-disease .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-disease .card-body form .form-type {
+  margin-top: 6%;
+}
+.edit-disease .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-disease .card-body form .form-name {
+  margin-top: 6%;
+}
+.edit-disease .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-disease .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-disease .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-disease .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-disease .card-body form .form-healing-date {
+  margin-top: 6%;
+}
+.edit-disease .card-body form .form-healing-date .healing-date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-disease .card-body form .form-healing-date #healing-date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-disease .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.edit-disease .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+}
+
+.disease-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.disease-details .card-disease-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.disease-details .card-disease-detail .disease-container {
+  padding-top: 5%;
+}
+.disease-details .card-disease-detail .disease-container .disease-type, .disease-details .card-disease-detail .disease-container .disease-name, .disease-details .card-disease-detail .disease-container .disease-date, .disease-details .card-disease-detail .disease-container .disease-healing-date {
+  text-align: left;
+  margin-left: 20%;
+}
+.disease-details .card-disease-detail .disease-container .disease-type span, .disease-details .card-disease-detail .disease-container .disease-name span, .disease-details .card-disease-detail .disease-container .disease-date span, .disease-details .card-disease-detail .disease-container .disease-healing-date span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.disease-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.disease-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.disease-details .edit-pet form {
+  width: 40%;
+}
+.disease-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.container-wound a {
+  color: #000;
+  text-decoration: none;
+}
+.container-wound .container {
+  margin-top: 6.4%;
+}
+.container-wound .container:first-child {
+  margin-top: 18%;
+}
+.container-wound p {
+  margin: 0;
+}
+.container-wound .wound-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-wound .wound-card .date-wound {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-wound .wound-card .date-wound .day p {
+  font-size: 32px;
+}
+.container-wound .wound-card .date-wound .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-wound .wound-card .date-wound .month_year .month {
+  margin-right: 6%;
+}
+.container-wound .wound-card .date-wound .month_year .month p {
+  font-size: 12px;
+}
+.container-wound .wound-card .date-wound .month_year .year p {
+  font-size: 12px;
+}
+.container-wound .wound-card .info-wound {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-wound .wound-card .info-wound .wound-name p {
+  font-size: 20px;
+}
+
+.wound-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.wound-details .card-wound-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.wound-details .card-wound-detail .wound-container {
+  padding-top: 5%;
+}
+.wound-details .card-wound-detail .wound-container .wound-name, .wound-details .card-wound-detail .wound-container .wound-healing-date, .wound-details .card-wound-detail .wound-container .wound-date {
+  text-align: left;
+  margin-left: 20%;
+}
+.wound-details .card-wound-detail .wound-container .wound-name span, .wound-details .card-wound-detail .wound-container .wound-healing-date span, .wound-details .card-wound-detail .wound-container .wound-date span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.wound-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.wound-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.wound-details .edit-pet form {
+  width: 40%;
+}
+.wound-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-wound .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-wound .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-wound .card-body form .form-name {
+  margin-top: 6%;
+}
+.edit-wound .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-wound .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-wound .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-wound .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-wound .card-body form .form-healing-date {
+  margin-top: 6%;
+}
+.edit-wound .card-body form .form-healing-date .healing-date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-wound .card-body form .form-healing-date #healing-date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-wound .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.edit-wound .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+}
+
+.create-wound .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-wound .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-wound .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-wound .card-body form .form-name {
+  margin-top: 6%;
+}
+.create-wound .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-wound .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-wound .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-wound .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-wound .card-body form .form-healing-date {
+  margin-top: 6%;
+}
+.create-wound .card-body form .form-healing-date .healing-date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-wound .card-body form .form-healing-date #healing-date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-wound .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-wound .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.container-dewormers a {
+  color: #000;
+  text-decoration: none;
+}
+.container-dewormers .container {
+  margin-top: 6.4%;
+}
+.container-dewormers .container:first-child {
+  margin-top: 18%;
+}
+.container-dewormers p {
+  margin: 0;
+}
+.container-dewormers .dewormer-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-dewormers .dewormer-card .date-dewormer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-dewormers .dewormer-card .date-dewormer .day p {
+  font-size: 32px;
+}
+.container-dewormers .dewormer-card .date-dewormer .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-dewormers .dewormer-card .date-dewormer .month_year .month {
+  margin-right: 6%;
+}
+.container-dewormers .dewormer-card .date-dewormer .month_year .month p {
+  font-size: 12px;
+}
+.container-dewormers .dewormer-card .date-dewormer .month_year .year p {
+  font-size: 12px;
+}
+.container-dewormers .dewormer-card .info-dewormer {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-dewormers .dewormer-card .info-dewormer .dewormer-name p, .container-dewormers .dewormer-card .info-dewormer .dewormer-type p {
+  font-size: 20px;
+}
+
+.add-dewormer {
+  margin-top: 30%;
+}
+
+.btn-submit {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.dewormer-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.dewormer-details .card-dewormer-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.dewormer-details .card-dewormer-detail .dewormer-container {
+  padding-top: 5%;
+}
+.dewormer-details .card-dewormer-detail .dewormer-container .dewormer-type, .dewormer-details .card-dewormer-detail .dewormer-container .dewormer-name, .dewormer-details .card-dewormer-detail .dewormer-container .dewormer-date {
+  text-align: left;
+  margin-left: 20%;
+}
+.dewormer-details .card-dewormer-detail .dewormer-container .dewormer-type span, .dewormer-details .card-dewormer-detail .dewormer-container .dewormer-name span, .dewormer-details .card-dewormer-detail .dewormer-container .dewormer-date span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.dewormer-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.dewormer-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.dewormer-details .edit-pet form {
+  width: 40%;
+}
+.dewormer-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-dewormer .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-dewormer .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-dewormer .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-dewormer .card-body form .form-name {
+  margin-top: 6%;
+}
+.edit-dewormer .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-dewormer .card-body form .form-dose {
+  margin-top: 6%;
+}
+.edit-dewormer .card-body form .form-dose .dose {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-dewormer .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-dewormer .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-dewormer .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-dewormer .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.edit-dewormer .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+}
+
+.create-dewormer .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-dewormer .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-dewormer .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-dewormer .card-body form .form-name {
+  margin-top: 6%;
+}
+.create-dewormer .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-dewormer .card-body form .form-dose {
+  margin-top: 6%;
+}
+.create-dewormer .card-body form .form-dose .dose {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-dewormer .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-dewormer .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-dewormer .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-dewormer .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-dewormer .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.container-treatment a {
+  color: #000;
+  text-decoration: none;
+}
+.container-treatment .container {
+  margin-top: 6.4%;
+}
+.container-treatment .container:first-child {
+  margin-top: 18%;
+}
+.container-treatment p {
+  margin: 0;
+}
+.container-treatment .treatment-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-treatment .treatment-card .date-treatment {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-treatment .treatment-card .date-treatment .day p {
+  font-size: 32px;
+}
+.container-treatment .treatment-card .date-treatment .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-treatment .treatment-card .date-treatment .month_year .month {
+  margin-right: 6%;
+}
+.container-treatment .treatment-card .date-treatment .month_year .month p {
+  font-size: 12px;
+}
+.container-treatment .treatment-card .date-treatment .month_year .year p {
+  font-size: 12px;
+}
+.container-treatment .treatment-card .info-treatment {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-treatment .treatment-card .info-treatment .treatment-name p, .container-treatment .treatment-card .info-treatment .treatment-quantite p {
+  font-size: 20px;
+}
+
+.add-treatment {
+  margin-top: 30%;
+}
+
+.btn-submit {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.treatment-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.treatment-details .card-treatment-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.treatment-details .card-treatment-detail .treatment-container {
+  padding-top: 5%;
+}
+.treatment-details .card-treatment-detail .treatment-container .treatment-quantite, .treatment-details .card-treatment-detail .treatment-container .treatment-name, .treatment-details .card-treatment-detail .treatment-container .treatment-date {
+  text-align: left;
+  margin-left: 20%;
+}
+.treatment-details .card-treatment-detail .treatment-container .treatment-quantite span, .treatment-details .card-treatment-detail .treatment-container .treatment-name span, .treatment-details .card-treatment-detail .treatment-container .treatment-date span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.treatment-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.treatment-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.treatment-details .edit-pet form {
+  width: 40%;
+}
+.treatment-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-treatment .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-treatment .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-treatment .card-body form .form-name {
+  margin-top: 6%;
+}
+.edit-treatment .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-treatment .card-body form .form-quantite {
+  margin-top: 6%;
+}
+.edit-treatment .card-body form .form-quantite .quantite {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-treatment .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-treatment .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-treatment .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-treatment .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.edit-treatment .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+}
+
+.create-treatment .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-treatment .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-treatment .card-body form .form-name {
+  margin-top: 6%;
+}
+.create-treatment .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-treatment .card-body form .form-quantite {
+  margin-top: 6%;
+}
+.create-treatment .card-body form .form-quantite .quantite {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-treatment .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-treatment .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-treatment .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-treatment .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-treatment .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.container-vaccine a {
+  color: #000;
+  text-decoration: none;
+}
+.container-vaccine .container {
+  margin-top: 6.4%;
+}
+.container-vaccine .container:first-child {
+  margin-top: 18%;
+}
+.container-vaccine p {
+  margin: 0;
+}
+.container-vaccine .vaccine-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-vaccine .vaccine-card .date-vaccine {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-vaccine .vaccine-card .date-vaccine .day p {
+  font-size: 32px;
+}
+.container-vaccine .vaccine-card .date-vaccine .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-vaccine .vaccine-card .date-vaccine .month_year .month {
+  margin-right: 6%;
+}
+.container-vaccine .vaccine-card .date-vaccine .month_year .month p {
+  font-size: 12px;
+}
+.container-vaccine .vaccine-card .date-vaccine .month_year .year p {
+  font-size: 12px;
+}
+.container-vaccine .vaccine-card .info-vaccine {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-vaccine .vaccine-card .info-vaccine .vaccine-name p, .container-vaccine .vaccine-card .info-vaccine .vaccine-type p, .container-vaccine .vaccine-card .info-vaccine .vaccine-date p, .container-vaccine .vaccine-card .info-vaccine .vaccine-dose p {
+  font-size: 20px;
+}
+
+.add-vaccine {
+  margin-top: 30%;
+}
+
+.btn-submit {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.vaccine-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.vaccine-details .card-vaccine-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.vaccine-details .card-vaccine-detail .vaccine-container {
+  padding-top: 5%;
+}
+.vaccine-details .card-vaccine-detail .vaccine-container .vaccine-type, .vaccine-details .card-vaccine-detail .vaccine-container .vaccine-name, .vaccine-details .card-vaccine-detail .vaccine-container .vaccine-date, .vaccine-details .card-vaccine-detail .vaccine-container .vaccine-dose {
+  text-align: left;
+  margin-left: 20%;
+}
+.vaccine-details .card-vaccine-detail .vaccine-container .vaccine-type span, .vaccine-details .card-vaccine-detail .vaccine-container .vaccine-name span, .vaccine-details .card-vaccine-detail .vaccine-container .vaccine-date span, .vaccine-details .card-vaccine-detail .vaccine-container .vaccine-dose span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.vaccine-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.vaccine-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.vaccine-details .edit-pet form {
+  width: 40%;
+}
+.vaccine-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-vaccine .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-vaccine .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-vaccine .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-vaccine .card-body form .form-name {
+  margin-top: 6%;
+}
+.edit-vaccine .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-vaccine .card-body form .form-dose {
+  margin-top: 6%;
+}
+.edit-vaccine .card-body form .form-dose .dose {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-vaccine .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-vaccine .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-vaccine .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-vaccine .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.edit-vaccine .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+}
+
+.create-vaccine .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-vaccine .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-vaccine .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-vaccine .card-body form .form-name {
+  margin-top: 6%;
+}
+.create-vaccine .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-vaccine .card-body form .form-dose {
+  margin-top: 6%;
+}
+.create-vaccine .card-body form .form-dose .dose {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-vaccine .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-vaccine .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-vaccine .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-vaccine .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-vaccine .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.container-pestcontrol a {
+  color: #000;
+  text-decoration: none;
+}
+.container-pestcontrol .container {
+  margin-top: 6.4%;
+}
+.container-pestcontrol .container:first-child {
+  margin-top: 18%;
+}
+.container-pestcontrol p {
+  margin: 0;
+}
+.container-pestcontrol .pestcontrol-card {
+  width: 88%;
+  margin-left: 6%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.5% 6%;
+  display: flex;
+  flex-direction: row;
+}
+.container-pestcontrol .pestcontrol-card .date-pestcontrol {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container-pestcontrol .pestcontrol-card .date-pestcontrol .day p {
+  font-size: 32px;
+}
+.container-pestcontrol .pestcontrol-card .date-pestcontrol .month_year {
+  display: flex;
+  flex-direction: row;
+}
+.container-pestcontrol .pestcontrol-card .date-pestcontrol .month_year .month {
+  margin-right: 6%;
+}
+.container-pestcontrol .pestcontrol-card .date-pestcontrol .month_year .month p {
+  font-size: 12px;
+}
+.container-pestcontrol .pestcontrol-card .date-pestcontrol .month_year .year p {
+  font-size: 12px;
+}
+.container-pestcontrol .pestcontrol-card .info-pestcontrol {
+  width: 70%;
+  align-self: center;
+  padding-left: 10%;
+}
+.container-pestcontrol .pestcontrol-card .info-pestcontrol .pestcontrol-name p, .container-pestcontrol .pestcontrol-card .info-pestcontrol .pestcontrol-type p, .container-pestcontrol .pestcontrol-card .info-pestcontrol .pestcontrol-date p, .container-pestcontrol .pestcontrol-card .info-pestcontrol .pestcontrol-dose p {
+  font-size: 20px;
+}
+
+.add-pestcontrol {
+  margin-top: 30%;
+}
+
+.btn-submit {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50%;
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
+}
+
+.pestcontrol-details {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.pestcontrol-details .card-pestcontrol-detail {
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.pestcontrol-details .card-pestcontrol-detail .pestcontrol-container {
+  padding-top: 5%;
+}
+.pestcontrol-details .card-pestcontrol-detail .pestcontrol-container .pestcontrol-type, .pestcontrol-details .card-pestcontrol-detail .pestcontrol-container .pestcontrol-name, .pestcontrol-details .card-pestcontrol-detail .pestcontrol-container .pestcontrol-date, .pestcontrol-details .card-pestcontrol-detail .pestcontrol-container .pestcontrol-dose {
+  text-align: left;
+  margin-left: 20%;
+}
+.pestcontrol-details .card-pestcontrol-detail .pestcontrol-container .pestcontrol-type span, .pestcontrol-details .card-pestcontrol-detail .pestcontrol-container .pestcontrol-name span, .pestcontrol-details .card-pestcontrol-detail .pestcontrol-container .pestcontrol-date span, .pestcontrol-details .card-pestcontrol-detail .pestcontrol-container .pestcontrol-dose span {
+  font-size: 20px;
+  margin-right: 4%;
+}
+.pestcontrol-details .edit-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.pestcontrol-details .edit-pet a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.pestcontrol-details .edit-pet form {
+  width: 40%;
+}
+.pestcontrol-details .edit-pet form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-pestcontrol .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.edit-pestcontrol .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-pestcontrol .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-pestcontrol .card-body form .form-name {
+  margin-top: 6%;
+}
+.edit-pestcontrol .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-pestcontrol .card-body form .form-dose {
+  margin-top: 6%;
+}
+.edit-pestcontrol .card-body form .form-dose .dose {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-pestcontrol .card-body form .form-date {
+  margin-top: 6%;
+}
+.edit-pestcontrol .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edit-pestcontrol .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.edit-pestcontrol .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.edit-pestcontrol .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+}
+
+.create-pestcontrol .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-pestcontrol .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-pestcontrol .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-pestcontrol .card-body form .form-name {
+  margin-top: 6%;
+}
+.create-pestcontrol .card-body form .form-name .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-pestcontrol .card-body form .form-dose {
+  margin-top: 6%;
+}
+.create-pestcontrol .card-body form .form-dose .dose {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-pestcontrol .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-pestcontrol .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-pestcontrol .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-pestcontrol .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 50%;
+}
+.create-pestcontrol .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
 }
 
 .container {

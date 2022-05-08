@@ -2,14 +2,15 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Litters', 'color'=>'#FFB5B1'])
+@include('layouts.navbar', ['title'=>'groom', 'color'=>'#FFB5B1'])
 
-  <div class="litter-details">
-    <div class="card-litter-detail">
-        <div class="pet-container">
 
-            <div class='litter-date'>
-                <h4><b>{{$litter->date}}</b></h4>
+<div class="health-details">
+    <div class="card-health-detail">
+        <div class="health-container">
+
+            <div class='health-date'>
+                <p><span>Date</span> {{ date('d/m/y', strtotime($litter->date)) }}</p>
             </div>
 
         </div>
@@ -17,7 +18,7 @@
 
 
 
-<div class="edit-pet">
+    <div class="edit-pet">
         <a href="{{ route('litters.edit', $litter->id)}}" class="btn btn-primary">Edit</a>
         <form action="{{ route('litters.destroy', $litter->id)}}" method="post">
             @csrf
@@ -26,5 +27,6 @@
         </form>
     </div>
 
+</div>
 
 @endsection

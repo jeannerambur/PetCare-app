@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Care;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Dewormer;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DewormerController extends Controller
 {
@@ -16,7 +17,9 @@ class DewormerController extends Controller
     public function index($id)
     {
        $dewormers = Dewormer::where('pet_id',$id)->get();
-       return view('care.dewormers.index', compact('dewormers'));
+
+       $todayDate = Carbon::now()->format('Y-m-d');
+       return view('care.dewormers.index', compact('dewormers', 'todayDate'));
     }
 
     /**

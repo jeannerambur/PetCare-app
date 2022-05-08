@@ -4,30 +4,37 @@
 
 @include('layouts.navbar', ['title'=>'Edit Food', 'color'=>'#FFB5B1'])
 
-<div class="card uper">
-  <div class="card-header">
-    Modifier l'Alimentation
-  </div>
+<div class="edit-food">
+  <div class="card-body">
 
-  <form method="post" action="{{ route('foods.update', $food->id ) }}" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
+    <form method="post" action="{{ route('foods.update', $food->id ) }}" enctype="multipart/form-data">
+          @csrf
+          @method('PUT')
 
-        <div class="form-group">
-              <label for="type">Type:</label>
+          <div class="form-type">
+              <label for="type" class="type">Type:</label>
               <input type="text" class="form-control" name="type"/>
           </div>
+          <div class="form-marque">
+            <label for="marque" class="marque">Marque:</label>
+            <input type="text" class="form-control" name="marque"/>
+          </div>
 
-          <label for="marque">Marque:</label>
-          <input type="text" class="form-control" name="marque"/>
+          <div class="form-quantite">
+            <label for="quantite" class="quantite">Quantite:</label>
+            <input type="text" class="form-control" name="quantite"/>
+          </div>
 
-          <label for="quantite">Quantite:</label>
-          <input type="text" class="form-control" name="quantite"/>
+          <div class="form-date">
+            <label for="date" class="date">Date:</label>
+            <input type="date" id="date" name="date" class="date-form">
+          </div>
 
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
+          <div class="btn-submit">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+          </div>
 
-          <button type="submit" class="btn btn-primary">Modifier</button>
-      </form>
+        </form>
+  </div>
 </div>
 @endsection

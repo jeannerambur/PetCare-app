@@ -5,12 +5,16 @@
 @include('layouts.navbar', ['title'=>'Appetit', 'color'=>'#F2CA80'])
 
 
-  <div class="pet-details">
-    <div class="card-pet-detail">
-        <div class="pet-container">
+  <div class="appetit-details">
+    <div class="card-appetit-detail">
+        <div class="appetit-container">
 
-            <div class='pet-name'>
-                <h4><b>{{$appetit->appetit}}</b></h4>
+            <div class='appetit-name'>
+                <p><span>Appétit</span> {{$appetit->appetit}}</p>
+            </div>
+
+            <div class='appetit-date'>
+                <p><span>Date</span> {{ date('d/m/y', strtotime($appetit->date)) }}</p>
             </div>
 
         </div>

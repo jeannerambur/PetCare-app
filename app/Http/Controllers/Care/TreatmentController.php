@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Care;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Treatment;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class TreatmentController extends Controller
 {
@@ -16,7 +17,8 @@ class TreatmentController extends Controller
     public function index($id)
     {
        $treatments = Treatment::where('pet_id',$id)->get();
-       return view('care.treatments.index', compact('treatments'));
+       $todayDate = Carbon::now()->format('Y-m-d');
+       return view('care.treatments.index', compact('treatments', 'todayDate'));
     }
 
 

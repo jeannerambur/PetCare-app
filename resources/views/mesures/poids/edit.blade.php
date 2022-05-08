@@ -5,22 +5,30 @@
 
 
 
-<div class="card uper">
-  <div class="card-header">
-    Modifier Poids
-  </div>
+<div class="edit-poids">
 
-  <form method="post" action="{{ route('poids.update-poids', $poids->id ) }}" enctype="multipart/form-data">
+  <div class="card-body">
+
+    <form method="post" action="{{ route('poids.update-poids', $poids->id ) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
-        <label for="poids">poids :</label>
-        <input type="text" class="form-control" name="poids" value="{{ $poids->poids }}"/>
+        <div class="form-poids">
+          <label for="poids" class="poids" >Poids:</label>
+          <input type="text" class="form-control" name="poids" value="{{ $poids->poids }}"/>
+        </div>
 
-        <label for="date">Date:</label>
+        <div class="form-date">
+          <label for="date" class="date" >Date:</label>
           <input type="date" id="date" name="date" class="date-form">
+        </div>
 
-          <button type="submit" class="btn btn-primary">Modifier</button>
-      </form>
+        <div class="btn-submit">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+        </div>
+    </form>
+
+  </div>
+
 </div>
 @endsection

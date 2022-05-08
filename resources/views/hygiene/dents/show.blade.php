@@ -4,12 +4,13 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'dent', 'color'=>'#FFB5B1'])
 
-  <div class="dent-details">
-    <div class="card-dent-detail">
-        <div class="pet-container">
 
-            <div class='dent-date'>
-                <h4><b>{{$dent->date}}</b></h4>
+<div class="health-details">
+    <div class="card-health-detail">
+        <div class="health-container">
+
+            <div class='health-date'>
+                <p><span>Date</span> {{ date('d/m/y', strtotime($dent->date)) }}</p>
             </div>
 
         </div>
@@ -17,7 +18,7 @@
 
 
 
-<div class="edit-pet">
+    <div class="edit-pet">
         <a href="{{ route('dents.edit', $dent->id)}}" class="btn btn-primary">Edit</a>
         <form action="{{ route('dents.destroy', $dent->id)}}" method="post">
             @csrf
@@ -26,5 +27,6 @@
         </form>
     </div>
 
+</div>
 
 @endsection

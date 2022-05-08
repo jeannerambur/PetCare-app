@@ -5,12 +5,18 @@
 @include('layouts.navbar', ['title'=>'Vermifuge', 'color'=>'#B1A7F2'])
 
 
-  <div class="pet-details">
-    <div class="card-pet-detail">
-        <div class="pet-container">
+<div class="dewormer-details">
+    <div class="card-dewormer-detail">
+        <div class="dewormer-container">
 
-            <div class='pet-name'>
-                <h4><b>{{$dewormer->name}}</b></h4>
+            <div class='dewormer-type'>
+                <p><span>Type</span> {{$dewormer->type}}</p>
+            </div>
+            <div class='dewormer-name'>
+                <p><span>Name</span> {{$dewormer->name}}</p>
+            </div>
+            <div class='dewormer-date'>
+                <p><span>Date</span> {{ date('d/m/y', strtotime($dewormer->date)) }}</p>
             </div>
 
         </div>

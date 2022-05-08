@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Health;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\Wound;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class WoundController extends Controller
 {
@@ -16,7 +17,8 @@ class WoundController extends Controller
     public function index($id)
     {
        $wounds = Wound::where('pet_id',$id)->get();
-       return view('health.wound.index', compact('wounds'));
+       $todayDate = Carbon::now()->format('Y-m-d');
+       return view('health.wound.index', compact('wounds', 'todayDate'));
     }
 
     /**

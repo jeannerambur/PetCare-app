@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Care;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Models\PestControl;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PestControlController extends Controller
 {
@@ -16,7 +17,8 @@ class PestControlController extends Controller
     public function index($id)
     {
        $pestcontrols = Pestcontrol::where('pet_id',$id)->get();
-       return view('care.pestcontrols.index', compact('pestcontrols'));
+       $todayDate = Carbon::now()->format('Y-m-d');
+       return view('care.pestcontrols.index', compact('pestcontrols', 'todayDate'));
     }
     /**
      * Show the form for creating a new resource.
