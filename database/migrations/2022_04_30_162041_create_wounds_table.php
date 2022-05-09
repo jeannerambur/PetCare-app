@@ -19,7 +19,7 @@ class CreateWoundsTable extends Migration
             $table->string('title_name');
             $table->string("name");
             $table->date('date');
-            $table->date('healing_date');
+            $table->date('healing_date')->nullable();
 
             $table->timestamps();
 

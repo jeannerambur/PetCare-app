@@ -18,9 +18,9 @@ class CreateDiseasesTable extends Migration
             $table->unsignedInteger("pet_id");
             $table->string('title_name');
             $table->string("type");
-            $table->string("name");
+            $table->string("name")->nullable();
             $table->date('date');
-            $table->date('healing_date');
+            $table->date('healing_date')->nullable();
 
             $table->timestamps();
 

@@ -72,13 +72,13 @@ class UserController extends Controller
      */
     public function update(UpdateProfileRequest $request)
     {
-        
+
 
         $user = auth()->user();
 
         if($request->hasFile('image')){
             $path = $request->file('image')->store('public/images');
-            $user->image = $path;
+            $pet->image = $path;
         }
 
         $user->name = $request->name;

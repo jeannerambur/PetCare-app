@@ -7,7 +7,15 @@
 <div class="form-edit-pet">
 
   <div class="form-container">
-
+  @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+      </div><br />
+    @endif
       <form method="post" action="{{ route('pets.update', $pet->id ) }}" enctype="multipart/form-data">
 
           <div class="pet-image-form">
@@ -25,12 +33,22 @@
           <div class="name-form">
               @csrf
               @method('PATCH')
-              <input type="text" class="form-control" name="name" value="{{ $pet->name }}"/>
+              <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name" value="{{ $pet->name }}"/>
+              @error('name')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
 
           <div class="birth-date">
             <label for="birth">Birth date : </label>
-            <input type="date" id="birth" name="birth" class="birth-form" placeholder="yyyy-mm-dd">
+            <input type="date" id="birth" name="birth" class="birth-form @error('birth') is-invalid @enderror" required placeholder="yyyy-mm-dd">
+            @error('birth')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+            @enderror
           </div>
 
 

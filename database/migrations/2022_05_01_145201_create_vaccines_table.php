@@ -19,7 +19,7 @@ class CreateVaccinesTable extends Migration
             $table->string('title_name');
             $table->string("type");
             $table->string("name");
-            $table->string("dose");
+            $table->string("dose")->nullable();
             $table->date('date');
 
             $table->timestamps();

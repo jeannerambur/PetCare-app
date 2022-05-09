@@ -1,0 +1,69 @@
+.container-veterinary-profile {
+    .veterinary-details {
+        margin-top: 17%;
+
+        .veterinary-card {
+            background-color: white;
+            width: 75%;
+            margin-left: 12.5%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10%;
+            box-shadow: 1px 2px 5px lightgrey;
+
+            .veterinary-img {
+                align-self: center;
+                border-radius: 40px;
+                margin-top: -13%;
+            }
+            .veterinary-name {
+                align-self: center;
+                font-size: 18px;
+                font-weight: 600;
+                margin-top: 10%;
+            }
+            .veterinary-contacts {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin-top: 16%;
+                .veterinary-mail {
+                    padding: 3% 5%;
+                    background-color: wheat;
+                    border-radius: 23px;
+                }
+                .veterinary-location {
+                    padding: 3% 5%;
+                    background-color: wheat;
+                    border-radius: 23px;
+                }
+                .veterinary-urgency {
+                    padding: 3% 4%;
+                    background-color: wheat;
+                    border-radius: 23px;
+                }
+            }
+        }
+        .infos-details {
+            margin-left: 13%;
+            margin-top: 6%;
+            .veterinary-address, .veterinary-zipcode,
+            .veterinary-city, .veterinary-phone {
+                margin-top: 4.2%;
+                p {
+                    margin: 0;
+                    &:first-child {
+                        opacity: 0.7;
+                        font-size: 16px;
+                    }
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.edit-veterinary {
+    margin-top: 15%;
+}

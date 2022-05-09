@@ -95,7 +95,7 @@ class AppetitController extends Controller
         $appetit = Appetit::find($id);
 
         $appetit->appetit = $request->appetit;
-        $appetit->AppetitDate = $request->AppetitDate;
+        $appetit->date = $request->date;
         $appetit->heure = $request->heure;
         $appetit->updated_at = now();
 

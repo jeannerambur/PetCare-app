@@ -19,7 +19,7 @@ class CreateTreatmentsTable extends Migration
             $table->string('title_name');
             $table->string("name");
             $table->date('date');
-            $table->string("quantite");
+            $table->string("quantite")->nullable();
 
             $table->timestamps();
 

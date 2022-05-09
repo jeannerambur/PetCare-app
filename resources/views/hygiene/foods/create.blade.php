@@ -16,17 +16,27 @@
 
           <div class="form-group">
               <label for="type">Type:</label>
-              <input type="text" class="form-control" name="type"/>
+              <input type="text" class="form-control @error('type') is-invalid @enderror" required name="type"/>
+              @error('type')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
 
-          <label for="marque">Marque:</label>
+          <label for="marque">Marque:(facultatif)</label>
           <input type="text" class="form-control" name="marque"/>
 
-          <label for="quantite">Quantite:</label>
+          <label for="quantite">Quantite: (facultatif)</label>
           <input type="text" class="form-control" name="quantite"/>
 
           <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form">
+          <input type="date" id="date" name="date" class="date-form @error('date') is-invalid @enderror" required>
+          @error('date')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 
 
           <button type="submit" class="btn btn-primary">Ajouter</button>

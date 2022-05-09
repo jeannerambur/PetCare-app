@@ -14,8 +14,8 @@ class VeterinaryController extends Controller
      */
     public function index($id)
     {
-       $veterinary = Veterinary::where('pet_id',$id)->get();
-       return view('veterinary.index', compact('veterinary'));
+       $veterinaries = Veterinary::where('pet_id',$id)->get();
+       return view('veterinaries.index', compact('veterinaries'));
     }
 
     /**
@@ -25,7 +25,7 @@ class VeterinaryController extends Controller
      */
     public function create()
     {
-        //
+        return view('veterinaries.create');
     }
 
     /**
@@ -34,9 +34,26 @@ class VeterinaryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $path = $request->file('image')->store('public/images');
+        $veterinary = new Veterinary;
+
+        $veterinary->name = $request->name;
+        $veterinary->pet_id = $id;
+        $veterinary->lastname = $request->lastname;
+        $veterinary->adress = $request->adress;
+        $veterinary->zipcode = $request->zipcode;
+        $veterinary->city = $request->city;
+        $veterinary->phone = $request->phone;
+        $veterinary->email = $request->email;
+        $veterinary->image = $request->path;
+        $veterinary->created_at = now();
+        $veterinary->updated_at = now();
+
+        $veterinary->save();
+
+        return redirect('/pets/'.$appetit->pet_id.'/veterinaries')->with('success', 'veterinaire créer avec succèss');
     }
 
     /**
@@ -47,7 +64,9 @@ class VeterinaryController extends Controller
      */
     public function show($id)
     {
-        //
+        $veterinary = Veterinary::find($id);
+        return view('veterinaries.show')->with('veterinary', $veterinary);
+
     }
 
     /**
@@ -56,9 +75,11 @@ class VeterinaryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        
+        $veterinary = Veterinary::findOrFail($id);
+
+        return view('veterinaries.edit', compact('veterinary'));
     }
 
     /**
@@ -68,9 +89,23 @@ class VeterinaryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProfileRequest $request)
+    public function update(Request $request, $id)
     {
+        $veterinary = Veterinary::find($id);
 
+        $veterinary->name = $request->name;
+        $veterinary->lastname = $request->lastname;
+        $veterinary->adress = $request->adress;
+        $veterinary->zipcode = $request->zipcode;
+        $veterinary->city = $request->city;
+        $veterinary->phone = $request->phone;
+        $veterinary->email = $request->email;
+        $veterinary->image = $request->path;
+        $veterinary->updated_at = now();
+
+        $veterinary->save();
+
+        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire modifié avec succèss');
     }
 
     /**
@@ -81,6 +116,9 @@ class VeterinaryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $veterinary = Veterinary::findOrFail($id);
+        $veterinary->delete();
+
+        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire supprimer avec succèss');
     }
 }

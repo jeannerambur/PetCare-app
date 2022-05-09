@@ -11,16 +11,26 @@
 
          <div class="form-name">
             <label for="name" class="name">Name :</label>
-            <input type="text" class="form-control" name="name"/>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name"/>
+            @error('name')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
 
           <div class="form-date">
             <label for="date" class="date">Date:</label>
-            <input type="date" id="date" name="date" class="date-form">
+            <input type="date" id="date" name="date" class="date-form @error('date') is-invalid @enderror" required>
+            @error('date')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
 
           <div class="form-healing-date">
-            <label for="healing_date" class="healing-date">Healing date:</label>
+            <label for="healing_date" class="healing-date">Healing date: (facultatif)</label>
             <input type="date" id="healing-date" name="healing_date" class="date-form">
           </div>
 

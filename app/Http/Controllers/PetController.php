@@ -56,7 +56,6 @@ class PetController extends Controller
             'image' => 'required'
         ]);
 
-        //Dd($request->all());
 
         $path = $request->file('image')->store('public/images');
         $pet = new Pet;

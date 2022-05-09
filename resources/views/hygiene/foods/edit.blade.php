@@ -13,21 +13,31 @@
 
           <div class="form-type">
               <label for="type" class="type">Type:</label>
-              <input type="text" class="form-control" name="type"/>
+              <input type="text" class="form-control @error('date') is-invalid @enderror" required name="type"/>
+              @error('type')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
           <div class="form-marque">
-            <label for="marque" class="marque">Marque:</label>
+            <label for="marque" class="marque">Marque: (facultatif)</label>
             <input type="text" class="form-control" name="marque"/>
           </div>
 
           <div class="form-quantite">
-            <label for="quantite" class="quantite">Quantite:</label>
+            <label for="quantite" class="quantite">Quantite: (facultatif)</label>
             <input type="text" class="form-control" name="quantite"/>
           </div>
 
           <div class="form-date">
             <label for="date" class="date">Date:</label>
-            <input type="date" id="date" name="date" class="date-form">
+            <input type="date" id="date" name="date" class="date-form @error('date') is-invalid @enderror" required>
+            @error('date')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
 
           <div class="btn-submit">

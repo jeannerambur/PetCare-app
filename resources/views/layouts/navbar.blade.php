@@ -9,9 +9,7 @@
     <div class="navbar-container">
         @if (Route::currentRouteName() == 'pets.index')
             <div class="user-profile">
-                <a class="nav-link" href="{{ route('user.index')}}">
-                    <img src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="user-img">
-                </a>
+
             </div>
             @else
             <div class="previous">

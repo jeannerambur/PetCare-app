@@ -17,13 +17,13 @@ class CreateVeterinariesTable extends Migration
             $table->increments("id");
             $table->unsignedInteger("pet_id");
             $table->string("name");
-            $table->string("lastname");
-            $table->string("adress");
-            $table->string("zipcode");
-            $table->string("city");
-            $table->string('phone');
-            $table->string('email');
-            $table->string('image')->default('default-user.jpg');
+            $table->string("lastname")->nullable();
+            $table->string("adress")->nullable();
+            $table->string("zipcode")->nullable();
+            $table->string("city")->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('image');
 
             $table->timestamps();
 

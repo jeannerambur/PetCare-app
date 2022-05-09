@@ -14,7 +14,12 @@
 
             <div class="form-date">
               <label for="date" class="date" >Date:</label>
-              <input type="date" id="date" name="date" class="date-form">
+              <input type="date" id="date" name="date" class="date-form @error('date') is-invalid @enderror" required>
+              @error('date')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
             </div>
 
             <div class="btn-submit">

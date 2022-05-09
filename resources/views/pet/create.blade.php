@@ -5,12 +5,6 @@
 
 @include('layouts.navbar', ['title'=>'Add Pet', 'color'=>'#827EF2'])
 
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-
 <div class="add-pet">
 
 
@@ -41,12 +35,22 @@
 
           </div>
           <div class="name-form">
-              <input type="text" class="form-control" name="name" placeholder="Name">
+              <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" required placeholder="Name">
+              @error('name')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
 
           <div class="birth-date">
             <label for="birth">Birth date : </label>
-            <input type="date" id="birth" name="birth" class="birth-form" placeholder="yyyy-mm-dd">
+            <input type="date" id="birth" name="birth" class="birth-form  @error('birth') is-invalid @enderror" required placeholder="yyyy-mm-dd">
+            @error('birth')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+            @enderror
           </div>
 
           <div class="form-group">
@@ -56,6 +60,7 @@
             <div class="getfatnone">
               GET F<span>A<span>A</span><span>I</span></span>T
             </div>
+
             <div>
               <label id="venus" for="female"><font-awesome-icon icon="fa-solid fa-venus" :style="{ color: 'white' }" /></label>
               <label id="mars" for="male"><font-awesome-icon icon="fa-solid fa-mars" :style="{ color: 'white' }"/></label>

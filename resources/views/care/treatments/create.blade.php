@@ -12,17 +12,27 @@
 
           <div class="form-name">
               <label for="name" class="name">Name:</label>
-              <input type="text" class="form-control" name="name" placeholder="name" id="name"/>
+              <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name" placeholder="name" id="name"/>
+              @error('name')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
 
           <div class="form-quantite">
-            <label for="dose" class="quantite">Quantite:</label>
+            <label for="dose" class="quantite">Quantite: <span>(facultatif)</span></label>
             <input type="text" class="form-control" name="quantite"/>
           </div>
 
           <div class="form-date">
               <label for="date" class="date" >Date:</label>
-              <input type="date" id="date" name="date" class="date-form">
+              <input type="date" id="date" name="date" class="date-form @error('date') is-invalid @enderror" required>
+              @error('date')
+                <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
 
 
