@@ -26,21 +26,34 @@ class DatabaseSeeder extends Seeder
 	public function run()
 	{
 		User::create([
-			'name'=> 'toto',
-			'email'=> 'toto@gmail.com',
-			'password'=> Hash::make('totototo'),
+			'name'=> 'username',
+			'email'=> 'username@gmail.com',
+			'password'=> Hash::make('motdepasse'),
 			'about' => null
 		]);
 
 		User::create([
 			'name'=> 'Jeanne',
-			'email'=> 'jeanne_rambur@hotmail.fr',
+			'email'=> 'jeanne.r@free.fr',
 			'password'=> Hash::make('Jeannette'),
 			'about' => null
 		]);
 
+		Pet::create([
+			'name'=> 'Miho',
+            'user_id'=> 1,
+            'birth' => '2021-02-28',
+            'sex' => 'female',
+            'image' => 'default.jpg'
+		]);
 
-		Pet::factory()->count(2)->create();
+		Pet::create([
+			'name'=> 'Bibou',
+            'user_id'=> 1,
+            'birth' => '2022-04-22',
+            'sex' => 'male',
+            'image' => 'default.jpg'
+		]);
 
 		Veterinary::create([
             'pet_id' => '1',
@@ -55,36 +68,33 @@ class DatabaseSeeder extends Seeder
 		]);
 
 		Wound::create([
-            'name'=> 'Bras Casse',
+            'name'=> 'Plaie',
             'pet_id'=> 1,
-			'date' => '2021-02-28',
-			'healing_date' => '2021-04-28'
+			'date' => '2022-04-14',
+			'healing_date' => '2022-04-28'
 		]);
 
 		Treatment::create([
             'name'=> 'Pensement',
             'pet_id'=> 1,
-			'date' => '2021-02-28',
+			'date' => '2022-02-28',
 			'quantite' => '2'
 		]);
 
 		Claw::create([
             'pet_id'=> 1,
-			'date' => '2021-02-28'
+			'date' => '2022-04-18'
 		]);
 
 		Litter::create([
             'pet_id'=> 1,
-			'date' => '2021-02-28'
+			'date' => '2022-05-02'
 		]);
 
 		Dent::create([
             'pet_id'=> 1,
-			'date' => '2021-02-28'
+			'date' => '2022-04-21'
 		]);
-
-
-		Appetit::factory()->count(2)->create();
 
 		Appetit::create([
 			'appetit'=> 'bof',
@@ -94,21 +104,23 @@ class DatabaseSeeder extends Seeder
 		]);
 
 		Appetit::create([
-			'appetit'=> 'bof',
+			'appetit'=> 'moyen',
             'pet_id'=> 1,
-            'date' => '2022-04-12',
+            'date' => '2022-04-13',
             'heure' => '12'
 		]);
 
-
 		Poids::create([
 			'pet_id'=> 1,
-            'poids'=> '12',
+            'poids'=> '3',
             'date' => '2022-05-22',
 		]);
+		Poids::create([
+			'pet_id'=> 2,
+            'poids'=> '7',
+            'date' => '2022-05-01',
+		]);
 
-
-		Poids::factory()->count(1)->create();
 		Allergy::factory()->count(2)->create();
 
 	}

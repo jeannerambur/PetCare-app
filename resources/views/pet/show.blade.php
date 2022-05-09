@@ -67,7 +67,7 @@
         </div>
 
         <div class="veterinaire">
-            <a href="{{ route('veterinary', $pet->id)}}">
+            <a href="{{ route('veterinaries', $pet->id)}}">
                 <div class="button">
                 </div>
                 <p>Veterinaire</p>

@@ -16,13 +16,13 @@
             </div>
             <div class="veterinary-contacts">
                 <div class="veterinary-mail">
-                  <font-awesome-icon icon="fa-solid fa-envelope" />
+                  <font-awesome-icon icon="fa-solid fa-envelope" :style="{ color: 'white' }"/>
                 </div>
                 <div class="veterinary-location">
-                  <font-awesome-icon icon="fa-solid fa-location-dot" />
+                  <font-awesome-icon icon="fa-solid fa-location-dot" :style="{ color: 'white' }"/>
                 </div>
                 <div class="veterinary-urgency">
-                  <font-awesome-icon icon="fa-solid fa-truck-medical" />
+                  <font-awesome-icon icon="fa-solid fa-truck-medical" :style="{ color: 'white' }"/>
                 </div>
             </div>
           </div>
@@ -50,9 +50,5 @@
 
   </div>
   @endforeach
-</div>
-
-<div class="edit-veterinary">
-    <a href="{{ route('veterinaries.create-veterinary', Route::current()->parameter('id'))}}" class="btn-submit">Ajouter</a>
 </div>
 @endsection

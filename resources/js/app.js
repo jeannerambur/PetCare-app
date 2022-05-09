@@ -12,8 +12,6 @@ window.Vue = require('vue').default;
 import Velocity from 'velocity-animate'
 import vuetify from './vuetify';
 import Burger from './components/Burger'
-import 'fullcalendar/dist/fullcalendar.css';
-import FullCalendar from 'vue-full-calendar';
 
 import "@mdi/font/css/materialdesignicons.css"
 
@@ -31,7 +29,7 @@ library.add(faAngleLeft, faBars, faCamera, faVenus, faMars, faPen, faClockRotate
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.use(FullCalendar);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -46,8 +44,6 @@ Vue.use(FullCalendar);
 Vue.component('welcome', require('./components/Welcome.vue').default);
 
 Vue.component('iconcomponent', require('./components/IconComponent.vue').default);
-
-Vue.component('calendar-component', require('./components/CalendarComponent.vue').default);
 
 //Vue.component('burgermenu', require('./components/BurgerMenu.vue').default);
 
