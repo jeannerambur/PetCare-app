@@ -29,10 +29,15 @@
                    <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y years, %m months and %d days');}}</p>
                 </div>
 
+                @if(!$pet->num_id)
+                <div class="pet_num-id">
+                   <p></p>
+                </div>
+                @else
                 <div class="pet_num-id">
                    <p>N°{{$pet->num_id }}</p>
                 </div>
-
+                @endif
             </div>
 
         </div>
@@ -42,6 +47,7 @@
         <div class="mesures">
             <a href="{{ route('mesures', $pet->id)}}">
                 <div class="button">
+                    <font-awesome-icon icon="fa-thin fa-weight-scale" />
                 </div>
                 <p>Mesures</p>
             </a>
@@ -51,6 +57,7 @@
         <div class="sante">
             <a href="{{ route('health', $pet->id)}}">
                 <div class="button">
+                    <font-awesome-icon icon="fa-solid fa-heart-pulse" />
                 </div>
                 <p>Santé</p>
             </a>
