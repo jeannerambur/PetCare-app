@@ -36,8 +36,8 @@ class VeterinaryController extends Controller
      */
     public function store(Request $request, $id)
     {
-        $path = $request->file('image')->store('public/images');
         $veterinary = new Veterinary;
+
 
         $veterinary->name = $request->name;
         $veterinary->pet_id = $id;
@@ -47,13 +47,13 @@ class VeterinaryController extends Controller
         $veterinary->city = $request->city;
         $veterinary->phone = $request->phone;
         $veterinary->email = $request->email;
-        $veterinary->image = $request->path;
+        $veterinary->image = $request->image;
         $veterinary->created_at = now();
         $veterinary->updated_at = now();
 
         $veterinary->save();
 
-        return redirect('/pets/'.$appetit->pet_id.'/veterinaries')->with('success', 'veterinaire créer avec succèss');
+        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire créer avec succèss');
     }
 
     /**
@@ -91,7 +91,15 @@ class VeterinaryController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        //Dd($request->all());
         $veterinary = Veterinary::find($id);
+
+
+        if($request->hasFile('image')){
+            $path = $request->file('image')->store('public/images');
+            $veterinary->image = $path;
+        }
 
         $veterinary->name = $request->name;
         $veterinary->lastname = $request->lastname;
@@ -100,7 +108,6 @@ class VeterinaryController extends Controller
         $veterinary->city = $request->city;
         $veterinary->phone = $request->phone;
         $veterinary->email = $request->email;
-        $veterinary->image = $request->path;
         $veterinary->updated_at = now();
 
         $veterinary->save();

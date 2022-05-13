@@ -1,13 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Ajouter Veterinaire', 'color'=>'#63A5F1'])
+@include('layouts.navbar', ['title'=>'Veterinaire', 'color'=>'#63A5F1'])
 
 <div class="edit-veterinary">
   <div class="card-body">
-    <form method="post" action="{{ route('veterinaries.update-veterinary', $veterinary->id ) }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('veterinaries.store-veterinary', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
           @csrf
-          @method('PUT')
+
+          <div class="pet-image-form">
+            <div class="pet-image">
+              <img src="{{asset('/storage/images/'.Auth::user()->image)}}" height="200" width="200" alt="" />
+            </div>
+            <div class="image-form">
+              <label for="file-input">
+                  <font-awesome-icon icon="fa-solid fa-camera" :style="{ color: 'white' }"/>
+              </label>
+              <input id="file-input" type="file" name="image" class="form-control">
+            </div>
 
           <div class="form-name">
             <label for="name" class="name">Name :</label>

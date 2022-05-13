@@ -33,12 +33,13 @@
           <div class="name-form">
               @csrf
               @method('PATCH')
-              <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name" value="{{ $pet->name }}"/>
-              @error('name')
-                <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                </span>
-              @enderror
+            <label for="Name" class="name">Nom:</label>
+            <input type="text" class="form-control" name="name" value='{{$pet->name}}' required/>
+          </div>
+
+          <div class="id-form">
+            <label for="num_id" class="num_id">N° d'identification:</label>
+            <input type="text" class="form-control" name="num_id" value='{{$pet->num_id}}'/>
           </div>
 
           <div class="birth-date">

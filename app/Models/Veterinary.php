@@ -9,9 +9,6 @@ class Veterinary extends Model
 {
     use HasFactory;
 
-    protected $attributes = [
-		'image' => 'default-user.jpg'
-	];
 	/**
 	 * The attributes that are mass assignable.
 	 *
@@ -24,7 +21,6 @@ class Veterinary extends Model
         'zipcode',
         'city',
         'phone',
-		'email',
-		'image'
+		'email'
 	];
 }

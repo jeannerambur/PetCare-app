@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Food', 'color'=>'#FFB5B1'])
+@include('layouts.navbar', ['title'=>'Alimentation', 'color'=>'#FFB5B1'])
 
 <div class="food-details">
     <div class="card-food-detail">

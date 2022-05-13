@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('layouts.navbar', ['title'=>'Create groom', 'color'=>'#FFB5B1'])
+@include('layouts.navbar', ['title'=>'Bain', 'color'=>'#FFB5B1'])
 
 <div class="create-health">
 

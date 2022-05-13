@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Vermifuges', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Vaccin', 'color'=>'#B1A7F2'])
 
 <div class="container-vaccine">
 @foreach($vaccines as $vaccine)

@@ -145,8 +145,13 @@
                     font-size: 20px;
                     font-weight: 600;
                 }
+                #type {
+                    padding: 2%;
+                    background-color: white;
+                    border: 1px solid lightgray;
+                    border-radius: 8px;
+                }
             }
-
             .form-name {
                 margin-top: 6%;
                 .name {
@@ -211,8 +216,13 @@
                     font-size: 20px;
                     font-weight: 600;
                 }
+                #type {
+                    padding: 2%;
+                    background-color: white;
+                    border: 1px solid lightgray;
+                    border-radius: 8px;
+                }
             }
-
             .form-name {
                 margin-top: 6%;
                 .name {
@@ -250,7 +260,7 @@
 
             .btn-submit {
                 text-align: center;
-                margin-top: 50%;
+                margin-top: 20%;
                 button {
                     color: #fff;
                     background-color: #827EF2;

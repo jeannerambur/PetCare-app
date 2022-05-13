@@ -11,21 +11,23 @@
         @csrf
         @method('PUT')
 
+        <div class="form-type">
+            <label for="type" class="type">Type de Maladie:</label>
+            <select name="type" id="type" required>
+              <option value="">Selectionnez le type de maladie </option>
+              <option value="Maladie Parasitaire">Maladie Parasitaire</option>
+              <option value="Maladie Inconnue">Maladie Inconnue</option>
+              <option value="Maladie Infectueuse">Maladie Infectueuse</option>
+              <option value="Autre Maladie">Autre Maladie</option>
+            </select>
+          </div>
+
+
+
         <div class="form-name">
-            <label for="Name" class="name">Name:</label>
+            <label for="Name" class="name">Nom: (facultatif)</label>
             <input type="text" class="form-control" name="name"/>
         </div>
-
-       <div class="form-type">
-          <label for="type" class="type">Type :</label>
-          <input type="text" class="form-control @error('type') is-invalid @enderror" required name="type"/>
-          @error('type')
-                <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                </span>
-              @enderror
-        </div>
-
 
         <div class="form-date">
           <label for="date" class="date">Date:</label>
@@ -38,7 +40,7 @@
         </div>
 
         <div class="form-healing-date">
-          <label for="healing_date" class="healing-date">Healing date:</label>
+          <label for="healing_date" class="healing-date">Date de guérison: (facultatif)</label>
           <input type="date" id="healing-date" name="healing_date" class="date-form">
 
         </div>

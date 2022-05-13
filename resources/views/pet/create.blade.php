@@ -43,6 +43,11 @@
               @enderror
           </div>
 
+          <div class="id-form">
+            <label for="num_id" class="num_id">N° d'identification:</label>
+            <input type="text" class="form-control" name="num_id" placeholder='ex: 177THY'/>
+          </div>
+
           <div class="birth-date">
             <label for="birth">Birth date : </label>
             <input type="date" id="birth" name="birth" class="birth-form  @error('birth') is-invalid @enderror" required placeholder="yyyy-mm-dd">

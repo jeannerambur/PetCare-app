@@ -10,7 +10,7 @@
           @method('PUT')
 
           <div class="form-name">
-            <label for="name" class="name">Name :</label>
+            <label for="name" class="name">Nom :</label>
             <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name" value="{{ $wound->name }}"/>
             @error('date')
                 <span class="invalid-feedback" role="alert">
@@ -30,7 +30,7 @@
           </div>
 
           <div class="form-healing-date">
-            <label for="healing_date" class="healing-date">Healing date:</label>
+            <label for="healing_date" class="healing-date">Date de guérison:</label>
             <input type="date" id="healing-date" name="healing_date" class="date-form">
           </div>
 

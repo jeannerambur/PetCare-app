@@ -11,17 +11,17 @@
                 @method('PUT')
 
                 <div class="pet-image-form">
-            <div class="pet-image">
-              <img src="{{ Storage::url($user->image) }}" height="200" width="200" alt="" />
-            </div>
-            <div class="image-form">
-              <label for="file-input">
-                  <font-awesome-icon icon="fa-solid fa-camera" :style="{ color: 'white' }"/>
-              </label>
-              <input id="file-input" type="file" name="image" class="form-control">
-            </div>
+                    <div class="pet-image">
+                        <img src="{{ Storage::url($user->image) }}" height="200" width="200" alt="" />
+                    </div>
+                    <div class="image-form">
+                        <label for="file-input">
+                            <font-awesome-icon icon="fa-solid fa-camera" :style="{ color: 'white' }"/>
+                        </label>
+                        <input id="file-input" type="file" name="image" class="form-control">
+                    </div>
 
-          </div>
+                </div>
 
                 <div class="name-form">
                     <label for="name">Name</label>
@@ -51,8 +51,8 @@
                     <textarea class='form-control' name='about' id="about" cols="5" rows="5">{{ $user->about }}</textarea>
                 </div>
 
-                <button type="submit" class="btn btn-success">
-                    Update Profile
+                <button type="submit" class="btn btn-submit">
+                    Modifier
                 </button>
 
             </form>

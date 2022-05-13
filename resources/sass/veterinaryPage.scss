@@ -1,4 +1,4 @@
-.container-veterinary-profile {
+
     .veterinary-details {
         margin-top: 17%;
 
@@ -14,8 +14,10 @@
 
             .veterinary-img {
                 align-self: center;
-                border-radius: 40px;
                 margin-top: -13%;
+                img {
+                    border-radius: 40px;
+                }
             }
             .veterinary-name {
                 align-self: center;
@@ -32,16 +34,61 @@
                     padding: 3% 5%;
                     background-color: #B73BAA;
                     border-radius: 23px;
+                    p {
+                        display: none
+                    }
+                    &:hover {
+                        padding: 0 5%;
+                        svg {
+                            display: none;
+                        }
+                        p {
+                            display: block;
+                            font-size: 12px;
+                            color: #ffffff;
+                            margin: 7% 0;
+                        }
+                    }
                 }
                 .veterinary-location {
                     padding: 3% 5%;
                     background-color: #7977EE;
                     border-radius: 23px;
+                    p {
+                        display: none
+                    }
+                    &:hover {
+                        padding: 0 5%;
+                        svg {
+                            display: none;
+                        }
+                        p {
+                            display: block;
+                            font-size: 12px;
+                            color: #ffffff;
+                            margin: 22% 0;
+                        }
+                    }
                 }
                 .veterinary-urgency {
                     padding: 3% 4%;
                     background-color: #FF3E01;
                     border-radius: 23px;
+                    p {
+                        display: none
+                    }
+                    &:hover {
+                        padding: 0 5%;
+                        svg {
+                            display: none;
+                        }
+                        p {
+                            display: block;
+                            font-size: 12px;
+                            color: #ffffff;
+                            margin: 12% 0;
+                        }
+                    }
                 }
             }
         }
@@ -62,8 +109,54 @@
             }
         }
     }
+
+
+.container-veterinary-profile {
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.add-veterinary {
+    text-align: center;
+    margin-top: 10%;
+    padding-bottom: 10%;
+    .btn-submit {
+        margin-left: 0;
+    }
 }
 
 .edit-veterinary {
     margin-top: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10%;
+
+    a {
+        width: 40%;
+        font-size: 18px;
+        margin-right: 2.5%;
+        background-color: #827EF2;
+        border-color: transparent;
+    }
+
+    form {
+        width: 40%;
+
+        button {
+            width: 100%;
+            font-size: 18px;
+            color: #fff;
+            background-color: #FF6F6F;
+            border-color: transparent;
+        }
+    }
+}
+
+.edit-veterinary-form {
+    .btn-submit {
+        margin-top: 10%;
+    }
 }

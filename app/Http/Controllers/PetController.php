@@ -64,6 +64,7 @@ class PetController extends Controller
         $pet->user_id = Auth::id();
         $pet->sex = $request->sex;
         $pet->birth = $request->birth;
+        $pet->num_id = $request->num_id;
         $pet->image = $path;
         $pet->created_at = now();
         $pet->updated_at = now();
@@ -122,6 +123,7 @@ class PetController extends Controller
         $pet->user_id = Auth::id();
         $pet->sex = $request->sex;
         $pet->birth = $request->birth;
+        $pet->num_id = $request->num_id;
         $pet->updated_at = now();
 
         $pet->save();

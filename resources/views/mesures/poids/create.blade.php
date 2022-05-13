@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('layouts.navbar', ['title'=>'Add Poids', 'color'=>'#F2CA80'])
+@include('layouts.navbar', ['title'=>'Ajouter Poids', 'color'=>'#F2CA80'])
 
 <div class="create-poids">
   <div class="card-body">
@@ -11,7 +11,7 @@
       @csrf
 
         <div class="form-poids">
-            <label for="poids" class="poids">poids:</label>
+            <label for="poids" class="poids">Poids: (kg)</label>
             <input type="text" class="form-control @error('poids') is-invalid @enderror" required name="poids"/>
             @error('poids')
                 <span class="invalid-feedback" role="alert">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Add Blessure', 'color'=>'#F2865E'])
+@include('layouts.navbar', ['title'=>'Blessure', 'color'=>'#F2865E'])
 
 <div class="create-wound">
   <div class="card-body">
@@ -10,8 +10,8 @@
          @csrf
 
          <div class="form-name">
-            <label for="name" class="name">Name :</label>
-            <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name"/>
+            <label for="name" class="name">Nom :</label>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Nom de la blessure" required name="name"/>
             @error('name')
                 <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -30,7 +30,7 @@
           </div>
 
           <div class="form-healing-date">
-            <label for="healing_date" class="healing-date">Healing date: (facultatif)</label>
+            <label for="healing_date" class="healing-date">Date de guérison: (facultatif)</label>
             <input type="date" id="healing-date" name="healing_date" class="date-form">
           </div>
 

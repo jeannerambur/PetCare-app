@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Edit Vermifuge', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Vermifuge', 'color'=>'#B1A7F2'])
 
 <div class="edit-dewormer">
 
@@ -12,18 +12,21 @@
         @method('PUT')
 
           <div class="form-type">
-              <label for="type" class='type'>Type:</label>
-              <input type="text" class="form-control @error('type') is-invalid @enderror" required name="type"/>
-              @error('type')
-                <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                </span>
-              @enderror
+            <label for="type" class="type">Type de vermifuges :</label>
+            <select name="type" id="type" required>
+              <option value=""> <font-awesome-icon icon="fa-solid fa-angle-down"/> Selectionnez le type de vermifuge </option>
+              <option value="Comprimés">Comprimés</option>
+              <option value="Pipettes">Pipettes</option>
+              <option value="liquides">Liquides</option>
+              <option value="Injections">Injections</option>
+              <option value="Autre">Autre</option>
+            </select>
           </div>
+
 
           <div class="form-name">
             <label for="Name" class="name">Name:</label>
-            <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name"/>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name" placeholder='{{$dewormer->name}}'/>
             @error('name')
                 <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>

@@ -2,21 +2,18 @@
 
 @section('content')
 
-@include('layouts.navbar', ['title'=>'Create Food', 'color'=>'#FFB5B1'])
+@include('layouts.navbar', ['title'=>'Alimentation', 'color'=>'#FFB5B1'])
 
-<div class="add-pet">
-  <div class="add-pet-title">
-    Add Food
-  </div>
+<div class="create-food">
 
   <div class="card-body">
 
       <form method="post" action="{{ route('foods.store-food', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
-          <div class="form-group">
-              <label for="type">Type:</label>
-              <input type="text" class="form-control @error('type') is-invalid @enderror" required name="type"/>
+          <div class="form-type">
+              <label for="type" class="type" >Type:</label>
+              <input type="text" class="form-control @error('type') is-invalid @enderror" required name="type" placeholder="Type d'alimentation"/>
               @error('type')
                 <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -24,22 +21,27 @@
               @enderror
           </div>
 
-          <label for="marque">Marque:(facultatif)</label>
-          <input type="text" class="form-control" name="marque"/>
+          <div class="form-marque">
+            <label for="marque" class="marque">Marque:(facultatif)</label>
+            <input type="text" class="form-control" name="marque" placeholder="Royal Canin"/>
+          </div>
 
-          <label for="quantite">Quantite: (facultatif)</label>
-          <input type="text" class="form-control" name="quantite"/>
-
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" class="date-form @error('date') is-invalid @enderror" required>
-          @error('date')
-                <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                </span>
-              @enderror
+          <div class="form-quantite">
+            <label for="quantite" class="quantite">Quantité: (facultatif)</label>
+            <input type="text" class="form-control" name="quantite" placeholder="en gramme"/>
+          </div>
 
 
-          <button type="submit" class="btn btn-primary">Ajouter</button>
+          <div class="form-date">
+            <label for="date" class="date">Date:</label>
+            <input type="date" id="date" name="date" class="date-form @error('date') is-invalid @enderror" required>
+            @error('date')
+                  <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                  </span>
+                @enderror
+          </div>
+          <button type="submit" class="btn btn-submit">Ajouter</button>
       </form>
   </div>
 </div>

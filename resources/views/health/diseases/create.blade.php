@@ -9,15 +9,21 @@
       <form method="post" action="{{ route('diseases.store-disease', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
+         <div class="form-type">
+            <label for="type" class="type">Type de Maladie:</label>
+            <select name="type" id="type">
+              <option value="">Selectionnez le type de maladie </option>
+              <option value="Maladie Parasitaire">Maladie Parasitaire</option>
+              <option value="Maladie Inconnue">Maladie Inconnue</option>
+              <option value="Maladie Infectueuse">Maladie Infectueuse</option>
+              <option value="Autre Maladie">Autre Maladie</option>
+            </select>
+          </div>
+
+
         <div class="form-name">
-          <label for="name" class="name">Name : (facultatif)</label>
-          <input type="text" class="form-control" name="name"/>
-
-        </div>
-
-        <div class="form-type">
-          <label for="type" class="type">Type :</label>
-          <input type="text" class="form-control @error('type') is-invalid @enderror" required name="type"/>
+          <label for="name" class="name">Nom: (facultatif)</label>
+          <input type="text" class="form-control @error('type') is-invalid @enderror" name="name"/>
           @error('type')
                 <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -36,7 +42,7 @@
         </div>
 
         <div class="form-healing-date">
-          <label for="healing_date" class="healing-date">Healing date: (facultatif)</label>
+          <label for="healing_date" class="healing-date">Date de guérison: (facultatif)</label>
           <input type="date" id="healing-date" name="healing_date" class="date-form">
         </div>
 

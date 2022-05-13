@@ -11319,6 +11319,15 @@ textarea.form-control-lg {
   height: 100%;
   border-radius: 5px;
 }
+.pet-details .card-pet-detail .pet-container .pet-name-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 2%;
+}
+.pet-details .card-pet-detail .pet-container .pet-name-id .pet-sex {
+  align-self: center;
+}
 .pet-details .card-pet-detail .pet-container .pet-infos {
   display: flex;
   flex-direction: row;
@@ -11386,7 +11395,8 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 12%;
+  margin-top: 10%;
+  padding-bottom: 5%;
 }
 .pet-details .edit-pet a {
   width: 40%;
@@ -11443,11 +11453,15 @@ textarea.form-control-lg {
   display: none;
 }
 
-.name-form {
+.name-form, .email-form, .phone-form, .id-form {
   padding: 0 10%;
   margin-top: 12%;
 }
-.name-form .form-control {
+.name-form .name, .name-form .num_id, .email-form .name, .email-form .num_id, .phone-form .name, .phone-form .num_id, .id-form .name, .id-form .num_id {
+  font-size: 20px;
+  font-weight: 600;
+}
+.name-form .form-control, .email-form .form-control, .phone-form .form-control, .id-form .form-control {
   box-shadow: 1px 5px 5px lightgrey;
   padding: 4%;
   background-color: #fff;
@@ -11468,6 +11482,14 @@ textarea.form-control-lg {
   font-size: 18px;
   border-radius: 9px;
   box-shadow: 2px 2px 10px lightgrey;
+}
+
+.form-edit-pet .btn-submit {
+  margin-top: 20%;
+}
+.form-edit-pet .form-group #mars, .form-edit-pet .form-group #venus {
+  width: 20%;
+  font-size: 21px;
 }
 
 .form-group input {
@@ -11754,7 +11776,7 @@ input[type=date], focus {
 }
 .container-login .login .card-body .form .form-email {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .container-login .login .card-body .form .form-email .reset-password {
   position: absolute;
@@ -13172,7 +13194,7 @@ input[type=date], focus {
 }
 .edit-food .card-body form .btn-submit {
   text-align: center;
-  margin-top: 50%;
+  margin-top: 20%;
 }
 .edit-food .card-body form .btn-submit button {
   color: #fff;
@@ -13181,6 +13203,69 @@ input[type=date], focus {
   font-size: 18px;
   border: none;
   border-radius: 8px;
+}
+
+.create-food .card-body {
+  margin-top: 15%;
+  flex: 0;
+  padding: 0;
+}
+.create-food .card-body form {
+  width: 80%;
+  margin-left: 10%;
+}
+.create-food .card-body form .form-type .type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-food .card-body form .form-type #type {
+  padding: 2%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+.create-food .card-body form .form-marque {
+  margin-top: 6%;
+}
+.create-food .card-body form .form-marque .marque {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-food .card-body form .form-quantite {
+  margin-top: 6%;
+}
+.create-food .card-body form .form-quantite .quantite {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-food .card-body form .form-date {
+  margin-top: 6%;
+}
+.create-food .card-body form .form-date .date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.create-food .card-body form .form-date #date {
+  margin-top: 3%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  margin-bottom: 7%;
+  border-radius: 9px;
+}
+.create-food .card-body form .btn-submit {
+  text-align: center;
+  margin-top: 20%;
+}
+.create-food .card-body form .btn-submit button {
+  color: #fff;
+  background-color: #827EF2;
+  padding: 3% 8%;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 5px 8px lightgrey;
 }
 
 .container-diseases a {
@@ -13266,6 +13351,12 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
+.create-disease .card-body form .form-type #type {
+  padding: 2%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
 .create-disease .card-body form .form-name {
   margin-top: 6%;
 }
@@ -13307,7 +13398,7 @@ input[type=date], focus {
 }
 .create-disease .card-body form .btn-submit {
   text-align: center;
-  margin-top: 50%;
+  margin-top: 20%;
 }
 .create-disease .card-body form .btn-submit button {
   color: #fff;
@@ -13332,10 +13423,16 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-disease .card-body form .form-type {
+.edit-disease .card-body form .form-type #type {
+  padding: 2%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+.edit-disease .card-body form .form-name {
   margin-top: 6%;
 }
-.edit-disease .card-body form .form-type .type {
+.edit-disease .card-body form .form-name .name {
   font-size: 20px;
   font-weight: 600;
 }
@@ -13380,7 +13477,7 @@ input[type=date], focus {
 }
 .edit-disease .card-body form .btn-submit {
   text-align: center;
-  margin-top: 50%;
+  margin-top: 20%;
 }
 .edit-disease .card-body form .btn-submit button {
   color: #fff;
@@ -13793,6 +13890,12 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
+.edit-dewormer .card-body form .form-type #type {
+  padding: 2%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
 .edit-dewormer .card-body form .form-name {
   margin-top: 6%;
 }
@@ -13848,6 +13951,12 @@ input[type=date], focus {
 .create-dewormer .card-body form .form-type .type {
   font-size: 20px;
   font-weight: 600;
+}
+.create-dewormer .card-body form .form-type #type {
+  padding: 2%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
 }
 .create-dewormer .card-body form .form-name {
   margin-top: 6%;
@@ -14472,6 +14581,12 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
+.edit-pestcontrol .card-body form .form-type #type {
+  padding: 2%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
 .edit-pestcontrol .card-body form .form-name {
   margin-top: 6%;
 }
@@ -14528,6 +14643,12 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
+.create-pestcontrol .card-body form .form-type #type {
+  padding: 2%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
 .create-pestcontrol .card-body form .form-name {
   margin-top: 6%;
 }
@@ -14560,7 +14681,7 @@ input[type=date], focus {
 }
 .create-pestcontrol .card-body form .btn-submit {
   text-align: center;
-  margin-top: 50%;
+  margin-top: 20%;
 }
 .create-pestcontrol .card-body form .btn-submit button {
   color: #fff;
@@ -14572,10 +14693,10 @@ input[type=date], focus {
   box-shadow: 1px 5px 8px lightgrey;
 }
 
-.container-veterinary-profile .veterinary-details {
+.veterinary-details {
   margin-top: 17%;
 }
-.container-veterinary-profile .veterinary-details .veterinary-card {
+.veterinary-details .veterinary-card {
   background-color: white;
   width: 75%;
   margin-left: 12.5%;
@@ -14585,59 +14706,145 @@ input[type=date], focus {
   padding-bottom: 10%;
   box-shadow: 1px 2px 5px lightgrey;
 }
-.container-veterinary-profile .veterinary-details .veterinary-card .veterinary-img {
+.veterinary-details .veterinary-card .veterinary-img {
   align-self: center;
-  border-radius: 40px;
   margin-top: -13%;
 }
-.container-veterinary-profile .veterinary-details .veterinary-card .veterinary-name {
+.veterinary-details .veterinary-card .veterinary-img img {
+  border-radius: 40px;
+}
+.veterinary-details .veterinary-card .veterinary-name {
   align-self: center;
   font-size: 18px;
   font-weight: 600;
   margin-top: 10%;
 }
-.container-veterinary-profile .veterinary-details .veterinary-card .veterinary-contacts {
+.veterinary-details .veterinary-card .veterinary-contacts {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 16%;
 }
-.container-veterinary-profile .veterinary-details .veterinary-card .veterinary-contacts .veterinary-mail {
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-mail {
   padding: 3% 5%;
   background-color: #B73BAA;
   border-radius: 23px;
 }
-.container-veterinary-profile .veterinary-details .veterinary-card .veterinary-contacts .veterinary-location {
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-mail p {
+  display: none;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-mail:hover {
+  padding: 0 5%;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-mail:hover svg {
+  display: none;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-mail:hover p {
+  display: block;
+  font-size: 12px;
+  color: #ffffff;
+  margin: 7% 0;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-location {
   padding: 3% 5%;
   background-color: #7977EE;
   border-radius: 23px;
 }
-.container-veterinary-profile .veterinary-details .veterinary-card .veterinary-contacts .veterinary-urgency {
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-location p {
+  display: none;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-location:hover {
+  padding: 0 5%;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-location:hover svg {
+  display: none;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-location:hover p {
+  display: block;
+  font-size: 12px;
+  color: #ffffff;
+  margin: 22% 0;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-urgency {
   padding: 3% 4%;
   background-color: #FF3E01;
   border-radius: 23px;
 }
-.container-veterinary-profile .veterinary-details .infos-details {
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-urgency p {
+  display: none;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-urgency:hover {
+  padding: 0 5%;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-urgency:hover svg {
+  display: none;
+}
+.veterinary-details .veterinary-card .veterinary-contacts .veterinary-urgency:hover p {
+  display: block;
+  font-size: 12px;
+  color: #ffffff;
+  margin: 12% 0;
+}
+.veterinary-details .infos-details {
   margin-left: 13%;
   margin-top: 6%;
 }
-.container-veterinary-profile .veterinary-details .infos-details .veterinary-address, .container-veterinary-profile .veterinary-details .infos-details .veterinary-zipcode,
-.container-veterinary-profile .veterinary-details .infos-details .veterinary-city, .container-veterinary-profile .veterinary-details .infos-details .veterinary-phone {
+.veterinary-details .infos-details .veterinary-address, .veterinary-details .infos-details .veterinary-zipcode,
+.veterinary-details .infos-details .veterinary-city, .veterinary-details .infos-details .veterinary-phone {
   margin-top: 4.2%;
 }
-.container-veterinary-profile .veterinary-details .infos-details .veterinary-address p, .container-veterinary-profile .veterinary-details .infos-details .veterinary-zipcode p,
-.container-veterinary-profile .veterinary-details .infos-details .veterinary-city p, .container-veterinary-profile .veterinary-details .infos-details .veterinary-phone p {
+.veterinary-details .infos-details .veterinary-address p, .veterinary-details .infos-details .veterinary-zipcode p,
+.veterinary-details .infos-details .veterinary-city p, .veterinary-details .infos-details .veterinary-phone p {
   margin: 0;
   font-size: 18px;
 }
-.container-veterinary-profile .veterinary-details .infos-details .veterinary-address p:first-child, .container-veterinary-profile .veterinary-details .infos-details .veterinary-zipcode p:first-child,
-.container-veterinary-profile .veterinary-details .infos-details .veterinary-city p:first-child, .container-veterinary-profile .veterinary-details .infos-details .veterinary-phone p:first-child {
+.veterinary-details .infos-details .veterinary-address p:first-child, .veterinary-details .infos-details .veterinary-zipcode p:first-child,
+.veterinary-details .infos-details .veterinary-city p:first-child, .veterinary-details .infos-details .veterinary-phone p:first-child {
   opacity: 0.7;
   font-size: 16px;
 }
 
+.container-veterinary-profile a {
+  color: #000;
+  text-decoration: none;
+}
+
+.add-veterinary {
+  text-align: center;
+  margin-top: 10%;
+  padding-bottom: 10%;
+}
+.add-veterinary .btn-submit {
+  margin-left: 0;
+}
+
 .edit-veterinary {
   margin-top: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.edit-veterinary a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
+}
+.edit-veterinary form {
+  width: 40%;
+}
+.edit-veterinary form button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6F6F;
+  border-color: transparent;
+}
+
+.edit-veterinary-form .btn-submit {
+  margin-top: 10%;
 }
 
 .form-date #date {
@@ -14825,4 +15032,11 @@ body {
 .start-container .has-account-home .login-home {
   color: #F2865E;
   text-decoration: none;
+}
+
+.add-treatment {
+  text-align: center;
+}
+.add-treatment .btn-submit {
+  margin-left: 0;
 }

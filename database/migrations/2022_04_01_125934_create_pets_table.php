@@ -18,8 +18,9 @@ class CreatePetsTable extends Migration
             $table->unsignedInteger("user_id");
             $table->string("name");
             $table->dateTime('birth');
-            $table->string('sex');
-            $table->string('image');
+            $table->string("num_id")->nullable();
+            $table->string('sex')->nullable();
+            $table->string('image')->nullable();
 
             $table->timestamps();
 

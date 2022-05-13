@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'History', 'color'=>'#827EF2'])
+@include('layouts.navbar', ['title'=>'Historique', 'color'=>'#827EF2'])
 
 
   <div class="history">

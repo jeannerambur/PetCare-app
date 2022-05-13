@@ -186,7 +186,7 @@
 
             .btn-submit {
                 text-align: center;
-                margin-top: 50%;
+                margin-top: 20%;
                 button {
                     color: #fff;
                     background-color: #827EF2;
@@ -194,6 +194,81 @@
                     font-size: 18px;
                     border: none;
                     border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+
+.create-food {
+    .card-body {
+        margin-top: 15%;
+        flex: 0;
+        padding: 0;
+
+        form {
+            width: 80%;
+            margin-left: 10%;
+
+            .form-type {
+                .type {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                #type {
+                    padding: 2%;
+                    background-color: white;
+                    border: 1px solid lightgray;
+                    border-radius: 8px;
+                }
+            }
+            .form-marque {
+                margin-top: 6%;
+                .marque {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+
+            .form-quantite {
+                margin-top: 6%;
+                .quantite {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+
+            .form-date {
+                margin-top: 6%;
+                .date {
+                    font-size: 20px;
+                    font-weight: 600;
+
+                }
+                #date {
+                    margin-top: 3%;
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: #fff;
+                    border: 0.5px solid lightgray;
+                    margin-bottom: 7%;
+                    border-radius: 9px;
+                }
+            }
+
+
+            .btn-submit {
+                text-align: center;
+                margin-top: 20%;
+                button {
+                    color: #fff;
+                    background-color: #827EF2;
+                    padding: 3% 8%;
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 8px;
+                    box-shadow: 1px 5px 8px lightgrey;
                 }
             }
         }

@@ -29,11 +29,11 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                            @if (Route::has('password.request'))
+                           <!--  @if (Route::has('password.request'))
                                 <a class="reset-password" href="{{ route('password.request') }}">
                                     {{ __('FORGOT') }}
                                 </a>
-                            @endif
+                            @endif -->
                         </div>
                     </div>
                     <div class="button-login">

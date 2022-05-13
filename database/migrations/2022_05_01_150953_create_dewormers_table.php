@@ -19,7 +19,7 @@ class CreateDewormersTable extends Migration
             $table->string('title_name');
             $table->string("type");
             $table->string("name");
-            $table->string("dose");
+            $table->string("dose")->nullable();
             $table->dateTime('date');
 
             $table->timestamps();

@@ -23,7 +23,7 @@ class CreateVeterinariesTable extends Migration
             $table->string("city")->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
-            $table->string('image');
+            $table->string('image')->nullable();
 
             $table->timestamps();
 

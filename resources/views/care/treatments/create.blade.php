@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Add Vermifuge', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Traitement', 'color'=>'#B1A7F2'])
 
 <div class="create-treatment">
 
@@ -11,8 +11,8 @@
          @csrf
 
           <div class="form-name">
-              <label for="name" class="name">Name:</label>
-              <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name" placeholder="name" id="name"/>
+              <label for="name" class="name">Nom:</label>
+              <input type="text" class="form-control @error('name') is-invalid @enderror" required name="name" placeholder="Nom du soin" id="name"/>
               @error('name')
                 <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -21,8 +21,8 @@
           </div>
 
           <div class="form-quantite">
-            <label for="dose" class="quantite">Quantite: <span>(facultatif)</span></label>
-            <input type="text" class="form-control" name="quantite"/>
+            <label for="dose" class="quantite">Quantité: <span>(facultatif)</span></label>
+            <input type="text" class="form-control" name="quantite" placeholder="2" />
           </div>
 
           <div class="form-date">

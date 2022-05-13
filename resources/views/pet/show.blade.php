@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('layouts.navbar', ['title'=>'Pet Details', 'color'=>'#827EF2'])
+@include('layouts.navbar', ['title'=>'Mon animal', 'color'=>'#827EF2'])
 
   <div class="pet-details">
     <div class="card-pet-detail">
@@ -10,14 +10,10 @@
             <div class="pet-img">
             <img src="{{ Storage::url($pet->image) }}" height="75" width="75" alt="" />
             </div>
-            <div class='pet-name'>
-                <p>{{$pet->name}}</p>
-            </div>
-            <div class="pet-infos">
-                <div class="birth-date">
-                   <p>{{ date('d/m/y', strtotime($pet->birth)) }}</p>
+            <div class='pet-name-id'>
+                <div class='pet-name'>
+                    <p>{{$pet->name}}</p>
                 </div>
-
                 @if(($pet->sex) == 'male')
                 <div class="pet-sex">
                     <font-awesome-icon icon="fa-solid fa-mars" />
@@ -27,6 +23,16 @@
                     <font-awesome-icon icon="fa-solid fa-venus" />
                 </div>
                 @endif
+            </div>
+            <div class="pet-infos">
+                <div class="birth-date">
+                   <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y years, %m months and %d days');}}</p>
+                </div>
+
+                <div class="pet_num-id">
+                   <p>N°{{$pet->num_id }}</p>
+                </div>
+
             </div>
 
         </div>

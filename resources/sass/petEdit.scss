@@ -34,9 +34,14 @@
 
 }
 
-.name-form {
+.name-form, .email-form, .phone-form, .id-form {
     padding: 0 10%;
     margin-top: 12%;
+
+    .name, .num_id {
+        font-size: 20px;
+        font-weight: 600;
+    }
 
     .form-control {
         box-shadow: 1px 5px 5px lightgrey;
@@ -64,6 +69,18 @@
     }
 
 
+.form-edit-pet {
+    .btn-submit {
+        margin-top: 20%;
+    }
+
+    .form-group {
+        #mars, #venus {
+            width: 20%;
+            font-size: 21px;
+        }
+    }
+}
 .form-group {
     input {
         display: none;

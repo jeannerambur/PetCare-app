@@ -20,16 +20,16 @@
       <form method="post" action="{{ route('appetit.store-appetit', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
          @csrf
 
-          <div class="form-appetit">
-              <label for="appetit" class="appetit" >Appetit:</label>
-              <input type="text" class="form-control @error('appetit') is-invalid @enderror" required name="appetit" placeholder="Selection de l’appétit" id="appetit"/>
-              @error('appetit')
-                <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                </span>
-              @enderror
+         <div class="form-appetit">
+            <label for="appetit" class="appetit">Type d'appetit :</label>
+            <select name="appetit" id="appetit" required>
+              <option value=""> <font-awesome-icon icon="fa-solid fa-angle-down"/> Selectionnez l'appetit </option>
+              <option value="Bon">Bon</option>
+              <option value="Moyen">Moyen</option>
+              <option value="Peu">Peu</option>
+              <option value="Pas du tout">Pas du tout</option>
+            </select>
           </div>
-
           <div class="form-date">
               <label for="date" class="date" >Date:</label>
               <input type="date" id="date" name="date" class="date-form @error('date') is-invalid @enderror" required>

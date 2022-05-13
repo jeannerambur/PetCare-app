@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'groom', 'color'=>'#FFB5B1'])
+@include('layouts.navbar', ['title'=>'Bain', 'color'=>'#FFB5B1'])
 
 
 <div class="health-details">

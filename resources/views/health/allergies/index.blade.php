@@ -26,7 +26,7 @@
                 </div>
                 <div class="info-allergy">
                     <div class="allergy">
-                        <p>{{ $allergy->name}}</p>
+                        <p>{{ $allergy->type}}</p>
                     </div>
 
                     <div class="duree">

@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'Vermifuge', 'color'=>'#B1A7F2'])
+@include('layouts.navbar', ['title'=>'Anti-parasites', 'color'=>'#B1A7F2'])
 
 
 <div class="pestcontrol-details">
