@@ -7,7 +7,7 @@
 <div class="container-user-profile">
     <div class="user-details">
         <div class="user-img">
-          <img src="{{asset('public/images/'.Auth::user()->image)}}" height="75" width="75" alt="" />
+          <img src="{{ Storage::url(Auth::user()->image ) }}" height="75" width="75" alt="" />
         </div>
         <div class="description-user">
           {{ Auth::user()->about }}
@@ -31,7 +31,7 @@
                 <p>Last name: </p>
               </div>
               <div class="name">
-                {{ Auth::user()->name }}
+                {{ Auth::user()->lastname }}
               </div>
             </div>
           </div>
@@ -43,12 +43,20 @@
             <p>Contacts</p>
           </div>
           <div class="description">
-            <div class="contact">
+            <div class="email">
               <div class="logo">
                 <p>Email: </p>
               </div>
               <div class="mail">
                 {{ Auth::user()->email }}
+              </div>
+            </div>
+            <div class="phone-number">
+              <div class="logo">
+                <p>Tel: </p>
+              </div>
+              <div class="phone">
+                {{ Auth::user()->phone_number }}
               </div>
             </div>
           </div>

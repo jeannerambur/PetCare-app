@@ -53,7 +53,7 @@
 
 
 <div class="add-allergy">
-    <a href="{{ route('allergies.create-allergy', Route::current()->parameter('id'))}}" class="btn-submit">Ajouter</a>
+    <a href="{{ route('allergies.create-allergy', Route::current()->parameter('id')) }}" class="btn-submit">Ajouter</a>
 </div>
 
 @endsection

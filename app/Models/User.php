@@ -15,8 +15,10 @@ class User extends Authenticatable
 	use HasApiTokens, HasFactory, Notifiable;
 
 	protected $attributes = [
-		'image' => 'default-user.jpg',
-		'about' => ''
+		'image' => 'default.jpg',
+		'about' => '',
+		'phone_number' => '',
+		'lastname' => ''
 	];
 	/**
 	 * The attributes that are mass assignable.
@@ -27,8 +29,10 @@ class User extends Authenticatable
 		'name',
 		'email',
 		'password',
+		'about',
 		'image',
-		'about'
+		'phone_number',
+		'lastname'
 	];
 
 	/**

@@ -12366,6 +12366,14 @@ input[type=date], focus {
   height: 100%;
   border-radius: 50px;
 }
+.container-user-profile .user-details .description-user {
+  background-color: white;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+  padding: 4%;
+  border-radius: 10px;
+}
 .container-user-profile .user-details .general-infos, .container-user-profile .user-details .contact-infos {
   text-align: left;
   margin-top: 10.5%;
@@ -12382,13 +12390,13 @@ input[type=date], focus {
   padding: 2% 5%;
   margin-top: 2.5%;
 }
-.container-user-profile .user-details .general-infos .description .username, .container-user-profile .user-details .general-infos .description .contact, .container-user-profile .user-details .contact-infos .description .username, .container-user-profile .user-details .contact-infos .description .contact {
+.container-user-profile .user-details .general-infos .description .username, .container-user-profile .user-details .general-infos .description .email, .container-user-profile .user-details .general-infos .description .phone-number, .container-user-profile .user-details .contact-infos .description .username, .container-user-profile .user-details .contact-infos .description .email, .container-user-profile .user-details .contact-infos .description .phone-number {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 2%;
 }
-.container-user-profile .user-details .general-infos .description .username .logo p, .container-user-profile .user-details .general-infos .description .contact .logo p, .container-user-profile .user-details .contact-infos .description .username .logo p, .container-user-profile .user-details .contact-infos .description .contact .logo p {
+.container-user-profile .user-details .general-infos .description .username .logo p, .container-user-profile .user-details .general-infos .description .email .logo p, .container-user-profile .user-details .general-infos .description .phone-number .logo p, .container-user-profile .user-details .contact-infos .description .username .logo p, .container-user-profile .user-details .contact-infos .description .email .logo p, .container-user-profile .user-details .contact-infos .description .phone-number .logo p {
   font-size: 12px;
   opacity: 0.8;
   margin: 0;
@@ -12404,6 +12412,20 @@ input[type=date], focus {
   border-color: lightcoral;
   padding: 30% 60%;
   color: #000;
+}
+
+.edit-profile .about-form {
+  width: 80%;
+  margin-left: 10%;
+}
+.edit-profile .about-form #about {
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  box-shadow: 1px 6px 8px lightgray;
+}
+.edit-profile .btn-submit {
+  margin-top: 20%;
 }
 
 .history-home-page {

@@ -70,7 +70,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProfileRequest $request)
+    public function update(Request $request)
     {
 
 
@@ -82,6 +82,9 @@ class UserController extends Controller
         }
 
         $user->name = $request->name;
+        $user->lastname = $request->lastname;
+        $user->phone_number = $request->phone_number;
+        $user->email = $request->email;
         $user->about = $request->about;
 
         $user->save();

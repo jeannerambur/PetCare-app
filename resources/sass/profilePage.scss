@@ -14,6 +14,14 @@
             }
         }
 
+        .description-user {
+            background-color: white;
+            width: 70%;
+            margin-left: 15%;
+            margin-top: 5%;
+            padding: 4%;
+            border-radius: 10px;
+        }
         .general-infos, .contact-infos {
             text-align: left;
             margin-top: 10.5%;
@@ -32,7 +40,7 @@
                 border-radius: 9px;
                 padding: 2% 5%;
                 margin-top: 2.5%;
-                .username, .contact {
+                .username, .email, .phone-number {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
@@ -60,5 +68,22 @@
             padding: 30% 60%;
             color: #000;
         }
+    }
+}
+
+.edit-profile {
+    .about-form {
+        width: 80%;
+        margin-left: 10%;
+
+        #about {
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            box-shadow: 1px 6px 8px lightgray;
+        }
+    }
+    .btn-submit {
+        margin-top: 20%;
     }
 }

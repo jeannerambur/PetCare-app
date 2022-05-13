@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Image;
+use Carbon\Carbon;
 use App\Models\Pet;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StorePetRequest;
 use App\Http\Requests\UpdatePetRequest;
-use Image;
 
 class PetController extends Controller
 {
@@ -111,7 +111,7 @@ class PetController extends Controller
     {
 
         $pet = Pet::find($id);
-        $birthday = Carbon::parse($request->date_of_birth)->format('Y-m-d');
+
 
         if($request->hasFile('image')){
             $path = $request->file('image')->store('public/images');
