@@ -19,13 +19,13 @@ import "@mdi/font/css/materialdesignicons.css"
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
-import { faAngleLeft, faBars, faCamera, faVenus, faMars, faPen, faClockRotateLeft, faEnvelope, faLocationDot, faTruckMedical, faAngleDown, faWeightScale, faHeartPulse} from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faBars, faCamera, faVenus, faMars, faPen, faClockRotateLeft, faEnvelope, faLocationDot, faTruckMedical, faAngleDown, faWeightScale, faHeartPulse, faPencil} from '@fortawesome/free-solid-svg-icons'
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* add icons to the library */
-library.add(faAngleLeft, faBars, faCamera, faVenus, faMars, faPen, faClockRotateLeft, faEnvelope, faLocationDot, faTruckMedical, faAngleDown, faWeightScale, faHeartPulse)
+library.add(faAngleLeft, faBars, faCamera, faVenus, faMars, faPen, faClockRotateLeft, faEnvelope, faLocationDot, faTruckMedical, faAngleDown, faWeightScale, faHeartPulse, faPencil)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -44,6 +44,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('welcome', require('./components/Welcome.vue').default);
 
 Vue.component('iconcomponent', require('./components/IconComponent.vue').default);
+
+Vue.component('introslider', require('./components/IntroSlider.vue').default);
 
 //Vue.component('burgermenu', require('./components/BurgerMenu.vue').default);
 

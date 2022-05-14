@@ -2,13 +2,11 @@
 
 @section('content')
 
-@include('layouts.navbar', ['title'=>'Veterinaire', 'color'=>'#63A5F1'])
+@include('layouts.navbar', ['title'=>'Vétérinaire', 'color'=>'#63A5F1'])
 
 <div class="veterinary-details">
           <div class='veterinary-card'>
-            <div class="veterinary-img">
-              <img src="{{ Storage::url($veterinary->image) }}" height="75" width="75" alt="" />
-            </div>
+
             <div class="veterinary-name">
               {{$veterinary->name}} {{$veterinary->lastname}}
             </div>

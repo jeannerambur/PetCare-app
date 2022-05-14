@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'My Profile', 'color'=>'#827EF2'])
+@include('layouts.navbar', ['title'=>'Mon Profil', 'color'=>'#827EF2'])
 
 <div class="container">
     <div class="edit-profile">
@@ -24,12 +24,12 @@
                 </div>
 
                 <div class="name-form">
-                    <label for="name">Name</label>
+                    <label for="name">Nom</label>
                     <input type="text" class='form-control' name='name' id="name" value="{{ $user->name }}">
                 </div>
 
                 <div class="email-form">
-                    <label for="name">Last Name</label>
+                    <label for="name">Prénom</label>
                     <input type="text" class='form-control' name='lastname' id="name" value="{{ $user->lastname }}">
                 </div>
 
@@ -41,13 +41,13 @@
 
 
                 <div class="name-form">
-                    <label for="name">Phone</label>
+                    <label for="name">Email</label>
                     <input type="text" class='form-control' name='email' id="name" value="{{ $user->email }}">
                 </div>
 
 
                 <div class="about-form">
-                    <label for="about">About Me</label>
+                    <label for="about">A propos</label>
                     <textarea class='form-control' name='about' id="about" cols="5" rows="5">{{ $user->about }}</textarea>
                 </div>
 

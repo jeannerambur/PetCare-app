@@ -4,8 +4,8 @@
 <div class="container-login">
     <div class="login">
         <div class="col-md-8">
-            <div class="login-title">{{ __('Login') }}</div>
-            <div class="login-subtitle">Please sign in to continue</div>
+            <div class="login-title">{{ __('Se connecter') }}</div>
+            <div class="login-subtitle">Connecte toi pour continuer</div>
             <div class="card-body">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
@@ -23,7 +23,7 @@
 
                     <div class="form">
                         <div class="form-email">
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Mot de passe" required autocomplete="current-password">
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -39,7 +39,7 @@
                     <div class="button-login">
                         <div class="button-submit">
                             <button type="submit" class="submit">
-                                {{ __('Login') }}
+                                {{ __('Se connecter') }}
                             </button>
 
                         </div>
@@ -50,6 +50,6 @@
     </div>
 </div>
 <div class='no-account'>
-    <div>Don’t have an account ?  <a href="{{ route('register') }}">Sign Up</a></div>
+    <div>Tu n'as pas de compte ?  <a href="{{ route('register') }}">S'inscrire</a></div>
 </div>
 @endsection

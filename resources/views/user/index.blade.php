@@ -1,17 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar', ['title'=>'My Profile', 'color'=>'#827EF2'])
+@include('layouts.navbar', ['title'=>'Mon Profil', 'color'=>'#827EF2'])
 
 
 <div class="container-user-profile">
     <div class="user-details">
+      <div class="edit">
         <div class="user-img">
           <img src="{{ Storage::url(Auth::user()->image ) }}" height="75" width="75" alt="" />
         </div>
+        <div class="edit-user">
+          <a href="/user/profile/edit" class="btn btn-primary"><font-awesome-icon icon="fa-solid fa-pencil" :style="{color: 'black'}"/></a>
+        </div>
+      </div>
+        @if(Auth::user()->about)
         <div class="description-user">
           {{ Auth::user()->about }}
         </div>
+        @else
+        <div class="description-user-classic">
+        </div>
+        @endif
 
         <div class="general-infos">
           <div class="title">
@@ -64,9 +74,7 @@
 
 
     </div>
-    <div class="edit-user">
-        <a href="/user/profile/edit" class="btn btn-primary">Edit</a>
-    </div>
+
 </div>
 
 @endsection

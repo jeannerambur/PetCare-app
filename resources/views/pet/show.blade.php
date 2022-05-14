@@ -47,7 +47,6 @@
         <div class="mesures">
             <a href="{{ route('mesures', $pet->id)}}">
                 <div class="button">
-                    <font-awesome-icon icon="fa-thin fa-weight-scale" />
                 </div>
                 <p>Mesures</p>
             </a>
@@ -57,7 +56,6 @@
         <div class="sante">
             <a href="{{ route('health', $pet->id)}}">
                 <div class="button">
-                    <font-awesome-icon icon="fa-solid fa-heart-pulse" />
                 </div>
                 <p>Santé</p>
             </a>

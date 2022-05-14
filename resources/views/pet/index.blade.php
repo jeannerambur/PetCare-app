@@ -9,10 +9,10 @@
 
     <div class="presentation">
         <div class="username-hi">
-            Hi <strong>{{ Auth::user()->name }}</strong>
+            Coucou <strong>{{ Auth::user()->name }}</strong>
         </div>
         <div class="username-subtitle">
-            Let’s take care of your pets
+          Prenons soin de vos animaux de compagnie
         </div>
 
     <!-- <div class="button-health">
@@ -37,6 +37,7 @@
         </div>
 
     </div>-->
+
     <a href="{{  url('/history')}}">
       <div class="history-pets">
         <div class="history-widget">

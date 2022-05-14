@@ -5,7 +5,7 @@
     <div class="register">
         <div class="form-register">
 
-                <div class="register-title">{{ __('Create Account') }}</div>
+                <div class="register-title">{{ __('Créer un compte') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -13,8 +13,7 @@
 
                         <div class="form-name">
                            <div class="name">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Full name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Nom" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -37,7 +36,7 @@
 
                         <div class="form-password">
                             <div class="password">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Mot de passe" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -49,14 +48,14 @@
 
                         <div class="form-password">
                             <div class="password">
-                                <input id="password-confirm" type="password" class="form-control" placeholder="Confirm password" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" placeholder="Confirmer le mot de passe" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
                         <div class="button-register">
                             <div class="button-submit">
                                 <button type="submit" class="btn-submit">
-                                    {{ __('Register') }}
+                                    {{ __("S'inscrire") }}
                                 </button>
                             </div>
                         </div>
@@ -68,6 +67,6 @@
 
 </div>
 <div class='has-account'>
-        <div>Already have an account ?  <a href="{{ route('login') }}">Sign In</a>
+        <div>Tu as déjà un compte ?  <a href="{{ route('login') }}">Se connecter</a>
     </div>
 @endsection

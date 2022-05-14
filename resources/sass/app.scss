@@ -59,7 +59,7 @@ body {
 }
 
 .container-home-page {
-    padding: 5% 5% 0 5%;
+    padding: 8% 5% 0 5%;
     height: calc( 100vh - 140px );
 
     .presentation {
@@ -67,7 +67,7 @@ body {
             font-size: 24px;
         }
         .username-subtitle {
-            font-size: 18px;
+            font-size: 14px;
             opacity: 0.5;
         }
 
@@ -116,19 +116,21 @@ body {
             .history-pets {
                 display: flex;
                 flex-direction: row;
-                padding: 12%;
+                align-items: center;
                 width: 100%;
                 height: 100px;
-                margin-top: 5.3%;
+                margin-top: 15%;
                 background-color: #827EF2;
                 position: relative;
                 border-radius: 9px;
                 box-shadow: 1px 5px 8px lightgrey;
                 p {
                     font-size: 20px;
+                    margin: 0;
                 }
                 .history-widget {
-                    margin-right: 10%;
+                    margin-right: 5%;
+                    margin-left: 10%;
 
                 }
             }
@@ -140,6 +142,7 @@ body {
         flex-direction: row;
         justify-content: space-between;
         margin-top: 10%;
+        padding: 0 1%;
         .my-pets {
             font-size: 24px;
         }
@@ -196,6 +199,21 @@ body {
     }
 }
 
+.get-started {
+    text-align: center;
+    width: 35%;
+    background-color: #827EF2;
+    padding: 2%;
+    border-radius: 9px;
+    box-shadow: 1px 2px 8px lightgrey;
+    margin-top: 30%;
+    a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+    }
+}
+
 .start-container {
         display: flex;
         flex-direction: column;
@@ -203,34 +221,24 @@ body {
         padding-bottom: 6%;
         align-items: center;
         justify-content: flex-end;
-
-        .start-button {
-            text-align: center;
-            width: 35%;
-            background-color: #827EF2;
-            padding: 2%;
-            border-radius: 9px;
-
-            a {
-                color: white;
-                font-size: 18px;
-            }
+        .intro-slide {
+            width: 80%;
         }
-
         .has-account-home {
             display: flex;
             flex-direction: row;
             justify-content: center;
             width: 100%;
             margin-top: 17.6%;
+            padding-bottom: 5%;
             .account {
                 margin-right: 2%;
-
-
+                font-size: 18px;
             }
             .login-home {
                 color: #F2865E;
-               text-decoration: none;
+                text-decoration: none;
+                font-size: 18px;
            }
         }
 

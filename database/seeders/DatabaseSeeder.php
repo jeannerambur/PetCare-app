@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
             'user_id'=> 1,
             'birth' => '2021-02-28',
             'sex' => 'female',
-            'image' => 'default.jpg'
+            'image' => 'default-user.jpg'
 		]);
 
 		Pet::create([
@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
             'user_id'=> 1,
             'birth' => '2022-04-22',
             'sex' => 'male',
-            'image' => 'default.jpg'
+            'image' => 'default-user.jpg'
 		]);
 
 		Veterinary::create([
@@ -63,8 +63,7 @@ class DatabaseSeeder extends Seeder
             'zipcode'=> '92140',
             'city' => 'Clamart',
             'phone' => '01 41 08 00 50',
-            'email' => 'juliette.lenoyer@gmail.com',
-            'image' => 'default-user.jpg'
+            'email' => 'juliette.lenoyer@gmail.com'
 		]);
 
 		Wound::create([

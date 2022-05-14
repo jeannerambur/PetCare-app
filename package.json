@@ -28,6 +28,7 @@
         "@fortawesome/free-solid-svg-icons": "^6.1.1",
         "@fortawesome/vue-fontawesome": "^2.0.6",
         "@mdi/font": "^6.6.96",
+        "@wyhaya/vue-slide": "^1.0.2",
         "babel-preset-stage-2": "^6.24.1",
         "babel-runtime": "^6.26.0",
         "moment": "^2.29.3",

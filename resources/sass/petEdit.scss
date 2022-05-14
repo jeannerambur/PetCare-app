@@ -3,6 +3,8 @@
 }
 .pet-image-form {
     margin-top: 8%;
+    display: flex;
+    flex-direction: row;
     .pet-image {
         width: 29.5%;
         height: 100px;
@@ -19,14 +21,14 @@
 
     .image-form {
         width: 8%;
-        position: absolute;
-        top: 17%;
-        margin-left: 60%;
+        height: 30px;
+        position: relative;
         padding: 4px;
-        padding: 3px;
         text-align: center;
         background-color: #F2865E;
         border-radius: 20px;
+        margin-left: -5%;
+        margin-top: -2%;
         #file-input {
             display: none;
         }
@@ -36,7 +38,7 @@
 
 .name-form, .email-form, .phone-form, .id-form {
     padding: 0 10%;
-    margin-top: 12%;
+    margin-top: 6.8%;
 
     .name, .num_id {
         font-size: 20px;
@@ -183,13 +185,14 @@
 }
 
 .birth-date, .form-group {
-    margin-top: 6.5%;
+    margin-top: 6.8%;
 }
 
 .birth-date {
-    text-align: center;
-    label {
-        font-size: 18px;
+    padding: 0 10%;
+    #birth-date {
+        font-size: 20px;
+        font-weight: 600;
     }
 }
 
