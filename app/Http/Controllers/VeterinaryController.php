@@ -89,7 +89,6 @@ class VeterinaryController extends Controller
     public function update(Request $request, $id)
     {
 
-        Dd($request->all());
         $veterinary = Veterinary::find($id);
 
         $veterinary->name = $request->name;

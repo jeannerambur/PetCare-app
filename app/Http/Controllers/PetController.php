@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Image;
+use Intervention\Image\Facades\Image;
 use Carbon\Carbon;
 use App\Models\Pet;
 use Illuminate\Http\Request;
@@ -53,10 +53,12 @@ class PetController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'birth' => 'required',
-            'image' => 'required'
+            'birth' => 'required'
         ]);
 
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
 
         $path = Storage::disk('s3')->put('images', $request->image);
         $path = Storage::disk('s3')->url($path);
@@ -115,15 +117,23 @@ class PetController extends Controller
     {
 
         $pet = Pet::find($id);
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        //$image = Image::make($request->image);
 
         $path = Storage::disk('s3')->put('images', $request->image);
         $path = Storage::disk('s3')->url($path);
+        $pet->image = $path;
 
+
+        //Dd($image);
         $pet->name = $request->name;
         $pet->user_id = Auth::id();
         $pet->sex = $request->sex;
         $pet->birth = $request->birth;
-        $pet->image = $path;
+
         $pet->num_id = $request->num_id;
         $pet->updated_at = now();
 

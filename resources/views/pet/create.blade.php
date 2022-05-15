@@ -24,7 +24,7 @@
 
          <div class="pet-image-form">
             <div class="pet-image">
-              <img src="../../storage/images/default-user.jpg" height="200" width="200" alt="" />
+              <img src="{{Storage::disk('s3')->url('images/default-placeholder.png')}}" height="200" width="200" alt="" />
             </div>
             <div class="image-form">
               <label for="file-input">
