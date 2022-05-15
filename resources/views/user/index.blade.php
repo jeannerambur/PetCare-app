@@ -8,7 +8,7 @@
     <div class="user-details">
       <div class="edit">
         <div class="user-img">
-          <img src="{{ Storage::url(Auth::user()->image ) }}" height="75" width="75" alt="" />
+          <img src="{{ Auth::user()->image }}" height="75" width="75" alt="" />
         </div>
         <div class="edit-user">
           <a href="/user/profile/edit" class="btn btn-primary"><font-awesome-icon icon="fa-solid fa-pencil" :style="{color: 'black'}"/></a>

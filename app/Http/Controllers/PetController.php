@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StorePetRequest;
 use App\Http\Requests\UpdatePetRequest;
+use Illuminate\Support\Facades\Storage;
 
 class PetController extends Controller
 {
@@ -57,7 +58,9 @@ class PetController extends Controller
         ]);
 
 
-        $path = $request->file('image')->store('public/images');
+        $path = Storage::disk('s3')->put('images', $request->image);
+        $path = Storage::disk('s3')->url($path);
+
         $pet = new Pet;
 
         $pet->name = $request->name;
@@ -113,16 +116,14 @@ class PetController extends Controller
 
         $pet = Pet::find($id);
 
-
-        if($request->hasFile('image')){
-            $path = $request->file('image')->store('public/images');
-            $pet->image = $path;
-        }
+        $path = Storage::disk('s3')->put('images', $request->image);
+        $path = Storage::disk('s3')->url($path);
 
         $pet->name = $request->name;
         $pet->user_id = Auth::id();
         $pet->sex = $request->sex;
         $pet->birth = $request->birth;
+        $pet->image = $path;
         $pet->num_id = $request->num_id;
         $pet->updated_at = now();
 

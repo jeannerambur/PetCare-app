@@ -15,7 +15,7 @@ class User extends Authenticatable
 	use HasApiTokens, HasFactory, Notifiable;
 
 	protected $attributes = [
-		'image' => 'default.jpg',
+		'image' => 'default-user.jpg',
 		'about' => '',
 		'phone_number' => '',
 		'lastname' => ''

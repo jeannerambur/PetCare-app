@@ -20,7 +20,7 @@
 
           <div class="pet-image-form">
             <div class="pet-image">
-              <img src="{{ Storage::url($pet->image) }}" height="200" width="200" alt="" />
+              <img src="{{$pet->image}}" height="200" width="200" alt="" />
             </div>
             <div class="image-form">
               <label for="file-input">

@@ -73,7 +73,7 @@
         <a href="{{ route('pets.show', $pet->id)}}">
         <div class="pet-container">
           <div class="pet-img">
-          <img src="{{ Storage::url($pet->image) }}" height="75" width="75" alt="" />
+          <img src="{{ $pet->image }}" height="75" width="75" alt="" />
           </div>
           <div class="pet-name">
             <p>{{$pet->name}}</p>
