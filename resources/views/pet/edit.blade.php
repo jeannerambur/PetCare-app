@@ -43,7 +43,7 @@
           </div>
 
           <div class="birth-date">
-            <label for="birth">Birth date : </label>
+            <label for="birth" id="birth-date">Birth date : </label>
             <input type="date" id="birth" name="birth" class="birth-form @error('birth') is-invalid @enderror" required placeholder="Date of birth" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
             @error('birth')
                 <span class="invalid-feedback" role="alert">

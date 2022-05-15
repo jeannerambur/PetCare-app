@@ -64,9 +64,9 @@
 
         </div>
     </div>
-
-</div>
-<div class='has-account'>
+    <div class='has-account'>
         <div>Tu as déjà un compte ?  <a href="{{ route('login') }}">Se connecter</a>
     </div>
+</div>
+
 @endsection

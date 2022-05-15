@@ -11487,6 +11487,23 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 10px lightgrey;
 }
 
+.add-pet .btn-submit {
+  position: absolute;
+  top: auto;
+  bottom: 5%;
+  margin-top: 0;
+  margin-left: 25%;
+  box-shadow: 1px 2px 8px lightgrey;
+  width: 40%;
+  border: none;
+  background-color: #827EF2;
+  color: #fff !important;
+  padding: 2% 0;
+  font-size: 18px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
 .form-edit-pet .btn-submit {
   margin-top: 20%;
 }
@@ -11762,7 +11779,7 @@ input[type=date], focus {
   width: 80%;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 45px);
+  height: calc(100vh - 160px);
   justify-content: center;
   align-items: center;
 }
@@ -11837,8 +11854,9 @@ input[type=date], focus {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 45px);
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 5%;
 }
 .container-register .register {
   width: 100%;
@@ -12329,15 +12347,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-health .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-health .card-body form .btn-submit {
   text-align: center;
   margin-top: 50%;
@@ -12368,15 +12377,6 @@ input[type=date], focus {
 .create-health .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-health .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-health .card-body form .btn-submit {
   text-align: center;
@@ -12726,15 +12726,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-poids .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-poids .card-body form .btn-submit {
   text-align: center;
   margin-top: 50%;
@@ -12778,15 +12769,6 @@ input[type=date], focus {
 .create-poids .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-poids .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-poids .card-body form .btn-submit {
   text-align: center;
@@ -12957,30 +12939,12 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-allergy .card-body form .form-name #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-allergy .card-body form .form-date {
   margin-top: 6%;
 }
 .edit-allergy .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.edit-allergy .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .edit-allergy .card-body form .btn-submit {
   text-align: center;
@@ -13041,15 +13005,6 @@ input[type=date], focus {
 .create-allergy .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-allergy .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-allergy .card-body form .btn-submit {
   text-align: center;
@@ -13215,15 +13170,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-food .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-food .card-body form .btn-submit {
   text-align: center;
   margin-top: 20%;
@@ -13276,15 +13222,6 @@ input[type=date], focus {
 .create-food .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-food .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-food .card-body form .btn-submit {
   text-align: center;
@@ -13413,15 +13350,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.create-disease .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .create-disease .card-body form .form-healing-date {
   margin-top: 6%;
 }
@@ -13491,15 +13419,6 @@ input[type=date], focus {
 .edit-disease .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.edit-disease .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .edit-disease .card-body form .form-healing-date {
   margin-top: 6%;
@@ -13699,15 +13618,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-wound .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-wound .card-body form .form-healing-date {
   margin-top: 6%;
 }
@@ -13763,15 +13673,6 @@ input[type=date], focus {
 .create-wound .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-wound .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-wound .card-body form .form-healing-date {
   margin-top: 6%;
@@ -13969,15 +13870,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-dewormer .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-dewormer .card-body form .btn-submit {
   text-align: center;
   margin-top: 50%;
@@ -14030,15 +13922,6 @@ input[type=date], focus {
 .create-dewormer .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-dewormer .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-dewormer .card-body form .btn-submit {
   text-align: center;
@@ -14210,15 +14093,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-treatment .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-treatment .card-body form .btn-submit {
   text-align: center;
   margin-top: 50%;
@@ -14261,15 +14135,6 @@ input[type=date], focus {
 .create-treatment .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-treatment .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-treatment .card-body form .btn-submit {
   text-align: center;
@@ -14435,15 +14300,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-vaccine .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-vaccine .card-body form .btn-submit {
   text-align: center;
   margin-top: 50%;
@@ -14490,15 +14346,6 @@ input[type=date], focus {
 .create-vaccine .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-vaccine .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-vaccine .card-body form .btn-submit {
   text-align: center;
@@ -14680,15 +14527,6 @@ input[type=date], focus {
   font-size: 20px;
   font-weight: 600;
 }
-.edit-pestcontrol .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
-}
 .edit-pestcontrol .card-body form .btn-submit {
   text-align: center;
   margin-top: 50%;
@@ -14741,15 +14579,6 @@ input[type=date], focus {
 .create-pestcontrol .card-body form .form-date .date {
   font-size: 20px;
   font-weight: 600;
-}
-.create-pestcontrol .card-body form .form-date #date {
-  margin-top: 3%;
-  margin-top: 3%;
-  padding: 3%;
-  background-color: #fff;
-  border: 0.5px solid lightgray;
-  margin-bottom: 7%;
-  border-radius: 9px;
 }
 .create-pestcontrol .card-body form .btn-submit {
   text-align: center;
@@ -14978,7 +14807,7 @@ body {
 
 .container-home-page {
   padding: 8% 5% 0 5%;
-  height: calc(100vh - 140px);
+  height: 100%;
 }
 .container-home-page .presentation .username-hi {
   font-size: 24px;
