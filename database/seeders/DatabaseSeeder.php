@@ -43,16 +43,14 @@ class DatabaseSeeder extends Seeder
 			'name'=> 'Miho',
             'user_id'=> 1,
             'birth' => '2021-02-28',
-            'sex' => 'female',
-            'image' => 'default-user.jpg'
+            'sex' => 'female'
 		]);
 
 		Pet::create([
 			'name'=> 'Bibou',
             'user_id'=> 1,
             'birth' => '2022-04-22',
-            'sex' => 'male',
-            'image' => 'default-user.jpg'
+            'sex' => 'male'
 		]);
 
 		Veterinary::create([

@@ -6,14 +6,7 @@
 
 <div class="container-user-profile">
     <div class="user-details">
-      <div class="edit">
-        <div class="user-img">
-          <img src="{{ Auth::user()->image }}" height="75" width="75" alt="" />
-        </div>
-        <div class="edit-user">
-          <a href="/user/profile/edit" class="btn btn-primary"><font-awesome-icon icon="fa-solid fa-pencil" :style="{color: 'black'}"/></a>
-        </div>
-      </div>
+
         @if(Auth::user()->about)
         <div class="description-user">
           {{ Auth::user()->about }}
@@ -72,6 +65,9 @@
           </div>
         </div>
 
+        <div class="edit">
+          <a href="/user/profile/edit" class="btn btn-primary">Modifier</a>
+        </div>
 
     </div>
 

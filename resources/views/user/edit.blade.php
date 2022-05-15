@@ -10,19 +10,6 @@
                 @csrf
                 @method('PUT')
 
-                <div class="pet-image-form">
-                    <div class="pet-image">
-                        <img src="{{ Storage::url($user->image) }}" height="200" width="200" alt="" />
-                    </div>
-                    <div class="image-form">
-                        <label for="file-input">
-                            <font-awesome-icon icon="fa-solid fa-camera" :style="{ color: 'white' }"/>
-                        </label>
-                        <input id="file-input" type="file" name="image" class="form-control">
-                    </div>
-
-                </div>
-
                 <div class="name-form">
                     <label for="name">Nom</label>
                     <input type="text" class='form-control' name='name' id="name" value="{{ $user->name }}">

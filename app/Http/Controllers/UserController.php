@@ -74,16 +74,10 @@ class UserController extends Controller
     public function update(Request $request)
     {
 
-
         $user = auth()->user();
-
-        $path = Storage::disk('s3')->put('images', $request->image);
-        $path = Storage::disk('s3')->url($path);
-
 
         $user->name = $request->name;
         $user->lastname = $request->lastname;
-        $user->image = $path;
         $user->phone_number = $request->phone_number;
         $user->email = $request->email;
         $user->about = $request->about;

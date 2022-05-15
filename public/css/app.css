@@ -12435,29 +12435,17 @@ input[type=date], focus {
   opacity: 0.8;
   margin: 0;
 }
-.container-user-profile .edit {
-  display: flex;
-  flex-direction: row;
+.container-user-profile .user-details .edit {
+  text-align: center;
+  margin-top: 10%;
 }
-.container-user-profile .edit .user-img {
-  width: 28%;
-  margin-left: 36%;
-}
-.container-user-profile .edit .user-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-}
-.container-user-profile .edit .edit-user {
-  margin-left: -4%;
-  margin-top: -2%;
-}
-.container-user-profile .edit .edit-user a {
-  background-color: #fff;
-  border-radius: 33px;
-  border-color: lightcoral;
-  padding: 30% 60%;
-  color: #000;
+.container-user-profile .user-details .edit a {
+  width: 40%;
+  font-size: 18px;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  background-color: #827EF2;
+  border-color: transparent;
 }
 
 .edit-profile .about-form {
