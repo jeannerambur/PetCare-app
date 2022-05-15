@@ -50,7 +50,7 @@ class DentController extends Controller
         //Dd($request->all());
         $dent->save();
 
-        return redirect('/pets/'.$dent->pet_id.'/hygiene/dents')->with('success', 'dent créer avec succèss');
+        return redirect('/pets/'.$dent->pet_id.'/hygiene/dents')->with('success', 'Dent créé avec succès');
     }
 
     /**
@@ -95,7 +95,7 @@ class DentController extends Controller
 
         $dent->save();
 
-        return redirect('/pets/'.$dent->pet_id.'/hygiene/dents')->with('success', 'dent modifié avec succèss');
+        return redirect('/pets/'.$dent->pet_id.'/hygiene/dents')->with('success', 'Dent modifié avec succès');
     }
 
     /**
@@ -109,6 +109,6 @@ class DentController extends Controller
         $dent = Dent::findOrFail($id);
         $dent->delete();
 
-        return redirect('/pets/'.$dent->pet_id.'/hygiene/dents')->with('success', 'dent supprimer avec succèss');
+        return redirect('/pets/'.$dent->pet_id.'/hygiene/dents')->with('success', 'Dent supprimer avec succès');
     }
 }

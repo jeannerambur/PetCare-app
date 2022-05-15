@@ -53,7 +53,7 @@ class VaccineController extends Controller
 
         $vaccine->save();
 
-        return redirect('/pets/'.$vaccine->pet_id.'/care/vaccines')->with('success', 'vaccine créer avec succèss');
+        return redirect('/pets/'.$vaccine->pet_id.'/care/vaccines')->with('success', 'Vaccin créé avec succès');
     }
 
     /**
@@ -102,7 +102,7 @@ class VaccineController extends Controller
 
         $vaccine->save();
 
-        return redirect('/pets/'.$vaccine->pet_id.'/care/vaccines')->with('success', 'vaccine modifié avec succèss');
+        return redirect('/pets/'.$vaccine->pet_id.'/care/vaccines')->with('success', 'Vaccin modifié avec succès');
     }
     /**
      * Remove the specified resource from storage.
@@ -115,6 +115,6 @@ class VaccineController extends Controller
         $vaccine = Vaccine::findOrFail($id);
         $vaccine->delete();
 
-        return redirect('/pets/'.$vaccine->pet_id.'/care/vaccines')->with('success', 'vaccine supprimer avec succèss');
+        return redirect('/pets/'.$vaccine->pet_id.'/care/vaccines')->with('success', 'Vaccin supprimer avec succès');
     }
 }

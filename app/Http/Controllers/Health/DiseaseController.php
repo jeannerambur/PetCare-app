@@ -52,7 +52,7 @@ class DiseaseController extends Controller
 
         $disease->save();
 
-        return redirect('/pets/'.$disease->pet_id.'/health/diseases')->with('success', 'disease créer avec succèss');
+        return redirect('/pets/'.$disease->pet_id.'/health/diseases')->with('success', 'Maladie créée avec succès');
     }
 
     /**
@@ -101,7 +101,7 @@ class DiseaseController extends Controller
 
          $disease->save();
 
-         return redirect('/pets/'.$disease->pet_id.'/health/diseases')->with('success', 'disease créer avec succèss');
+         return redirect('/pets/'.$disease->pet_id.'/health/diseases')->with('success', 'Maladie créée avec succès');
     }
 
     /**
@@ -115,6 +115,6 @@ class DiseaseController extends Controller
         $disease = Disease::findOrFail($id);
         $disease->delete();
 
-        return redirect('/pets/'.$disease->pet_id.'/health/diseases')->with('success', 'disease supprimer avec succèss');
+        return redirect('/pets/'.$disease->pet_id.'/health/diseases')->with('success', 'Maladie supprimée avec succès');
     }
 }

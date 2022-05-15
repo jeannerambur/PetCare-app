@@ -52,7 +52,7 @@ class DewormerController extends Controller
 
         $dewormer->save();
 
-        return redirect('/pets/'.$dewormer->pet_id.'/care/dewormers')->with('success', 'vaccine créer avec succèss');
+        return redirect('/pets/'.$dewormer->pet_id.'/care/dewormers')->with('success', 'Vermifuge créé avec succès');
     }
     /**
      * Display the specified resource.
@@ -99,7 +99,7 @@ class DewormerController extends Controller
 
         $dewormer->save();
 
-        return redirect('/pets/'.$dewormer->pet_id.'/care/dewormers')->with('success', 'dewormer modifié avec succèss');
+        return redirect('/pets/'.$dewormer->pet_id.'/care/dewormers')->with('success', 'Vermifuge modifié avec succès');
     }
 
     /**
@@ -113,6 +113,6 @@ class DewormerController extends Controller
         $dewormer = Dewormer::findOrFail($id);
         $dewormer->delete();
 
-        return redirect('/pets/'.$dewormer->pet_id.'/care/dewormers')->with('success', 'dewormer supprimer avec succèss');
+        return redirect('/pets/'.$dewormer->pet_id.'/care/dewormers')->with('success', 'Vermifuge supprimé avec succès');
     }
 }

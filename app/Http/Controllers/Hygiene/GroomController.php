@@ -51,7 +51,7 @@ class GroomController extends Controller
         //Dd($request->all());
         $groom->save();
 
-        return redirect('/pets/'.$groom->pet_id.'/hygiene/grooms')->with('success', 'griffe créer avec succèss');
+        return redirect('/pets/'.$groom->pet_id.'/hygiene/grooms')->with('success', 'Toilettage créé avec succès');
     }
 
     /**
@@ -97,7 +97,7 @@ class GroomController extends Controller
 
         $groom->save();
 
-        return redirect('/pets/'.$groom->pet_id.'/hygiene/grooms')->with('success', 'groom modifié avec succèss');
+        return redirect('/pets/'.$groom->pet_id.'/hygiene/grooms')->with('success', 'Toilettage modifié avec succès');
     }
 
     /**
@@ -111,6 +111,6 @@ class GroomController extends Controller
         $groom = Groom::findOrFail($id);
         $groom->delete();
 
-        return redirect('/pets/'.$groom->pet_id.'/hygiene/grooms')->with('success', 'groom supprimer avec succèss');
+        return redirect('/pets/'.$groom->pet_id.'/hygiene/grooms')->with('success', 'Toilettage supprimé avec succès');
     }
 }

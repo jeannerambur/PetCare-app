@@ -51,7 +51,7 @@ class TreatmentController extends Controller
 
         $treatment->save();
 
-        return redirect('/pets/'.$treatment->pet_id.'/care/treatments')->with('success', 'treatment créer avec succèss');
+        return redirect('/pets/'.$treatment->pet_id.'/care/treatments')->with('success', 'Traitement créé avec succès');
     }
 
     /**
@@ -98,7 +98,7 @@ class TreatmentController extends Controller
 
         $treatment->save();
 
-        return redirect('/pets/'.$treatment->pet_id.'/care/treatments')->with('success', 'treatment modifié avec succèss');
+        return redirect('/pets/'.$treatment->pet_id.'/care/treatments')->with('success', 'Traitement modifié avec succès');
     }
     /**
      * Remove the specified resource from storage.
@@ -111,6 +111,6 @@ class TreatmentController extends Controller
         $treatment = Treatment::findOrFail($id);
         $treatment->delete();
 
-        return redirect('/pets/'.$treatment->pet_id.'/care/treatments')->with('success', 'treatment supprimer avec succèss');
+        return redirect('/pets/'.$treatment->pet_id.'/care/treatments')->with('success', 'Traitement supprimé avec succès');
     }
 }

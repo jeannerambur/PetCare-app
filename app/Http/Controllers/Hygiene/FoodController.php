@@ -50,7 +50,7 @@ class FoodController extends Controller
 
         $food->save();
 
-        return redirect('/pets/'.$food->pet_id.'/hygiene/foods')->with('success', 'food créer avec succèss');
+        return redirect('/pets/'.$food->pet_id.'/hygiene/foods')->with('success', 'Alimentation créé avec succès');
     }
 
 
@@ -99,7 +99,7 @@ class FoodController extends Controller
 
         $food->save();
 
-        return redirect('/pets/'.$food->pet_id.'/hygiene/foods')->with('success', 'food modifié avec succèss');
+        return redirect('/pets/'.$food->pet_id.'/hygiene/foods')->with('success', 'Alimentation modifié avec succès');
     }
 
     /**
@@ -113,6 +113,6 @@ class FoodController extends Controller
         $food = Food::findOrFail($id);
         $food->delete();
 
-        return redirect('/pets/'.$food->pet_id.'/hygiene/foods')->with('success', 'food supprimer avec succèss');
+        return redirect('/pets/'.$food->pet_id.'/hygiene/foods')->with('success', 'Alimentation supprimé avec succès');
     }
 }

@@ -50,7 +50,7 @@ class PestControlController extends Controller
 
         $pestcontrol->save();
 
-        return redirect('/pets/'.$pestcontrol->pet_id.'/care/pestcontrols')->with('success', 'vaccine créer avec succèss');
+        return redirect('/pets/'.$pestcontrol->pet_id.'/care/pestcontrols')->with('success', 'Anti-paraisite créé avec succès');
     }
 
     /**
@@ -99,7 +99,7 @@ class PestControlController extends Controller
 
         $pestcontrol->save();
 
-        return redirect('/pets/'.$pestcontrol->pet_id.'/care/pestcontrols')->with('success', 'pestcontrol modifié avec succèss');
+        return redirect('/pets/'.$pestcontrol->pet_id.'/care/pestcontrols')->with('success', 'Anti-paraisite modifié avec succès');
     }
 
     /**
@@ -113,6 +113,6 @@ class PestControlController extends Controller
         $pestcontrol = Pestcontrol::findOrFail($id);
         $pestcontrol->delete();
 
-        return redirect('/pets/'.$pestcontrol->pet_id.'/care/pestcontrols')->with('success', 'pestcontrol supprimer avec succèss');
+        return redirect('/pets/'.$pestcontrol->pet_id.'/care/pestcontrols')->with('success', 'Anti-paraisite supprimer avec succès');
     }
 }

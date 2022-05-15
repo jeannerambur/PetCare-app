@@ -84,7 +84,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('/user/profile')->with('success', 'Animal mis à jour avec succèss');
+        return redirect('/user/profile')->with('success', 'Utilisateur mis à jour avec succès');
     }
 
     /**

@@ -50,7 +50,7 @@ class WoundController extends Controller
 
         $wound->save();
 
-        return redirect('/pets/'.$wound->pet_id.'/health/wounds')->with('success', 'allergy créer avec succèss');
+        return redirect('/pets/'.$wound->pet_id.'/health/wounds')->with('success', 'Blessure créée avec succès');
     }
 
     /**
@@ -98,7 +98,7 @@ class WoundController extends Controller
 
         $wound->save();
 
-        return redirect('/pets/'.$wound->pet_id.'/health/wounds')->with('success', 'wound modifié avec succèss');
+        return redirect('/pets/'.$wound->pet_id.'/health/wounds')->with('success', 'Blessure modifiée avec succès');
     }
     /**
      * Remove the specified resource from storage.
@@ -111,6 +111,6 @@ class WoundController extends Controller
         $wound = Wound::findOrFail($id);
         $wound->delete();
 
-        return redirect('/pets/'.$wound->pet_id.'/health/wounds')->with('success', 'wound supprimer avec succèss');
+        return redirect('/pets/'.$wound->pet_id.'/health/wounds')->with('success', 'Blessure supprimée avec succès');
     }
 }

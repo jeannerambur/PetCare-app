@@ -51,7 +51,7 @@ class LitterController extends Controller
         //Dd($request->all());
         $litter->save();
 
-        return redirect('/pets/'.$litter->pet_id.'/hygiene/litters')->with('success', 'griffe créer avec succèss');
+        return redirect('/pets/'.$litter->pet_id.'/hygiene/litters')->with('success', 'Litière créée avec succès');
     }
 
     /**
@@ -98,7 +98,7 @@ class LitterController extends Controller
 
         $litter->save();
 
-        return redirect('/pets/'.$litter->pet_id.'/hygiene/litters')->with('success', 'food modifié avec succèss');
+        return redirect('/pets/'.$litter->pet_id.'/hygiene/litters')->with('success', 'Litière modifiée avec succès');
     }
 
     /**
@@ -112,6 +112,6 @@ class LitterController extends Controller
         $litter = Litter::findOrFail($id);
         $litter->delete();
 
-        return redirect('/pets/'.$litter->pet_id.'/hygiene/litters')->with('success', 'food supprimer avec succèss');
+        return redirect('/pets/'.$litter->pet_id.'/hygiene/litters')->with('success', 'Litière supprimer avec succès');
     }
 }

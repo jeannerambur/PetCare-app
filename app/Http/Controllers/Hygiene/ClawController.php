@@ -50,7 +50,7 @@ class ClawController extends Controller
         //Dd($request->all());
         $claw->save();
 
-        return redirect('/pets/'.$claw->pet_id.'/hygiene/claws')->with('success', 'griffe créer avec succèss');
+        return redirect('/pets/'.$claw->pet_id.'/hygiene/claws')->with('success', 'Griffe créée avec succès');
     }
 
     /**
@@ -95,7 +95,7 @@ class ClawController extends Controller
 
         $claw->save();
 
-        return redirect('/pets/'.$claw->pet_id.'/hygiene/claws')->with('success', 'food modifié avec succèss');
+        return redirect('/pets/'.$claw->pet_id.'/hygiene/claws')->with('success', 'Griffe modifiée avec succès');
     }
 
     /**
@@ -109,6 +109,6 @@ class ClawController extends Controller
         $claw = Claw::findOrFail($id);
         $claw->delete();
 
-        return redirect('/pets/'.$claw->pet_id.'/hygiene/claws')->with('success', 'food supprimer avec succèss');
+        return redirect('/pets/'.$claw->pet_id.'/hygiene/claws')->with('success', 'Griffe supprimée avec succès');
     }
 }

@@ -51,7 +51,7 @@ class AllergyController extends Controller
 
         $allergy->save();
 
-        return redirect('/pets/'.$allergy->pet_id.'/health/allergies')->with('success', 'allergy créer avec succèss');
+        return redirect('/pets/'.$allergy->pet_id.'/health/allergies')->with('success', 'Allergie créée avec succès');
     }
 
 
@@ -99,7 +99,7 @@ class AllergyController extends Controller
 
         $allergy->save();
 
-        return redirect('/pets/'.$allergy->pet_id.'/health/allergies')->with('success', 'allergy modifié avec succèss');
+        return redirect('/pets/'.$allergy->pet_id.'/health/allergies')->with('success', 'Allergie modifiée avec succès');
     }
 
     /**
@@ -113,6 +113,6 @@ class AllergyController extends Controller
         $allergy = Allergy::findOrFail($id);
         $allergy->delete();
 
-        return redirect('/pets/'.$allergy->pet_id.'/health/allergies')->with('success', 'allergy supprimer avec succèss');
+        return redirect('/pets/'.$allergy->pet_id.'/health/allergies')->with('success', 'Allergie supprimée avec succès');
     }
 }

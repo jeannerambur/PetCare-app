@@ -50,7 +50,7 @@ class BathController extends Controller
         //Dd($request->all());
         $bath->save();
 
-        return redirect('/pets/'.$bath->pet_id.'/hygiene/baths')->with('success', 'bath créer avec succèss');
+        return redirect('/pets/'.$bath->pet_id.'/hygiene/baths')->with('success', 'Bain créé avec succès');
     }
 
     /**
@@ -96,7 +96,7 @@ class BathController extends Controller
 
         $bath->save();
 
-        return redirect('/pets/'.$bath->pet_id.'/hygiene/baths')->with('success', 'bath modifié avec succèss');
+        return redirect('/pets/'.$bath->pet_id.'/hygiene/baths')->with('success', 'Bain modifié avec succès');
     }
 
     /**
@@ -110,6 +110,6 @@ class BathController extends Controller
         $bath = Bath::findOrFail($id);
         $bath->delete();
 
-        return redirect('/pets/'.$bath->pet_id.'/hygiene/baths')->with('success', 'bath supprimer avec succèss');
+        return redirect('/pets/'.$bath->pet_id.'/hygiene/baths')->with('success', 'Bain supprimé avec succès');
     }
 }

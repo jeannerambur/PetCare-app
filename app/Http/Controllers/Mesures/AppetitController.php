@@ -52,7 +52,7 @@ class AppetitController extends Controller
 
         $appetit->save();
 
-        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'appetit créer avec succèss');
+        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'Appetit créé avec succès');
     }
 
     /**
@@ -101,7 +101,7 @@ class AppetitController extends Controller
 
         $appetit->save();
 
-        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'appetit modifié avec succèss');
+        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'Appetit modifié avec succès');
 
     }
 
@@ -116,6 +116,6 @@ class AppetitController extends Controller
         $appetit = Appetit::findOrFail($id);
         $appetit->delete();
 
-        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'Appetit supprimer avec succèss');
+        return redirect('/pets/'.$appetit->pet_id.'/mesures/appetit')->with('success', 'Appetit supprimé avec succès');
     }
 }

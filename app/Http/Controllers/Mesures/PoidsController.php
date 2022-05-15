@@ -50,7 +50,7 @@ class PoidsController extends Controller
 
         $poids->save();
 
-        return redirect('/pets/'.$poids->pet_id.'/mesures/poids')->with('success', 'poids créer avec succèss');
+        return redirect('/pets/'.$poids->pet_id.'/mesures/poids')->with('success', 'poids créé avec succès');
     }
 
     /**
@@ -97,7 +97,7 @@ class PoidsController extends Controller
 
         $poids->save();
 
-        return redirect('/pets/'.$poids->pet_id.'/mesures/poids')->with('success', 'appetit modifié avec succèss');
+        return redirect('/pets/'.$poids->pet_id.'/mesures/poids')->with('success', 'poids modifié avec succès');
     }
 
     /**
@@ -111,6 +111,6 @@ class PoidsController extends Controller
         $poids = Poids::findOrFail($id);
         $poids->delete();
 
-        return redirect('/pets/'.$poids->pet_id.'/mesures/poids')->with('success', 'poids supprimer avec succèss');
+        return redirect('/pets/'.$poids->pet_id.'/mesures/poids')->with('success', 'poids supprimé avec succès');
     }
 }

@@ -50,7 +50,7 @@ class VeterinaryController extends Controller
 
         $veterinary->save();
 
-        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire créer avec succèss');
+        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire créé avec succès');
     }
 
     /**
@@ -102,7 +102,7 @@ class VeterinaryController extends Controller
 
         $veterinary->save();
 
-        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire modifié avec succèss');
+        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire modifié avec succès');
     }
 
     /**
@@ -116,6 +116,6 @@ class VeterinaryController extends Controller
         $veterinary = Veterinary::findOrFail($id);
         $veterinary->delete();
 
-        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire supprimer avec succèss');
+        return redirect('/pets/'.$veterinary->pet_id.'/veterinaries')->with('success', 'veterinaire supprimé avec succès');
     }
 }

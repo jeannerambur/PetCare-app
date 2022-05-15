@@ -74,7 +74,7 @@ class PetController extends Controller
 
         $pet->save();
 
-        return redirect('/pets')->with('success', 'Animal créer avec succèss');
+        return redirect('/pets')->with('success', 'Animal créé avec succès');
     }
 
     /**
@@ -135,7 +135,7 @@ class PetController extends Controller
 
         $pet->save();
 
-        return redirect('/pets')->with('success', 'Animal mis à jour avec succèss');
+        return redirect('/pets')->with('success', 'Animal mis à jour avec succès');
     }
 
 
@@ -150,6 +150,6 @@ class PetController extends Controller
         $pet = Pet::findOrFail($id);
         $pet->delete();
 
-        return redirect('/pets')->with('success', 'Animal supprimer avec succèss');
+        return redirect('/pets')->with('success', 'Animal supprimé avec succès');
     }
 }
