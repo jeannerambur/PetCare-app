@@ -26,8 +26,9 @@
               <label for="file-input">
                   <font-awesome-icon icon="fa-solid fa-camera" :style="{ color: 'white' }"/>
               </label>
-              <input id="file-input" type="file" name="image" class="form-control">
+              <input id="file-input" type="file" name="image" accept="image/jpg, image/jpeg, image/peg, image/png, image/gif" class="form-control" value='{{$pet->image}}'>
             </div>
+
 
           </div>
           <div class="name-form">

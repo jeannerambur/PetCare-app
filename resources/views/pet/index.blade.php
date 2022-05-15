@@ -75,8 +75,23 @@
           <div class="pet-img">
           <img src="{{ $pet->image }}" height="75" width="75" alt="" />
           </div>
-          <div class="pet-name">
-            <p>{{$pet->name}}</p>
+          <div class="pet-details">
+            <div class="pet-infos">
+              <div class="pet-name">
+                <p>{{$pet->name}}</p>
+              </div>
+            </div>
+            <div class="sex">
+                @if(($pet->sex) == 'male')
+                  <div class="pet-sex">
+                      <font-awesome-icon icon="fa-solid fa-mars" :style="{ color: '#63A5F1' }"/>
+                  </div>
+                  @else
+                  <div class="pet-sex">
+                      <font-awesome-icon icon="fa-solid fa-venus" :style="{ color: '#FFB5B1' }"/>
+                  </div>
+                  @endif
+            </div>
           </div>
         </div>
         </a>

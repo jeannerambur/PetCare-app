@@ -11883,7 +11883,7 @@ input[type=date], focus {
   flex-direction: row-reverse;
 }
 .container-register .register .card-body .button-submit .btn-submit {
-  margin-top: 19% !important;
+  margin-top: 0 !important;
   width: 40%;
   border: none;
   background-color: #827EF2;
@@ -11895,7 +11895,10 @@ input[type=date], focus {
 }
 
 .has-account {
-  padding-bottom: 1%;
+  position: absolute;
+  margin-top: 0;
+  top: auto;
+  bottom: 0;
 }
 .has-account > div {
   text-align: center;
@@ -14898,6 +14901,9 @@ body {
   border-radius: 20px;
 }
 
+.uper {
+  padding-bottom: 10%;
+}
 .uper .cards-pets {
   display: flex;
   flex-direction: row;
@@ -14933,7 +14939,12 @@ body {
   border-radius: 5px;
   height: 100%;
 }
-.uper .cards-pets .card-pet a .pet-container .pet-name {
+.uper .cards-pets .card-pet a .pet-container .pet-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.uper .cards-pets .card-pet a .pet-container .pet-details .pet-name {
   padding: 4% 1%;
 }
 

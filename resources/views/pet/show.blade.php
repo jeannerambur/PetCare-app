@@ -16,17 +16,25 @@
                 </div>
                 @if(($pet->sex) == 'male')
                 <div class="pet-sex">
-                    <font-awesome-icon icon="fa-solid fa-mars" />
+                    <font-awesome-icon icon="fa-solid fa-mars" :style="{ color: '#63A5F1' }"/>
                 </div>
                 @else
                 <div class="pet-sex">
-                    <font-awesome-icon icon="fa-solid fa-venus" />
+                    <font-awesome-icon icon="fa-solid fa-venus" :style="{ color: '#FFB5B1' }"/>
                 </div>
                 @endif
             </div>
             <div class="pet-infos">
                 <div class="birth-date">
-                   <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y years, %m months and %d days');}}</p>
+                    @if((\Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y')) == 0)
+                        @if((\Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%m')) == 0)
+                        <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%d jours')}}</p>
+                        @else
+                            <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%m mois et %d jours')}}</p>
+                        @endif
+                    @else
+                   <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y ans et %m mois')}}</p>
+                   @endif
                 </div>
 
                 @if(!$pet->num_id)

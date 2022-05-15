@@ -157,6 +157,7 @@ body {
 }
 
 .uper {
+    padding-bottom: 10%;
     .cards-pets {
         display: flex;
         flex-direction: row;
@@ -190,9 +191,17 @@ body {
 
                         }
                     }
-                    .pet-name {
-                        padding: 4% 1%;
+
+                    .pet-details {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+
+                        .pet-name {
+                            padding: 4% 1%;
+                        }
                     }
+
                 }
             }
         }

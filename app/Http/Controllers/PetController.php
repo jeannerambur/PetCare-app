@@ -52,11 +52,9 @@ class PetController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'birth' => 'required'
-        ]);
 
         $request->validate([
+            'birth' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -117,15 +115,13 @@ class PetController extends Controller
     {
 
         $pet = Pet::find($id);
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-
         //$image = Image::make($request->image);
 
-        $path = Storage::disk('s3')->put('images', $request->image);
-        $path = Storage::disk('s3')->url($path);
-        $pet->image = $path;
+        if ($request->hasFile('image')) {
+            $path = Storage::disk('s3')->put('images', $request->image);
+            $path = Storage::disk('s3')->url($path);
+            $pet->image = $path;
+        }
 
 
         //Dd($image);
