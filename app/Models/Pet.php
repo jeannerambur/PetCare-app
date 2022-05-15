@@ -10,7 +10,7 @@ class Pet extends Model
 {
     use HasFactory;
     protected $attributes = [
-		'image' => 'https://pet-care-ecv.s3.eu-west-3.amazonaws.com/images/default-placeholder.jpg',
+		'image' => 'https://pet-care-ecv.s3.eu-west-3.amazonaws.com/images/default-placeholder.png',
 	];
     protected $fillable = ['name','user_id', 'birth', 'sex'];
 
