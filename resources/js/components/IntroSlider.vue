@@ -9,7 +9,7 @@ import slide from '@wyhaya/vue-slide'
 export default {
     data() {
         return {
-            slide: ['../../storage/images/1.jpg', '../../storage/images/2.jpg', '../../storage/images/3.jpg'],
+            slide: ['https://pet-care-ecv.s3.eu-west-3.amazonaws.com/images/pets.png', 'https://pet-care-ecv.s3.eu-west-3.amazonaws.com/images/oeil.png'],
             time: 3000,
             speed: 300,
             spot: true,
