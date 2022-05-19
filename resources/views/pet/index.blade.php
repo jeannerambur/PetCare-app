@@ -9,10 +9,7 @@
 
     <div class="presentation">
         <div class="username-hi">
-            Coucou <strong>{{ Auth::user()->name }}</strong>
-        </div>
-        <div class="username-subtitle">
-          Prenons soin de vos animaux de compagnie
+            Hello <strong>{{ Auth::user()->name }}</strong>
         </div>
 
     <!-- <div class="button-health">
@@ -51,7 +48,11 @@
 
     <div class="pets-card">
         <div class="my-pets">
-            My Pets
+          @if (count($pets) == 1)
+            Mon animal
+          @else
+            Mes animaux
+          @endif
         </div>
         <button class="button-add-pet" onclick="window.location.href = '{{ url('/pets/create') }}' ">+</button>
 
@@ -69,6 +70,7 @@
   @endif
   <div class="cards-pets">
       @foreach($pets as $pet)
+
       <div class="card-pet">
         <a href="{{ route('pets.show', $pet->id)}}">
         <div class="pet-container">

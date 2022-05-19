@@ -5,7 +5,6 @@
     elevation="3"
     prominent
     >
-
     <div class="navbar-container">
         @if (Route::currentRouteName() == 'pets.index')
             <div class="user-profile">
@@ -13,7 +12,33 @@
             </div>
             @else
             <div class="previous">
+                @if (Route::currentRouteName() == 'pets.show')
+                <a href="{{ URL::to('/pets') }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'mesure')
+                <a href="{{ URL::to('/pets/'. Request::segment(2)) }}"><iconcomponent></iconcomponent></a>
+                @elseif ((Route::currentRouteName() == 'appetit') or (Route::currentRouteName() == 'poids'))
+                <a href="{{ URL::to('/pets/'. Request::segment(2)).'/mesures' }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'health')
+                <a href="{{ URL::to('/pets/'. Request::segment(2)) }}"><iconcomponent></iconcomponent></a>
+                @elseif ((Route::currentRouteName() == 'allergies') or (Route::currentRouteName() == 'diseases') or (Route::currentRouteName() == 'wounds'))
+                <a href="{{ URL::to('/pets/'. Request::segment(2)).'/health' }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'care')
+                <a href="{{ URL::to('/pets/'. Request::segment(2)) }}"><iconcomponent></iconcomponent></a>
+                @elseif ((Route::currentRouteName() == 'dewormers') or (Route::currentRouteName() == 'vaccines') or (Route::currentRouteName() == 'treatments') or (Route::currentRouteName() == 'pestcontrols'))
+                <a href="{{ URL::to('/pets/'. Request::segment(2)).'/care' }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'hygiene')
+                <a href="{{ URL::to('/pets/'. Request::segment(2)) }}"><iconcomponent></iconcomponent></a>
+                @elseif ((Route::currentRouteName() == 'baths') or (Route::currentRouteName() == 'foods') or (Route::currentRouteName() == 'claws') or (Route::currentRouteName() == 'litters') or (Route::currentRouteName() == 'grooms') or (Route::currentRouteName() == 'dents'))
+                <a href="{{ URL::to('/pets/'. Request::segment(2)).'/hygiene' }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'veterinaries')
+                <a href="{{ URL::to('/pets/'. Request::segment(2)) }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'user.index')
+                <a href="{{ URL::to('/pets') }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'veterinaries.show')
+                <a href="{{ URL::to('/pets/'. Request::segment(2)).'/veterinaries' }}"><iconcomponent></iconcomponent></a>
+                @else
                 <a href="{{ URL::previous() }}"><iconcomponent></iconcomponent></a>
+                @endif
             </div>
         @endif
         <div class="title">

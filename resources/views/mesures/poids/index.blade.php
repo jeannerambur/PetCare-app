@@ -4,7 +4,6 @@
 
 @include('layouts.navbar', ['title'=>'Poids', 'color'=>'#F2CA80'])
 
-
 <div class="container-poids">
 @foreach($poids as $poid)
     <div class="container">

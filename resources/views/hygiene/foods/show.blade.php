@@ -13,9 +13,12 @@
             </div>
 
             <div class='food-quantite'>
+                @if ($food->quantite == '')
+                <p></p>
+                @else
                 <p><span>Quantite</span> {{$food->quantite}} g</p>
+                @endif
             </div>
-
         </div>
       </div>
 

@@ -45,7 +45,7 @@
           </div>
 
           <div class="id-form">
-            <label for="num_id" class="num_id">N° d'identification:</label>
+            <label for="num_id" class="num_id">N° d'identification: (facultatif)</label>
             <input type="text" class="form-control" name="num_id" placeholder='ex: 177THY'/>
           </div>
 

@@ -21,6 +21,7 @@ use App\Http\Controllers\Care\TreatmentController;
 use App\Http\Controllers\Health\AllergyController;
 use App\Http\Controllers\Health\DiseaseController;
 use App\Http\Controllers\Hygiene\LitterController;
+use App\Http\Controllers\Mesures\MesureController;
 use App\Http\Controllers\Mesures\AppetitController;
 use App\Http\Controllers\Care\PestControlController;
 
@@ -49,13 +50,16 @@ Route::get('user/profile', [UserController::class, 'index'])->name('user.index')
 Route::get('user/profile/edit', [UserController::class, 'edit'])->name('user.edit-profile');
 Route::put('user/profile/edit', [UserController::class, 'update'])->name('user.update-profile');
 
-Route::view('pets/{id}/mesures', 'mesures.index')->name('mesures');
+//Route::view('pets/{id}/mesures', 'mesures.index')->name('mesures');
 Route::view('pets/{id}/health', 'health.index')->name('health');
 Route::view('pets/{id}/care', 'care.index')->name('care');
 Route::view('pets/{id}/hygiene', 'hygiene.index')->name('hygiene');
 
 Route::get('history', [HistoryController::class, 'index'])->name('history');
 Route::resource('history', HistoryController::class);
+
+Route::get('pets/{id}/mesures', [MesureController::class, 'index'])->name('mesure');
+Route::resource('mesure', MesureController::class);
 
 Route::get('pets/{id}/mesures/appetit', [AppetitController::class, 'index'])->name('appetit');
 Route::put('pets/{id}/mesures/appetit/edit', [AppetitController::class, 'update'])->name('appetit.update-appetit');

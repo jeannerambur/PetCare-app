@@ -4,10 +4,8 @@
 
 @include('layouts.navbar', ['title'=>'Vétérinaire', 'color'=>'#63A5F1'])
 
-
-
-  @foreach($veterinaries as $veterinary)
-  <div class="container-veterinary-profile">
+@foreach($veterinaries as $veterinary)
+<div class="container-veterinary-profile">
   <a href="{{ route('veterinaries.show', $veterinary->id)}}">
       <div class="veterinary-details">
           <div class='veterinary-card'>

@@ -4,7 +4,6 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Appétit', 'color'=>'#F2CA80'])
 
-
 <div class="container-appetit">
 @foreach($appetits as $appetit)
     <div class="container">

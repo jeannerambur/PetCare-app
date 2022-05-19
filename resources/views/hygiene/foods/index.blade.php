@@ -27,8 +27,13 @@
                     <div class="food-type">
                         <p>{{ $food->type }}</p>
                     </div>
+
                     <div class="food-quantite">
+                        @if ($food->quantite == '')
+                        <p></p>
+                        @else
                         <p>{{ $food->quantite}} g</p>
+                        @endif
                     </div>
                 </div>
 

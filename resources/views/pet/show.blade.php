@@ -53,7 +53,7 @@
 
     <div class="care-button">
         <div class="mesures">
-            <a href="{{ route('mesures', $pet->id)}}">
+            <a href="{{ route('mesure', $pet->id)}}">
                 <div class="button">
                 </div>
                 <p>Mesures</p>
