@@ -3,7 +3,6 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Mon Profil', 'color'=>'#827EF2'])
 
-{{Route::currentRouteName()}}
 <div class="container-user-profile">
     <div class="user-details">
 
