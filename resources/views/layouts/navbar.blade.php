@@ -36,6 +36,10 @@
                 <a href="{{ URL::to('/pets') }}"><iconcomponent></iconcomponent></a>
                 @elseif (Route::currentRouteName() == 'veterinaries.show')
                 <a href="{{ URL::to('/pets/'. Request::segment(2)).'/veterinaries' }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'history.index')
+                <a href="{{ URL::to('/pets') }}"><iconcomponent></iconcomponent></a>
+                @elseif (Route::currentRouteName() == 'history.show')
+                <a href="{{ URL::to('/history') }}"><iconcomponent></iconcomponent></a>
                 @else
                 <a href="{{ URL::previous() }}"><iconcomponent></iconcomponent></a>
                 @endif

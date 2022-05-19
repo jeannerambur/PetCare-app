@@ -3,7 +3,6 @@
 @section('content')
 @include('layouts.navbar', ['title'=>'Historique', 'color'=>'#827EF2'])
 
-
   <div class="history">
     <div class="card-history">
         @foreach($sorted as $ar)
