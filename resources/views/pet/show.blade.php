@@ -33,7 +33,11 @@
                             <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%m mois et %d jours')}}</p>
                         @endif
                     @else
-                   <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y ans et %m mois')}}</p>
+                        @if( \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y') == 1 )
+                        <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y an et %m mois')}}</p>
+                        @else
+                        <p>{{ \Carbon\Carbon::parse($pet->birth)->diff(\Carbon\Carbon::now())->format('%y ans et %m mois')}}</p>
+                        @endif
                    @endif
                 </div>
 
