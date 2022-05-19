@@ -14966,7 +14966,7 @@ body {
 .start-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 130px);
   padding-bottom: 6%;
   align-items: center;
   justify-content: center;
