@@ -11,6 +11,7 @@ use App\Models\Wound;
 use App\Models\Litter;
 use App\Models\Allergy;
 use App\Models\Appetit;
+use App\Models\Document;
 use App\Models\Treatment;
 use App\Models\Veterinary;
 use Illuminate\Database\Seeder;
@@ -87,6 +88,12 @@ class DatabaseSeeder extends Seeder
             'pet_id'=> 1,
 			'date' => '2022-05-02'
 		]);
+
+		Document::create([
+            'pet_id'=> 1,
+			'file' => 'lily-rose.jpg'
+		]);
+
 
 		Dent::create([
             'pet_id'=> 1,

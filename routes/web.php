@@ -7,6 +7,7 @@ use App\Http\Controllers\CarController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\VeterinaryController;
 use App\Http\Controllers\Care\VaccineController;
 use App\Http\Controllers\Health\WoundController;
@@ -163,3 +164,10 @@ Route::put('pets/{id}/veterinaries/edit', [VeterinaryController::class, 'update'
 Route::get('pets/{id}/veterinaries/create', [VeterinaryController::class, 'create'])->name('veterinaries.create-veterinary');
 Route::post('pets/{id}/veterinaries/create', [VeterinaryController::class, 'store'])->name('veterinaries.store-veterinary');
 Route::resource('veterinaries', VeterinaryController::class);
+
+Route::get('pets/{id}/documents', [DocumentController::class, 'index'])->name('documents');
+Route::put('pets/{id}/documents/edit', [DocumentController::class, 'update'])->name('documents.update-document');
+Route::get('pets/{id}/documents/create', [DocumentController::class, 'create'])->name('documents.create-document');
+Route::post('pets/{id}/documents/create', [DocumentController::class, 'store'])->name('documents.store-document');
+Route::resource('documents', DocumentController::class);
+
