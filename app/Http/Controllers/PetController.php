@@ -55,7 +55,7 @@ class PetController extends Controller
 
         $request->validate([
             'birth' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $path = Storage::disk('s3')->put('images', $request->image);

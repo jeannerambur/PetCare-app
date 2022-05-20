@@ -5,23 +5,7 @@
 @include('layouts.navbar', ['title'=>'Vétérinaire', 'color'=>'#63A5F1'])
 
 <div class="veterinary-details">
-          <div class='veterinary-card'>
-
-            <div class="veterinary-name">
-              {{$veterinary->name}} {{$veterinary->lastname}}
-            </div>
-            <div class="veterinary-contacts">
-                <div class="veterinary-mail">
-                  <font-awesome-icon icon="fa-solid fa-envelope" :style="{ color: 'white' }"/>
-                </div>
-                <div class="veterinary-location">
-                  <font-awesome-icon icon="fa-solid fa-location-dot" :style="{ color: 'white' }"/>
-                </div>
-                <div class="veterinary-urgency">
-                  <font-awesome-icon icon="fa-solid fa-truck-medical" :style="{ color: 'white' }"/>
-                </div>
-            </div>
-          </div>
+          <veterinarycard :veterinary="{{ $veterinary }}"></veterinarycard>
 
           <div class="infos-details">
             <div class="veterinary-address">

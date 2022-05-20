@@ -44,6 +44,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('iconcomponent', require('./components/IconComponent.vue').default);
 
 Vue.component('introslider', require('./components/IntroSlider.vue').default);
+Vue.component('veterinarycard', require('./components/VeterinaryCard.vue').default);
 
 //Vue.component('burgermenu', require('./components/BurgerMenu.vue').default);
 

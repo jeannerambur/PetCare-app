@@ -30,7 +30,7 @@
               <label for="file-input">
                   <font-awesome-icon icon="fa-solid fa-camera" :style="{ color: 'white' }"/>
               </label>
-              <input id="file-input" type="file" name="image" class="form-control">
+              <input id="file-input" type="file" name="image" class="form-control" value='https://pet-care-ecv.s3.eu-west-3.amazonaws.com/images/default-placeholder.png'>
             </div>
 
           </div>
