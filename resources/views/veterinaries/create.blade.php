@@ -2,7 +2,7 @@
 
 @section('content')
 @include('layouts.navbar', ['title'=>'Vétérinaire', 'color'=>'#63A5F1'])
-{{Route::current()->parameter('id')}}
+
 <div class="create-veterinary">
   <div class="card-body">
     <form method="post" action="{{ route('veterinaries.store-veterinary', Route::current()->parameter('id'))}}" enctype="multipart/form-data">
