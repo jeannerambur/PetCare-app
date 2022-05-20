@@ -6,7 +6,7 @@
 
 @foreach($veterinaries as $veterinary)
 <div class="container-veterinary-profile">
-  <a href="{{ route('veterinaries.show-veterinary', $veterinary->id)}}">
+  <a href="{{ route('veterinaries.show', $veterinary->id)}}">
     <veterinarycard :veterinary="{{ $veterinary }}"></veterinarycard>
   </a>
   </div>

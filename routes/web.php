@@ -159,7 +159,6 @@ Route::get('pets/{id}/hygiene/dents/create', [DentController::class, 'create'])-
 Route::post('pets/{id}/hygiene/dents/create', [DentController::class, 'store'])->name('dents.store-dent');
 Route::resource('dents', DentController::class);
 
-Route::get('pets/{id}/veterinaries/show', [VeterinaryController::class, 'show'])->name('veterinaries.show-veterinary');
 Route::get('pets/{id}/veterinaries', [VeterinaryController::class, 'index'])->name('veterinaries');
 Route::put('pets/{id}/veterinaries/edit', [VeterinaryController::class, 'update'])->name('veterinaries.update-veterinary');
 Route::get('pets/{id}/veterinaries/create', [VeterinaryController::class, 'create'])->name('veterinaries.create-veterinary');
